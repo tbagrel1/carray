@@ -6,6 +6,7 @@
 #define TBAGREL_PROJECT_CARRAY_H
 
 #include <stdbool.h>
+#include <string.h>
 
 #define DEFAULT_SPACE_INIT_FLAT 8
 #define DEFAULT_SPACE_INIT_PERCENT 1.25
@@ -40,6 +41,7 @@ typedef void *type;
 #define of_Double *(double*)
 #define of_lDouble *(long double*)
 #define of_Bool *(bool*)
+#define of_String (char*)
 
 char *Char_holder;
 #define Char(expr) \
@@ -135,6 +137,12 @@ bool *Bool_holder;
 #define Bool(expr) \
     (Bool_holder = malloc(sizeof(bool)), \
      *Bool_holder = (expr), Bool_holder)
+
+char *String_holder;
+#define String(expr) \
+    (String_holder = malloc(sizeof(expr) / sizeof(char)), \
+     strcpy(String_holder, (expr)), \
+     String_holder)
 
 void carray_free_obj(type);
 
