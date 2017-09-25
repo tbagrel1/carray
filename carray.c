@@ -879,6 +879,76 @@ carray *carray_subcarray_TF(carray *c, int from_index, int to_index, void **ok)
 }
 
 /**
+ * Returns a smaller carray which holds values from index "from_index"
+ * (included) to index "to_index" (excluded) according to the specified step.
+ * If params are correct and if the operation works, ok will hold the carray
+ * address; otherwise, it will hold NULL.
+ * @param c the carray
+ * @param from_index beginning index
+ * @param to_index ending index
+ * @param step item selecting step
+ * @param ok validation flag
+ * @return the sub-carray if the indices are correct, NULL otherwise
+ */
+carray *carray_subcarraystep_TF(
+    carray *c, int from_index, int to_index, int step, void **ok)
+{
+    carray *result;
+    if (step > 0)
+    {
+        if (from_index < 0 ||
+            from_index >= c->_size ||
+            to_index < 0 ||
+            to_index > c->_size ||
+            to_index < from_index)
+        {
+            *ok = NULL;
+            result = NULL;
+        }
+        else
+        {
+            size_t new_size = ((to_index - from_index) / step) + 1;
+            result = carray_new_ISC((size_t) (
+                DEFAULT_SPACE_INIT_PERCENT * new_size));
+            for (size_t i = 0; i < new_size; ++i)
+            {
+                result->_array[i] = c->_array[from_index + i * step];
+            }
+            result->_size = new_size;
+        }
+    }
+    else if (step < 0)
+    {
+        if (from_index >= c->_size ||
+            from_index <= -1 ||
+            to_index < -1 ||
+            to_index >= c->_size ||
+            from_index < to_index)
+        {
+            *ok = NULL;
+            result = NULL;
+        }
+        else
+        {
+            size_t new_size = ((from_index - to_index) / step) + 1;
+            result = carray_new_ISC((size_t) (
+                DEFAULT_SPACE_INIT_PERCENT * new_size));
+            for (size_t i = 0; i < new_size; ++i)
+            {
+                result->_array[i] = c->_array[from_index + i * step];
+            }
+            result->_size = new_size;
+        }
+    }
+    else /* step = 0 */
+    {
+        *ok = NULL;
+        result = NULL;
+    }
+    return result;
+}
+
+/**
  * Returns a smaller vanilla array which holds values from index "from_index"
  * (included) to index "to_index" (excluded).
  * If params are correct and if the operation works, ok will hold the carray
@@ -915,6 +985,72 @@ type *carray_subarray_TF(carray *c, int from_index, int to_index, void **ok)
         size_t new_size = (size_t) (to_index - from_index);
         result = malloc(sizeof(type) * new_size);
         memcpy(result, c->_array + from_index, new_size);
+    }
+    return result;
+}
+
+/**
+ * Returns a smaller vanilla array which holds values from index "from_index"
+ * (included) to index "to_index" (excluded) according to the specified step.
+ * If params are correct and if the operation works, ok will hold the carray
+ * address; otherwise, it will hold NULL.
+ * @param c the carray
+ * @param from_index beginning index
+ * @param to_index ending index
+ * @param step item selecting step
+ * @param ok validation flag
+ * @return the sub-vanilla array if the indices are correct, NULL otherwise
+ */
+type *carray_subarraystep_TF(
+    carray *c, int from_index, int to_index, int step, void **ok)
+{
+    type *result;
+    if (step > 0)
+    {
+        if (from_index < 0 ||
+            from_index >= c->_size ||
+            to_index < 0 ||
+            to_index > c->_size ||
+            to_index < from_index)
+        {
+            *ok = NULL;
+            result = NULL;
+        }
+        else
+        {
+            size_t new_size = ((to_index - from_index) / step) + 1;
+            result = malloc(sizeof(type) * new_size);
+            for (size_t i = 0; i < new_size; ++i)
+            {
+                result[i] = c->_array[from_index + i * step];
+            }
+        }
+    }
+    else if (step < 0)
+    {
+        if (from_index >= c->_size ||
+            from_index <= -1 ||
+            to_index < -1 ||
+            to_index >= c->_size ||
+            from_index < to_index)
+        {
+            *ok = NULL;
+            result = NULL;
+        }
+        else
+        {
+            size_t new_size = ((from_index - to_index) / step) + 1;
+            result = malloc(sizeof(type) * new_size);
+            for (size_t i = 0; i < new_size; ++i)
+            {
+                result[i] = c->_array[from_index + i * step];
+            }
+        }
+    }
+    else /* step = 0 */
+    {
+        *ok = NULL;
+        result = NULL;
     }
     return result;
 }

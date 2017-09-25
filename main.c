@@ -23,7 +23,7 @@ char *chara_of_String(type val)
     return result;
 }
 
-int main(int argc, char **argv)
+int main_a(int argc, char **argv)
 {
     carray *my_c = carray_new();
     char *repr;
@@ -45,4 +45,18 @@ int main(int argc, char **argv)
     carray_free(my_c, free_Obj);
 
     return 0;
+}
+
+int main_b(int argc, char **argv)
+{
+    for (size_t i = 0; i < 3; ++i)
+    {
+        printf("%d ,", "abcd"[i]);
+    }
+    return 0;
+}
+
+int main(int argc, char **argv)
+{
+    return main_b(argc, argv);
 }

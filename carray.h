@@ -211,7 +211,11 @@ bool carray_contains(carray *, type, bool(type, type));
 
 carray *carray_subcarray_TF(carray *, int, int, void **);
 
+carray *carray_subcarraystep_TF(carray *, int, int, int, void **);
+
 type *carray_subarray_TF(carray *, int, int, void **);
+
+type *carray_subarraystep_TF(carray *, int, int, int, void **);
 
 type *carray_toarray_TF(carray *);
 
