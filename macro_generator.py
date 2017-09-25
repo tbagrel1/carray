@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""Creates macro in C."""
+"""Creates preprocessor directives for the carray class."""
 
 TYPES = [
     "char", "short", "int", "long", "float", "double", "bool",

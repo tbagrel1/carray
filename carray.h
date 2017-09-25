@@ -2,26 +2,78 @@
 // Created by thomas on 09/09/17.
 //
 
+/**
+ * \file carray.h
+ * \brief Header of the carray class.
+ * Contains all function declarations and preprocessor directives.
+ */
+
 #ifndef TBAGREL_PROJECT_CARRAY_H
 #define TBAGREL_PROJECT_CARRAY_H
 
 #include <stdbool.h>
 #include <string.h>
 
+/**
+ * \addtogroup carray_group C-Array class
+ * @{
+ */
+
+/**
+ * \addtogroup cst_group Constants for C-Array class
+ * @{
+ */
+
+/**
+ * Initial space for the internal representation of a carray.
+ */
 #define DEFAULT_SPACE_INIT_FLAT 8
+
+/**
+ * Initial space factor used when a carray is created from an existing one.
+ */
 #define DEFAULT_SPACE_INIT_PERCENT 1.25
+
+/**
+ * Space factor used when a carray becomes too short.
+ */
 #define DEFAULT_SPACE_INCR 2.0
+
+/**
+ * Space threshold from which the carray is shrinked.
+ */
 #define DEFAULT_SHRINK_THRESHOLD 2.5
+
+/**
+ * Space factor used when the carray is shrinked.
+ */
 #define DEFAULT_SHRINK_PERCENT 1.25
 
+/**
+ * Alias for carray struct.
+ */
 typedef struct carray carray;
-typedef unsigned int uint;
 
-typedef uint hashtype;
+/**
+ * @}
+ */
+
+/**
+ * \addtogroup impl_group Implementation specific constants and aliases
+ * @{
+ */
+typedef unsigned int hashtype;
 #define PRIME_CST 31
 typedef void *type;
 #define DEFAULT_TYPE_VALUE NULL
+/**
+ * @}
+ */
 
+/**
+ * \addtogroup prep_group Preprocessor macros
+ * @{
+ */
 #define of_Char *(char*)
 #define of_sChar *(signed char*)
 #define of_uChar *(unsigned char*)
@@ -148,6 +200,19 @@ void carray_free_obj(type);
 
 #define free_Obj &carray_free_obj
 
+/**
+ * @}
+ */
+
+/**
+ * \addtogroup core_group C-Array core
+ * @{
+ */
+
+/**
+ * Carray class implementation.
+ * Provides Python-like list for C.
+ */
 struct carray
 {
     type *_array;
@@ -155,6 +220,15 @@ struct carray
     size_t _space;
     size_t _read_position;
 };
+
+/**
+ * @}
+ */
+
+/**
+ * \addtogroup method_group C-Array methods
+ * @{
+ */
 
 carray *carray_new();
 
@@ -236,5 +310,13 @@ type carray_remove(carray *, int, void **);
 type carray_pop(carray *);
 
 bool carray_remove_elt(carray *, type, bool(type, type));
+
+/**
+ * @}
+ */
+
+/**
+ * @}
+ */
 
 #endif //TBAGREL_PROJECT_CARRAY_H

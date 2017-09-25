@@ -2,6 +2,12 @@
 // Created by thomas on 09/09/17.
 //
 
+/**
+ * \file carray.c
+ * \brief Implementation of the carray class.
+ * Contains all the function implementations and documentation.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -9,6 +15,15 @@
 
 #include "carray.h"
 
+/**
+ * \addtogroup carray_group C-Array class
+ * @{
+ */
+
+/**
+ * Prints an error message
+ * @param message message to print
+ */
 void fatal_error(char message[])
 {
     printf("%s", message);
@@ -1063,3 +1078,7 @@ void carray_free_obj(type val)
 {
     free(val);
 }
+
+/**
+ * @}
+ */
