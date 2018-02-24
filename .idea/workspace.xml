@@ -13,7 +13,357 @@
   <component name="ChangeListManager">
     <list default="true" id="7ed4805a-37ed-4d4a-b990-0632b19b0bda" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/_main.c" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/carray.c" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/carray.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/carray_is_working.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/catch.hpp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/_c_make_c_compiler_id_8c.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/_c_make_c_compiler_id_8c.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/_c_make_c_compiler_id_8c_source.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/_c_make_c_x_x_compiler_id_8cpp.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/_c_make_c_x_x_compiler_id_8cpp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/_c_make_c_x_x_compiler_id_8cpp_source.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/_r_e_a_d_m_e_8md.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/_r_e_a_d_m_e_8md_source.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/annotated.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/annotated_dup.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/arrowdown.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/arrowright.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/bc_s.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/bdwn.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/carray_8c.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/carray_8c.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/carray_8c__incl.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/carray_8c__incl.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/carray_8c__incl.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/carray_8c_source.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/carray_8h.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/carray_8h.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/carray_8h__dep__incl.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/carray_8h__dep__incl.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/carray_8h__dep__incl.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/carray_8h__incl.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/carray_8h__incl.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/carray_8h__incl.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/carray_8h_source.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/classes.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/closed.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/dir_2676cc314455a3554bf96ebb25d8a9e1.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/dir_2676cc314455a3554bf96ebb25d8a9e1.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/dir_739bc212bfd731a9b0f1a6fe9553f49a.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/dir_739bc212bfd731a9b0f1a6fe9553f49a.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/dir_95e29a8b8ee7c54052c171a88bb95675.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/dir_95e29a8b8ee7c54052c171a88bb95675.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/dir_d51ff6810eea7fa52a558f76681df083.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/dir_d51ff6810eea7fa52a558f76681df083.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/dir_f89abcb304c928c7d889aa5625570de5.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/dir_f89abcb304c928c7d889aa5625570de5.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/doc.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/doxygen.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/doxygen.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/dynsections.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/feature__tests_8c.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/feature__tests_8c.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/feature__tests_8c_source.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/feature__tests_8cxx.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/feature__tests_8cxx.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/feature__tests_8cxx_source.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/files.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/files.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/folderclosed.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/folderopen.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/functions.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/functions_vars.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/globals.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/globals_defs.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/globals_func.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/globals_type.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/globals_vars.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/graph_legend.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/graph_legend.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/graph_legend.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__carray__group.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__carray__group.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__carray__group.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__carray__group.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__carray__group.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__core__group.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__core__group.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__core__group.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__core__group.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__core__group.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__cst__group.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__cst__group.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__cst__group.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__cst__group.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__cst__group.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__impl__group.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__impl__group.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__impl__group.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__impl__group.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__method__group.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__method__group.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__method__group.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__method__group.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__method__group.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__prep__group.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__prep__group.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__prep__group.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__prep__group.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/group__prep__group.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/jquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/macro__generator_8py.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/macro__generator_8py.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/macro__generator_8py_source.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/main_8c.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/main_8c.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/main_8c__incl.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/main_8c__incl.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/main_8c__incl.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/main_8c_source.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/md_README.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/modules.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/modules.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/namespacemacro__generator.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/namespacemembers.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/namespacemembers_func.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/namespacemembers_vars.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/namespaces.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/namespaces.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/nav_f.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/nav_g.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/nav_h.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/navtree.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/navtree.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/navtreedata.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/navtreeindex0.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/navtreeindex1.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/open.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/pages.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/resize.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_0.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_0.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_1.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_1.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_3.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_3.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_4.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_4.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_5.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_5.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_6.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_6.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_7.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_7.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_8.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_8.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_9.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_9.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_a.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_a.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_b.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_b.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_c.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_c.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_d.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_d.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_e.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_e.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_f.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_f.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_0.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_0.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/close.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_0.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_0.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_1.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_1.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_3.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_3.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_4.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_4.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_5.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_5.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_6.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_6.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_7.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_7.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_8.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_8.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_9.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_9.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_a.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_a.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_b.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/defines_b.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_0.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_0.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_1.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_1.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_3.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_3.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_0.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_0.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_1.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_1.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_3.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_3.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_4.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_4.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/groups_0.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/groups_0.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/groups_1.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/groups_1.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/groups_2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/groups_2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/mag_sel.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/namespaces_0.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/namespaces_0.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/nomatches.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/pages_0.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/pages_0.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/search.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/search.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/search_l.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/search_m.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/search_r.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/searchdata.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/typedefs_0.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/typedefs_0.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/typedefs_1.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/typedefs_1.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/typedefs_2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/typedefs_2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/typedefs_3.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/typedefs_3.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_0.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_0.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_1.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_1.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_3.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_3.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_4.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_4.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_5.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_5.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_6.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_6.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_7.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_7.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_8.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_8.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_9.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/search/variables_9.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/splitbar.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/structcarray-members.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/structcarray.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/structcarray.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/sync_off.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/sync_on.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/tab_a.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/tab_b.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/tab_h.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/tab_s.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/tabs.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/Makefile" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/_c_make_c_compiler_id_8c.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/_c_make_c_x_x_compiler_id_8cpp.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/_r_e_a_d_m_e_8md.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/annotated.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/carray_8c.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/carray_8c__incl.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/carray_8c__incl.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/carray_8h.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/carray_8h__dep__incl.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/carray_8h__dep__incl.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/carray_8h__incl.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/carray_8h__incl.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/dir_2676cc314455a3554bf96ebb25d8a9e1.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/dir_739bc212bfd731a9b0f1a6fe9553f49a.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/dir_95e29a8b8ee7c54052c171a88bb95675.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/dir_d51ff6810eea7fa52a558f76681df083.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/dir_f89abcb304c928c7d889aa5625570de5.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/doxygen.sty" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/feature__tests_8c.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/feature__tests_8cxx.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/files.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__carray__group.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__carray__group.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__carray__group.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__core__group.aux" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__core__group.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__core__group.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__core__group.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__cst__group.aux" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__cst__group.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__cst__group.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__cst__group.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__impl__group.aux" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__impl__group.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__impl__group.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__impl__group.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__method__group.aux" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__method__group.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__method__group.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__method__group.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__prep__group.aux" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__prep__group.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__prep__group.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/group__prep__group.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/macro__generator_8py.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/main_8c.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/main_8c__incl.md5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/main_8c__incl.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/md_README.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/modules.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/namespacemacro__generator.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/namespaces.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/refman.aux" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/refman.idx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/refman.ilg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/refman.ind" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/refman.log" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/refman.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/refman.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/refman.toc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/latex/structcarray.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/macro_generator.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/CMakeCCompilerId.c.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/CMakeCXXCompilerId.cpp.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/README.md.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/_home_thomas_OneDrive_tbagrel_dev_cpp_tbagrel_project_cmake-build-debug_.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/_home_thomas_OneDrive_tbagrel_dev_cpp_tbagrel_project_cmake-build-debug_CMakeFiles_.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/_home_thomas_OneDrive_tbagrel_dev_cpp_tbagrel_project_cmake-build-debug_CMakeFiles_3.8.2_.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/_home_thomas_OneDrive_tbagrel_dev_cpp_tbagrel_project_cmake-build-debug_CMakeFiles_3.8.2_CompilerIdCXX_.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/_home_thomas_OneDrive_tbagrel_dev_cpp_tbagrel_project_cmake-build-debug_CMakeFiles_3.8.2_CompilerIdC_.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/carray.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/carray.c.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/carray.h.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/carray_group.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/core_group.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/cst_group.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/feature_tests.c.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/feature_tests.cxx.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/impl_group.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/macro_generator.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/macro_generator.py.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/main.c.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/md__r_e_a_d_m_e.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/method_group.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/man/man3/prep_group.3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test_carray.cpp" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +395,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="456">
-                <caret line="24" column="95" lean-forward="false" selection-start-line="24" selection-start-column="95" selection-end-line="24" selection-end-column="95" />
+              <first_editor relative-caret-position="380">
+                <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -180,7 +530,7 @@
       <workItem from="1519299417137" duration="1633000" />
       <workItem from="1519313867675" duration="2831000" />
       <workItem from="1519317849101" duration="1579000" />
-      <workItem from="1519456367786" duration="2006000" />
+      <workItem from="1519456367786" duration="2364000" />
     </task>
     <task id="LOCAL-00002" summary="+ changes on README.md because of merge">
       <created>1519458155525</created>
@@ -203,17 +553,23 @@
       <option name="project" value="LOCAL" />
       <updated>1519458319877</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="+ error on README.md: missing /html/">
+      <created>1519458390267</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1519458390267</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27412000" />
+    <option name="totallyTimeSpent" value="27770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -242,7 +598,8 @@
     <MESSAGE value="+ changes on README.md because of merge" />
     <MESSAGE value="+ error on README.md: email address" />
     <MESSAGE value="+ error on README.md: /doc/ instead of /docs/" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ error on README.md: /doc/ instead of /docs/" />
+    <MESSAGE value="+ error on README.md: missing /html/" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ error on README.md: missing /html/" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -397,8 +754,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="456">
-            <caret line="24" column="95" lean-forward="false" selection-start-line="24" selection-start-column="95" selection-end-line="24" selection-end-column="95" />
+          <first_editor relative-caret-position="380">
+            <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
