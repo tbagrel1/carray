@@ -43,9 +43,9 @@ def to_macros():
                     lines = [
                         "{} *{}_holder;\n".format(ctype, abtype) +
                         "#define {}(expr)".format(abtype),
-                        "({}_holder = malloc(sizeof({})),"
-                            .format(abtype, ctype),
-                        " *{}_holder = (expr), {}_holder)"
+                        "({}_holder = ({}*)malloc(sizeof({})),"
+                            .format(abtype, ctype, ctype),
+                        " *{}_holder = (expr), (void*)({}_holder))"
                             .format(abtype, abtype)
                     ]
                     macros.append(" \\\n    ".join(lines))

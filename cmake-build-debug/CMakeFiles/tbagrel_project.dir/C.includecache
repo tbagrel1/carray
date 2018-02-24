@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/thomas/OneDrive/tbagrel/dev/cpp/tbagrel_project/_main.c
+stdio.h
+-
+stdlib.h
+-
+carray.h
+/home/thomas/OneDrive/tbagrel/dev/cpp/tbagrel_project/carray.h
+
+/home/thomas/OneDrive/tbagrel/dev/cpp/tbagrel_project/carray.c
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+memory.h
+-
+carray.h
+/home/thomas/OneDrive/tbagrel/dev/cpp/tbagrel_project/carray.h
+
+/home/thomas/OneDrive/tbagrel/dev/cpp/tbagrel_project/carray.h
+stdbool.h
+-
+string.h
+-
+

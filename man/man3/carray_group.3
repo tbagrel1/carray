@@ -1,0 +1,887 @@
+.TH "carray_group" 3 "Mon Sep 25 2017" "Version 0.1.3" "C-Array" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+carray_group \- C-Array class
+.SS "Modules"
+
+.in +1c
+.ti -1c
+.RI "\fBConstants for C\-Array class\fP"
+.br
+.ti -1c
+.RI "\fBImplementation specific constants and aliases\fP"
+.br
+.ti -1c
+.RI "\fBPreprocessor macros\fP"
+.br
+.ti -1c
+.RI "\fBC\-Array core\fP"
+.br
+.ti -1c
+.RI "\fBC\-Array methods\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfatal_error\fP (char message[])"
+.br
+.ti -1c
+.RI "\fBcarray\fP * \fBcarray_new\fP ()"
+.br
+.ti -1c
+.RI "\fBcarray\fP * \fBcarray_new_ISC\fP (size_t init_space)"
+.br
+.ti -1c
+.RI "\fBcarray\fP * \fBcarray_new_CC\fP (\fBcarray\fP *copy_carray)"
+.br
+.ti -1c
+.RI "\fBcarray\fP * \fBcarray_new_CISC\fP (\fBcarray\fP *copy_carray, size_t init_space)"
+.br
+.ti -1c
+.RI "void \fBcarray_free\fP (\fBcarray\fP *c, void(*voidfunc)(type))"
+.br
+.ti -1c
+.RI "size_t \fBcarray_getsize\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "size_t \fBcarray_getspace\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "void \fBcarray_setspace\fP (\fBcarray\fP *c, size_t new_space, void **ok)"
+.br
+.ti -1c
+.RI "void \fBcarray_addspace\fP (\fBcarray\fP *c, void **ok)"
+.br
+.ti -1c
+.RI "void \fBcarray_safeset\fP (\fBcarray\fP *c, int index, type value, void **ok)"
+.br
+.ti -1c
+.RI "void \fBcarray_append\fP (\fBcarray\fP *c, \fBcarray\fP *o, void **ok)"
+.br
+.ti -1c
+.RI "size_t \fBcarray_getreadposition\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "void \fBcarray_setreadposition\fP (\fBcarray\fP *c, int new_read_position, void **ok)"
+.br
+.ti -1c
+.RI "size_t \fBcarray_readingsremaining\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "type * \fBcarray_getarray\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "type \fBcarray_read\fP (\fBcarray\fP *c, void **ok)"
+.br
+.ti -1c
+.RI "void \fBcarray_push\fP (\fBcarray\fP *c, type value)"
+.br
+.ti -1c
+.RI "void \fBcarray_ins\fP (\fBcarray\fP *c, type value)"
+.br
+.ti -1c
+.RI "type \fBcarray_pop\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "void \fBcarray_adjust\fP (\fBcarray\fP *c, void **ok)"
+.br
+.ti -1c
+.RI "void \fBcarray_reverse\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "\fBcarray\fP * \fBcarray_reversed_TF\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "\fBcarray\fP * \fBcarray_concat_TF\fP (\fBcarray\fP *a, \fBcarray\fP *b)"
+.br
+.ti -1c
+.RI "hashtype \fBcarray_hashcode\fP (\fBcarray\fP *c, hashtype(*hashfunc)(type))"
+.br
+.ti -1c
+.RI "bool \fBcarray_equal\fP (\fBcarray\fP *a, \fBcarray\fP *b, bool(*eqfunc)(type, type))"
+.br
+.ti -1c
+.RI "char * \fBcarray_tostring_TF\fP (\fBcarray\fP *c, char *(*strfunc)(type), char *opener, char *closer, char *prefix, char *suffix)"
+.br
+.ti -1c
+.RI "bool \fBcarray_isempty\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "bool \fBcarray_contains\fP (\fBcarray\fP *c, type test_element, bool(*eqfunc)(type, type))"
+.br
+.ti -1c
+.RI "type * \fBcarray_toarray_TF\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "bool \fBcarray_remove_elt\fP (\fBcarray\fP *c, type test_element, bool(*eqfunc)(type, type))"
+.br
+.ti -1c
+.RI "void \fBcarray_clear\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "type \fBcarray_get\fP (\fBcarray\fP *c, int index, void **ok)"
+.br
+.ti -1c
+.RI "void \fBcarray_set\fP (\fBcarray\fP *c, int index, type new_value, void **ok)"
+.br
+.ti -1c
+.RI "void \fBcarray_add\fP (\fBcarray\fP *c, int index, type new_value, void **ok)"
+.br
+.ti -1c
+.RI "type \fBcarray_remove\fP (\fBcarray\fP *c, int index, void **ok)"
+.br
+.ti -1c
+.RI "int \fBcarray_indexof\fP (\fBcarray\fP *c, type test_value, bool(*eqfunc)(type, type))"
+.br
+.ti -1c
+.RI "int \fBcarray_lastindexof\fP (\fBcarray\fP *c, type test_value, bool(*eqfunc)(type, type))"
+.br
+.ti -1c
+.RI "\fBcarray\fP * \fBcarray_subcarray_TF\fP (\fBcarray\fP *c, int from_index, int to_index, void **ok)"
+.br
+.ti -1c
+.RI "\fBcarray\fP * \fBcarray_subcarraystep_TF\fP (\fBcarray\fP *c, int from_index, int to_index, int step, void **ok)"
+.br
+.ti -1c
+.RI "type * \fBcarray_subarray_TF\fP (\fBcarray\fP *c, int from_index, int to_index, void **ok)"
+.br
+.ti -1c
+.RI "type * \fBcarray_subarraystep_TF\fP (\fBcarray\fP *c, int from_index, int to_index, int step, void **ok)"
+.br
+.ti -1c
+.RI "void \fBcarray_free_obj\fP (type val)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Function Documentation"
+.PP 
+.SS "void carray_add (\fBcarray\fP * c, int index, type new_value, void ** ok)"
+Adds the specified element at the specified index in the carray\&. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold NULL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIindex\fP index where to insert the specified element\&. The element will be inserted at this exact position, and subsequent elements will be shifted\&. 
+.br
+\fInew_value\fP element to insert at the specified index 
+.br
+\fIok\fP validation flag 
+.RE
+.PP
+
+.PP
+Definition at line 725 of file carray\&.c\&.
+.SS "void carray_addspace (\fBcarray\fP * c, void ** ok)"
+Increases space allowed for the internal representation of the carray\&. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold NULL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIok\fP validation flag 
+.RE
+.PP
+
+.PP
+Definition at line 189 of file carray\&.c\&.
+.SS "void carray_adjust (\fBcarray\fP * c, void ** ok)"
+Enventually shrinks the size of the internal representation of the carray if free space exceed the threshold\&. ok will hold the carray address if a shrinking was made, and NULL otherwise\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIok\fP validation flag 
+.RE
+.PP
+
+.PP
+Definition at line 386 of file carray\&.c\&.
+.SS "void carray_append (\fBcarray\fP * c, \fBcarray\fP * o, void ** ok)"
+Append the second specified carray at the end of the first one\&. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold NULL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIo\fP the carray to put at the end of the first one 
+.br
+\fIok\fP validation flag 
+.RE
+.PP
+
+.PP
+Definition at line 251 of file carray\&.c\&.
+.SS "void carray_clear (\fBcarray\fP * c)"
+Clears the content of the carray\&. Be careful, this function DOESN'T free the space allowed for the internal representation of the carray\&. Use carray_adjust for that\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.RE
+.PP
+
+.PP
+Definition at line 652 of file carray\&.c\&.
+.SS "\fBcarray\fP* carray_concat_TF (\fBcarray\fP * a, \fBcarray\fP * b)"
+Concatenates both specified carrays into a new one which must be freed after use\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP the first carray to concatenate 
+.br
+\fIb\fP the second carray to concatenate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a concatenated version of carrays a and b 
+.RE
+.PP
+
+.PP
+Definition at line 438 of file carray\&.c\&.
+.SS "bool carray_contains (\fBcarray\fP * c, type test_element, bool(*)(type, type) eqfunc)"
+Tests if the carray contains the test_element according to the specified equality function 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fItest_element\fP the element to be compared to the carray elements 
+.br
+\fIeqfunc\fP the function to test equality between elements 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the specified element is inside the carray, and false otherwise 
+.RE
+.PP
+
+.PP
+Definition at line 598 of file carray\&.c\&.
+.SS "bool carray_equal (\fBcarray\fP * a, \fBcarray\fP * b, bool(*)(type, type) eqfunc)"
+Returns true if both carrays are equal and false otherwise, according to the specified elements equality function\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP the first carray to test 
+.br
+\fIb\fP the second carray to test 
+.br
+\fIeqfunc\fP equality function to apply on two elements 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if both carrays are equal, false otherwise 
+.RE
+.PP
+
+.PP
+Definition at line 473 of file carray\&.c\&.
+.SS "void carray_free (\fBcarray\fP * c, void(*)(type) voidfunc)"
+Destructor for carray\&. Frees the carray internal array representation and the carray itself\&. If voidfunc is not NULL, applies this function to each element of the carray before freeing the whole struct\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIvoidfunc\fP a function to be applied on each element of the carray to free it; can be NULL 
+.RE
+.PP
+
+.PP
+Definition at line 120 of file carray\&.c\&.
+.SS "void carray_free_obj (type val)"
+Frees the specified primitive-wrapped element\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIval\fP primitive-wrapped element to free 
+.RE
+.PP
+
+.PP
+Definition at line 1077 of file carray\&.c\&.
+.SS "type carray_get (\fBcarray\fP * c, int index, void ** ok)"
+Gets the element at the specified index in the carray\&. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold NULL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIindex\fP index where element will be retrieved 
+.br
+\fIok\fP validation flag 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the element at the specified index if index is correct; default type value otherwise 
+.RE
+.PP
+
+.PP
+Definition at line 667 of file carray\&.c\&.
+.SS "type* carray_getarray (\fBcarray\fP * c)"
+Internal array getter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the internal representation of the carray 
+.RE
+.PP
+
+.PP
+Definition at line 320 of file carray\&.c\&.
+.SS "size_t carray_getreadposition (\fBcarray\fP * c)"
+Read position getter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the current read position 
+.RE
+.PP
+
+.PP
+Definition at line 276 of file carray\&.c\&.
+.SS "size_t carray_getsize (\fBcarray\fP * c)"
+Size getter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the size of the carray 
+.RE
+.PP
+
+.PP
+Definition at line 138 of file carray\&.c\&.
+.SS "size_t carray_getspace (\fBcarray\fP * c)"
+Space getter\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the space (in nb of elements) of the carray 
+.RE
+.PP
+
+.PP
+Definition at line 148 of file carray\&.c\&.
+.SS "hashtype carray_hashcode (\fBcarray\fP * c, hashtype(*)(type) hashfunc)"
+Returns the hashcode of the carray according to the specified elements hash code function\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIhashfunc\fP hashcode function to apply on each element of the carray 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the hashcode of the carray 
+.RE
+.PP
+
+.PP
+Definition at line 455 of file carray\&.c\&.
+.SS "int carray_indexof (\fBcarray\fP * c, type test_value, bool(*)(type, type) eqfunc)"
+Returns the index of the specified element in the carray, and -1 if this element wasn't found\&. The carray is read left to right and this function returns the index of the first occurence met\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fItest_value\fP the element to find in the carray 
+.br
+\fIeqfunc\fP the function to test equality between elements 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the index of the specified element if this one was found, -1 otherwise 
+.RE
+.PP
+
+.PP
+Definition at line 813 of file carray\&.c\&.
+.SS "void carray_ins (\fBcarray\fP * c, type value)"
+Inserts the specified value at the beginning of the carray\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIvalue\fP the element to insert at the end of the carray 
+.RE
+.PP
+
+.PP
+Definition at line 362 of file carray\&.c\&.
+.SS "bool carray_isempty (\fBcarray\fP * c)"
+Returns true if the carray is empty, false otherwise 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the carray is empty, false otherwise 
+.RE
+.PP
+
+.PP
+Definition at line 584 of file carray\&.c\&.
+.SS "int carray_lastindexof (\fBcarray\fP * c, type test_value, bool(*)(type, type) eqfunc)"
+Returns the index of the specified element in the carray, and -1 if this element wasn't found\&. The carray is read right to left and this function returns the index of the first occurence met\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fItest_value\fP the element to find in the carray 
+.br
+\fIeqfunc\fP the function to test equality between elements 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the index of the specified element if this one was found, -1 otherwise 
+.RE
+.PP
+
+.PP
+Definition at line 838 of file carray\&.c\&.
+.SS "\fBcarray\fP* carray_new ()"
+Constructor for carray\&. Returns a pointer to the created carray which must be freed after use\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+a pointer to the created carray 
+.RE
+.PP
+
+.PP
+Definition at line 37 of file carray\&.c\&.
+.SS "\fBcarray\fP* carray_new_CC (\fBcarray\fP * copy_carray)"
+Copy constructor for carray\&. The created carray is the exact copy of the specified one with a bit more space than the length of the specified one\&. Returns a pointer to the created carray which must be freed after use\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcopy_carray\fP the carray to be copied 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a pointer to the created carray 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file carray\&.c\&.
+.SS "\fBcarray\fP* carray_new_CISC (\fBcarray\fP * copy_carray, size_t init_space)"
+Copy constructor for carray with init_space specified\&. This carray have at least init_space slots at instanciation, and hold the exact content of the specified carray\&. Returns a pointer to the created carray which must be freed after use; if init_space is shorter than the length of the carray to be copied, returns NULL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcopy_carray\fP the carray to be copied 
+.br
+\fIinit_space\fP Initial space (number of elements) of the carray 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a pointer to the created carray 
+.RE
+.PP
+
+.PP
+Definition at line 97 of file carray\&.c\&.
+.SS "\fBcarray\fP* carray_new_ISC (size_t init_space)"
+Constructor for carray with specified init_space\&. This carray have at least init_space slots at instanciation\&. Returns a pointer to the created carray which must be freed after use; if init_space is not valid, returns NULL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinit_space\fP Initial space (number of elements) of the carray 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a pointer to the created carray 
+.RE
+.PP
+
+.PP
+Definition at line 55 of file carray\&.c\&.
+.SS "type carray_pop (\fBcarray\fP * c)"
+Removes the last element of the carray and returns it\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the last element of the carray 
+.RE
+.PP
+
+.PP
+Definition at line 373 of file carray\&.c\&.
+.SS "void carray_push (\fBcarray\fP * c, type value)"
+Pushes the specified value at the end of the carray\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIvalue\fP the element to push at the end of the carray 
+.RE
+.PP
+
+.PP
+Definition at line 351 of file carray\&.c\&.
+.SS "type carray_read (\fBcarray\fP * c, void ** ok)"
+Read method\&. Returns elt at the current read position and increases read position by 1\&. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold NULL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIok\fP validation flag 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the element at the current read position; default type value if there's no element to be read 
+.RE
+.PP
+
+.PP
+Definition at line 335 of file carray\&.c\&.
+.SS "size_t carray_readingsremaining (\fBcarray\fP * c)"
+Gets the number of read operation remaining before reaching the end of the carray\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of read possible before the end of the carray 
+.RE
+.PP
+
+.PP
+Definition at line 310 of file carray\&.c\&.
+.SS "type carray_remove (\fBcarray\fP * c, int index, void ** ok)"
+Removes the element at the specified index and returns it\&. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold NULL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIindex\fP index where element will be removed\&. The element will be removed at this exact position, and subsequent elements will be shifted\&. 
+.br
+\fIok\fP validation flag 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the element which have been removed if the index is correct, default type value otherwise\&. 
+.RE
+.PP
+
+.PP
+Definition at line 778 of file carray\&.c\&.
+.SS "bool carray_remove_elt (\fBcarray\fP * c, type test_element, bool(*)(type, type) eqfunc)"
+Removes the specified element from the carray if and only if this one is present\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fItest_element\fP element to be removed if present 
+.br
+\fIeqfunc\fP the function to test equality between elements 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the specified element was in the carray and thus was removed, false if nothing was made\&. 
+.RE
+.PP
+
+.PP
+Definition at line 634 of file carray\&.c\&.
+.SS "void carray_reverse (\fBcarray\fP * c)"
+Reverses the specified carray in-place\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.RE
+.PP
+
+.PP
+Definition at line 402 of file carray\&.c\&.
+.SS "\fBcarray\fP* carray_reversed_TF (\fBcarray\fP * c)"
+Returns a reversed copy of the specified carray which must be freed after use\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a reversed copy of the specified carray 
+.RE
+.PP
+
+.PP
+Definition at line 419 of file carray\&.c\&.
+.SS "void carray_safeset (\fBcarray\fP * c, int index, type value, void ** ok)"
+Used to set an element somewhere in the carray even if this cell is not already used by the carray, for example, to set carray[8] with a length-4 carray\&. Unused cells until the specified one are set with the default type value\&. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold NULL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIindex\fP index where to put the specified value; can be larger than the carray size 
+.br
+\fIvalue\fP value to be put at the specified index 
+.br
+\fIok\fP validation flag 
+.RE
+.PP
+
+.PP
+Definition at line 207 of file carray\&.c\&.
+.SS "void carray_set (\fBcarray\fP * c, int index, type new_value, void ** ok)"
+Sets the element at the specified index in the carray to the specified value\&. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold NULL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIindex\fP index where element will be set 
+.br
+\fInew_value\fP new value for this element 
+.br
+\fIok\fP validation flag 
+.RE
+.PP
+
+.PP
+Definition at line 697 of file carray\&.c\&.
+.SS "void carray_setreadposition (\fBcarray\fP * c, int new_read_position, void ** ok)"
+Read position setter\&. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold NULL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fInew_read_position\fP new read position 
+.br
+\fIok\fP validation flag 
+.RE
+.PP
+
+.PP
+Definition at line 289 of file carray\&.c\&.
+.SS "void carray_setspace (\fBcarray\fP * c, size_t new_space, void ** ok)"
+Space setter\&. Can be used to modify the space allowed for the internal representation of the carray\&. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold NULL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fInew_space\fP new space (in nb of elements) for the carray 
+.br
+\fIvalidation\fP flag 
+.RE
+.PP
+
+.PP
+Definition at line 162 of file carray\&.c\&.
+.SS "type* carray_subarray_TF (\fBcarray\fP * c, int from_index, int to_index, void ** ok)"
+Returns a smaller vanilla array which holds values from index 'from_index' (included) to index 'to_index' (excluded)\&. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold NULL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIfrom_index\fP beginning index 
+.br
+\fIto_index\fP ending index 
+.br
+\fIok\fP validation flag 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the sub-vanilla array if the indices are correct, NULL otherwise 
+.RE
+.PP
+
+.PP
+Definition at line 977 of file carray\&.c\&.
+.SS "type* carray_subarraystep_TF (\fBcarray\fP * c, int from_index, int to_index, int step, void ** ok)"
+Returns a smaller vanilla array which holds values from index 'from_index' (included) to index 'to_index' (excluded) according to the specified step\&. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold NULL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIfrom_index\fP beginning index 
+.br
+\fIto_index\fP ending index 
+.br
+\fIstep\fP item selecting step 
+.br
+\fIok\fP validation flag 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the sub-vanilla array if the indices are correct, NULL otherwise 
+.RE
+.PP
+
+.PP
+Definition at line 1019 of file carray\&.c\&.
+.SS "\fBcarray\fP* carray_subcarray_TF (\fBcarray\fP * c, int from_index, int to_index, void ** ok)"
+Returns a smaller carray which holds values from index 'from_index' (included) to index 'to_index' (excluded)\&. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold NULL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIfrom_index\fP beginning index 
+.br
+\fIto_index\fP ending index 
+.br
+\fIok\fP validation flag 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the sub-carray if the indices are correct, NULL otherwise 
+.RE
+.PP
+
+.PP
+Definition at line 864 of file carray\&.c\&.
+.SS "\fBcarray\fP* carray_subcarraystep_TF (\fBcarray\fP * c, int from_index, int to_index, int step, void ** ok)"
+Returns a smaller carray which holds values from index 'from_index' (included) to index 'to_index' (excluded) according to the specified step\&. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold NULL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIfrom_index\fP beginning index 
+.br
+\fIto_index\fP ending index 
+.br
+\fIstep\fP item selecting step 
+.br
+\fIok\fP validation flag 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the sub-carray if the indices are correct, NULL otherwise 
+.RE
+.PP
+
+.PP
+Definition at line 908 of file carray\&.c\&.
+.SS "type* carray_toarray_TF (\fBcarray\fP * c)"
+Returns a vanilla array version of the carray\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a vanilla array version of the carray 
+.RE
+.PP
+
+.PP
+Definition at line 618 of file carray\&.c\&.
+.SS "char* carray_tostring_TF (\fBcarray\fP * c, char *(*)(type) strfunc, char * opener, char * closer, char * prefix, char * suffix)"
+Returns a representation of the specified carray\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP the carray 
+.br
+\fIstrfunc\fP the function to apply on each element to convert it into string 
+.br
+\fIopener\fP opening string 
+.br
+\fIcloser\fP closing string 
+.br
+\fIprefix\fP prefix string added before each cell except for the first one 
+.br
+\fIsuffix\fP suffix string added after each cell except for the lats one 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a string representing the carray 
+.RE
+.PP
+
+.PP
+Definition at line 500 of file carray\&.c\&.
+.SS "void fatal_error (char message[])"
+Prints an error message 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP message to print 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file carray\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for C-Array from the source code\&.

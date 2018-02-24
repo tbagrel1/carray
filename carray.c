@@ -36,11 +36,11 @@ void fatal_error(char message[])
  */
 carray *carray_new()
 {
-    carray *c = malloc(sizeof(carray));
+    carray *c = (carray*)malloc(sizeof(carray));
     c->_space = DEFAULT_SPACE_INIT_FLAT;
     c->_size = 0;
     c->_read_position = 0;
-    c->_array = malloc(c->_space * sizeof(type));
+    c->_array = (type*)malloc(c->_space * sizeof(type));
     return c;
 }
 
@@ -54,15 +54,16 @@ carray *carray_new()
  */
 carray *carray_new_ISC(size_t init_space)
 {
-    if (init_space < 0)
+    /* Even if size_t should be positive... */
+    if (init_space <= 0)
     {
         return NULL;
     }
-    carray *c = malloc(sizeof(carray));
+    carray *c = (carray*)malloc(sizeof(carray));
     c->_space = init_space;
     c->_size = 0;
     c->_read_position = 0;
-    c->_array = malloc(c->_space * sizeof(type));
+    c->_array = (type*)malloc(c->_space * sizeof(type));
     return c;
 }
 
@@ -75,12 +76,20 @@ carray *carray_new_ISC(size_t init_space)
  */
 carray *carray_new_CC(carray *copy_carray)
 {
-    carray *c = malloc(sizeof(carray));
+    if (copy_carray == NULL)
+    {
+        return NULL;
+    }
+    carray *c = (carray*)malloc(sizeof(carray));
     c->_space = (size_t) (copy_carray->_size * DEFAULT_SPACE_INIT_PERCENT);
     c->_size = copy_carray->_size;
     c->_read_position = 0;
-    c->_array = malloc(c->_space * sizeof(type));
-    memcpy(c->_array, copy_carray->_array, c->_size);
+    c->_array = (type*)malloc(c->_space * sizeof(type));
+    /* memcpy(c->_array, copy_carray->_array, c->_size * sizeof(type)); */
+    for (size_t i = 0; i < c->_size; ++i)
+    {
+        c->_array[i] = copy_carray->_array[i];
+    }
     return c;
 }
 
@@ -96,16 +105,20 @@ carray *carray_new_CC(carray *copy_carray)
  */
 carray *carray_new_CISC(carray *copy_carray, size_t init_space)
 {
-    if (init_space < 0 || init_space < copy_carray->_size)
+    if (copy_carray == NULL)
     {
         return NULL;
     }
-    carray *c = malloc(sizeof(carray));
+    if (init_space <= 0 || init_space < copy_carray->_size)
+    {
+        return NULL;
+    }
+    carray *c = (carray*)malloc(sizeof(carray));
     c->_space = init_space;
     c->_size = copy_carray->_size;
     c->_read_position = 0;
-    c->_array = malloc(c->_space * sizeof(type));
-    memcpy(c->_array, copy_carray->_array, c->_size);
+    c->_array = (type*)malloc(c->_space * sizeof(type));
+    memcpy(c->_array, copy_carray->_array, c->_size * sizeof(type));
     return c;
 }
 
@@ -119,6 +132,10 @@ carray *carray_new_CISC(carray *copy_carray, size_t init_space)
  */
 void carray_free(carray *c, void(*voidfunc)(type))
 {
+    if (c == NULL)
+    {
+        return;
+    }
     if (voidfunc != NULL)
     {
         for (size_t i = 0; i < c->_size; ++i)
@@ -137,6 +154,10 @@ void carray_free(carray *c, void(*voidfunc)(type))
  */
 size_t carray_getsize(carray *c)
 {
+    if (c == NULL)
+    {
+        return 0;
+    }
     return c->_size;
 }
 
@@ -147,6 +168,10 @@ size_t carray_getsize(carray *c)
  */
 size_t carray_getspace(carray *c)
 {
+    if (c == NULL)
+    {
+        return 0;
+    }
     return c->_space;
 }
 
@@ -161,12 +186,17 @@ size_t carray_getspace(carray *c)
  */
 void carray_setspace(carray *c, size_t new_space, void **ok)
 {
-    if (new_space < 0 || new_space < c->_size)
+    if (c == NULL)
     {
         *ok = NULL;
         return;
     }
-    type *temp_carray = realloc(c->_array, new_space);
+    if (new_space <= 0 || new_space < c->_size)
+    {
+        *ok = NULL;
+        return;
+    }
+    type *temp_carray = realloc(c->_array, new_space * sizeof(type));
     /* Should never happen */
     if (temp_carray == NULL)
     {
@@ -188,6 +218,11 @@ void carray_setspace(carray *c, size_t new_space, void **ok)
  */
 void carray_addspace(carray *c, void **ok)
 {
+    if (c == NULL)
+    {
+        *ok = NULL;
+        return;
+    }
     carray_setspace(c, (size_t) (c->_space * DEFAULT_SPACE_INCR + 1), ok);
 }
 
@@ -206,6 +241,10 @@ void carray_addspace(carray *c, void **ok)
  */
 void carray_safeset(carray *c, int index, type value, void **ok)
 {
+    if (c == NULL)
+    {
+        return;
+    }
     if (index < 0)
     {
         index = (int) (c->_size + index);
@@ -250,10 +289,15 @@ void carray_safeset(carray *c, int index, type value, void **ok)
  */
 void carray_append(carray *c, carray *o, void **ok)
 {
+    if (c == NULL || o == NULL)
+    {
+        return;
+    }
     if (c->_size + o->_size <= c->_space)
     {
         *ok = c;
-        memcpy(c->_array + c->_size, o->_array, o->_size);
+        memcpy(c->_array + c->_size, o->_array, o->_size * sizeof(type));
+        c->_size += o->_size;
     }
     else
     {
@@ -275,6 +319,10 @@ void carray_append(carray *c, carray *o, void **ok)
  */
 size_t carray_getreadposition(carray *c)
 {
+    if (c == NULL)
+    {
+        return 0;
+    }
     return c->_read_position;
 }
 
@@ -288,6 +336,11 @@ size_t carray_getreadposition(carray *c)
  */
 void carray_setreadposition(carray *c, int new_read_position, void **ok)
 {
+    if (c == NULL)
+    {
+        *ok = NULL;
+        return;
+    }
     if (new_read_position < 0)
     {
         new_read_position = (int) (c->_size + new_read_position);
@@ -309,6 +362,10 @@ void carray_setreadposition(carray *c, int new_read_position, void **ok)
  */
 size_t carray_readingsremaining(carray *c)
 {
+    if (c == NULL)
+    {
+        return 0;
+    }
     return c->_size - c->_read_position;
 }
 
@@ -319,6 +376,10 @@ size_t carray_readingsremaining(carray *c)
  */
 type *carray_getarray(carray *c)
 {
+    if (c == NULL)
+    {
+        return NULL;
+    }
     return c->_array;
 }
 
@@ -334,6 +395,11 @@ type *carray_getarray(carray *c)
  */
 type carray_read(carray *c, void **ok)
 {
+    if (c == NULL)
+    {
+        *ok = NULL;
+        return DEFAULT_TYPE_VALUE;
+    }
     if (carray_readingsremaining(c) == 0)
     {
         *ok = NULL;
@@ -350,6 +416,10 @@ type carray_read(carray *c, void **ok)
  */
 void carray_push(carray *c, type value)
 {
+    if (c == NULL)
+    {
+        return;
+    }
     void *ok = NULL;
     carray_add(c, (int) c->_size, value, &ok);
 }
@@ -361,6 +431,10 @@ void carray_push(carray *c, type value)
  */
 void carray_ins(carray *c, type value)
 {
+    if (c == NULL)
+    {
+        return;
+    }
     void *ok = NULL;
     carray_add(c, 0, value, &ok);
 }
@@ -372,6 +446,10 @@ void carray_ins(carray *c, type value)
  */
 type carray_pop(carray *c)
 {
+    if (c == NULL)
+    {
+        return DEFAULT_TYPE_VALUE;
+    }
     void *ok = NULL;
     return carray_remove(c, (int) (c->_size - 1), ok);
 }
@@ -385,6 +463,11 @@ type carray_pop(carray *c)
  */
 void carray_adjust(carray *c, void **ok)
 {
+    if (c == NULL)
+    {
+        *ok = NULL;
+        return;
+    }
     if ((double) (c->_space) / (double) (c->_size) > DEFAULT_SHRINK_THRESHOLD)
     {
         carray_setspace(c, (size_t) (c->_size * DEFAULT_SHRINK_PERCENT), ok);
@@ -401,6 +484,10 @@ void carray_adjust(carray *c, void **ok)
  */
 void carray_reverse(carray *c)
 {
+    if (c == NULL)
+    {
+        return;
+    }
     const size_t n = c->_size;
     for (size_t i = 0; i < n / 2; ++i)
     {
@@ -418,6 +505,10 @@ void carray_reverse(carray *c)
  */
 carray *carray_reversed_TF(carray *c)
 {
+    if (c == NULL)
+    {
+        return NULL;
+    }
     const size_t n = c->_size;
     carray *result_array = carray_new_ISC(n);
     result_array->_size = n;
@@ -437,6 +528,10 @@ carray *carray_reversed_TF(carray *c)
  */
 carray *carray_concat_TF(carray *a, carray *b)
 {
+    if (a == NULL || b == NULL)
+    {
+        return NULL;
+    }
     carray *c = carray_new_CISC(
         a, (size_t) (DEFAULT_SPACE_INIT_PERCENT * (a->_size + b->_size)));
     /* TEMP */
@@ -454,6 +549,10 @@ carray *carray_concat_TF(carray *a, carray *b)
  */
 hashtype carray_hashcode(carray *c, hashtype(*hashfunc)(type))
 {
+    if (c == NULL || hashfunc == NULL)
+    {
+        return DEFAULT_HASHTYPE_VALUE;
+    }
     hashtype result_hash = 0;
     for (size_t i = 0; i < c->_size; ++i)
     {
@@ -525,7 +624,7 @@ char *carray_tostring_TF(
     {
         ++suffix_size;
     }
-    char **parts = malloc(sizeof(char *) * c->_size);
+    char **parts = (char**)malloc(sizeof(char *) * c->_size);
     size_t total_size = 1;
     size_t individual_size;
     for (size_t i = 0; i < c->_size; ++i)
@@ -617,8 +716,8 @@ bool carray_contains(carray *c, type test_element, bool(*eqfunc)(type, type))
  */
 type *carray_toarray_TF(carray *c)
 {
-    type *result = malloc(sizeof(type) * c->_size);
-    memcpy(result, c->_array, c->_size);
+    type *result = (type*)malloc(sizeof(type) * c->_size);
+    memcpy(result, c->_array, c->_size * sizeof(type));
     return result;
 }
 
@@ -724,6 +823,11 @@ void carray_set(carray *c, int index, type new_value, void **ok)
  */
 void carray_add(carray *c, int index, type new_value, void **ok)
 {
+    if (c == NULL)
+    {
+        *ok = NULL;
+        return;
+    }
     if (index < 0)
     {
         index += c->_size;
@@ -731,35 +835,33 @@ void carray_add(carray *c, int index, type new_value, void **ok)
     if (index < 0 || index > c->_size)
     {
         *ok = NULL;
+        return;
+    }
+    if (c->_size < c->_space)
+    {
+        if (c->_read_position > index)
+        {
+            c->_read_position = 0;
+        }
+        c->_array[c->_size] = DEFAULT_TYPE_VALUE;
+        type next_value = c->_array[index];
+        type temp;
+        for (size_t i = (size_t) index; i < c->_size; ++i)
+        {
+            temp = c->_array[i + 1];
+            c->_array[i + 1] = next_value;
+            next_value = temp;
+        }
+        c->_array[index] = new_value;
+        ++c->_size;
+        *ok = c;
     }
     else
     {
-        if (c->_size < c->_space)
+        carray_addspace(c, ok);
+        if (*ok != NULL)
         {
-            if (c->_read_position > index)
-            {
-                c->_read_position = 0;
-            }
-            c->_array[c->_size] = DEFAULT_TYPE_VALUE;
-            type next_value = c->_array[index];
-            type temp;
-            for (size_t i = (size_t) index; i < c->_size; ++i)
-            {
-                temp = c->_array[i + 1];
-                c->_array[i + 1] = next_value;
-                next_value = temp;
-            }
-            c->_array[index] = new_value;
-            ++c->_size;
-            *ok = c;
-        }
-        else
-        {
-            carray_addspace(c, ok);
-            if (*ok != NULL)
-            {
-                carray_add(c, index, new_value, ok);
-            }
+            carray_add(c, index, new_value, ok);
         }
     }
 }
@@ -887,7 +989,8 @@ carray *carray_subcarray_TF(carray *c, int from_index, int to_index, void **ok)
         size_t new_size = (size_t) (to_index - from_index);
         result = carray_new_ISC((size_t) (
             DEFAULT_SPACE_INIT_PERCENT * new_size));
-        memcpy(result->_array, c->_array + from_index, new_size);
+        memcpy(result->_array, c->_array + from_index, new_size * sizeof
+                                                                      (type));
         result->_size = new_size;
     }
     return result;
@@ -998,8 +1101,8 @@ type *carray_subarray_TF(carray *c, int from_index, int to_index, void **ok)
     {
         *ok = c;
         size_t new_size = (size_t) (to_index - from_index);
-        result = malloc(sizeof(type) * new_size);
-        memcpy(result, c->_array + from_index, new_size);
+        result = (type*)malloc(sizeof(type) * new_size);
+        memcpy(result, c->_array + from_index, new_size * sizeof(type));
     }
     return result;
 }
@@ -1034,7 +1137,7 @@ type *carray_subarraystep_TF(
         else
         {
             size_t new_size = ((to_index - from_index) / step) + 1;
-            result = malloc(sizeof(type) * new_size);
+            result = (type*)malloc(sizeof(type) * new_size);
             for (size_t i = 0; i < new_size; ++i)
             {
                 result[i] = c->_array[from_index + i * step];
@@ -1055,7 +1158,7 @@ type *carray_subarraystep_TF(
         else
         {
             size_t new_size = ((from_index - to_index) / step) + 1;
-            result = malloc(sizeof(type) * new_size);
+            result = (type*)malloc(sizeof(type) * new_size);
             for (size_t i = 0; i < new_size; ++i)
             {
                 result[i] = c->_array[from_index + i * step];

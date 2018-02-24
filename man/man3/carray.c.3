@@ -1,0 +1,163 @@
+.TH "carray.c" 3 "Mon Sep 25 2017" "Version 0.1.3" "C-Array" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+carray.c \- Implementation of the carray class\&. Contains all the function implementations and documentation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include <memory\&.h>\fP
+.br
+\fC#include 'carray\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfatal_error\fP (char message[])"
+.br
+.ti -1c
+.RI "\fBcarray\fP * \fBcarray_new\fP ()"
+.br
+.ti -1c
+.RI "\fBcarray\fP * \fBcarray_new_ISC\fP (size_t init_space)"
+.br
+.ti -1c
+.RI "\fBcarray\fP * \fBcarray_new_CC\fP (\fBcarray\fP *copy_carray)"
+.br
+.ti -1c
+.RI "\fBcarray\fP * \fBcarray_new_CISC\fP (\fBcarray\fP *copy_carray, size_t init_space)"
+.br
+.ti -1c
+.RI "void \fBcarray_free\fP (\fBcarray\fP *c, void(*voidfunc)(type))"
+.br
+.ti -1c
+.RI "size_t \fBcarray_getsize\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "size_t \fBcarray_getspace\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "void \fBcarray_setspace\fP (\fBcarray\fP *c, size_t new_space, void **ok)"
+.br
+.ti -1c
+.RI "void \fBcarray_addspace\fP (\fBcarray\fP *c, void **ok)"
+.br
+.ti -1c
+.RI "void \fBcarray_safeset\fP (\fBcarray\fP *c, int index, type value, void **ok)"
+.br
+.ti -1c
+.RI "void \fBcarray_append\fP (\fBcarray\fP *c, \fBcarray\fP *o, void **ok)"
+.br
+.ti -1c
+.RI "size_t \fBcarray_getreadposition\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "void \fBcarray_setreadposition\fP (\fBcarray\fP *c, int new_read_position, void **ok)"
+.br
+.ti -1c
+.RI "size_t \fBcarray_readingsremaining\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "type * \fBcarray_getarray\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "type \fBcarray_read\fP (\fBcarray\fP *c, void **ok)"
+.br
+.ti -1c
+.RI "void \fBcarray_push\fP (\fBcarray\fP *c, type value)"
+.br
+.ti -1c
+.RI "void \fBcarray_ins\fP (\fBcarray\fP *c, type value)"
+.br
+.ti -1c
+.RI "type \fBcarray_pop\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "void \fBcarray_adjust\fP (\fBcarray\fP *c, void **ok)"
+.br
+.ti -1c
+.RI "void \fBcarray_reverse\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "\fBcarray\fP * \fBcarray_reversed_TF\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "\fBcarray\fP * \fBcarray_concat_TF\fP (\fBcarray\fP *a, \fBcarray\fP *b)"
+.br
+.ti -1c
+.RI "hashtype \fBcarray_hashcode\fP (\fBcarray\fP *c, hashtype(*hashfunc)(type))"
+.br
+.ti -1c
+.RI "bool \fBcarray_equal\fP (\fBcarray\fP *a, \fBcarray\fP *b, bool(*eqfunc)(type, type))"
+.br
+.ti -1c
+.RI "char * \fBcarray_tostring_TF\fP (\fBcarray\fP *c, char *(*strfunc)(type), char *opener, char *closer, char *prefix, char *suffix)"
+.br
+.ti -1c
+.RI "bool \fBcarray_isempty\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "bool \fBcarray_contains\fP (\fBcarray\fP *c, type test_element, bool(*eqfunc)(type, type))"
+.br
+.ti -1c
+.RI "type * \fBcarray_toarray_TF\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "bool \fBcarray_remove_elt\fP (\fBcarray\fP *c, type test_element, bool(*eqfunc)(type, type))"
+.br
+.ti -1c
+.RI "void \fBcarray_clear\fP (\fBcarray\fP *c)"
+.br
+.ti -1c
+.RI "type \fBcarray_get\fP (\fBcarray\fP *c, int index, void **ok)"
+.br
+.ti -1c
+.RI "void \fBcarray_set\fP (\fBcarray\fP *c, int index, type new_value, void **ok)"
+.br
+.ti -1c
+.RI "void \fBcarray_add\fP (\fBcarray\fP *c, int index, type new_value, void **ok)"
+.br
+.ti -1c
+.RI "type \fBcarray_remove\fP (\fBcarray\fP *c, int index, void **ok)"
+.br
+.ti -1c
+.RI "int \fBcarray_indexof\fP (\fBcarray\fP *c, type test_value, bool(*eqfunc)(type, type))"
+.br
+.ti -1c
+.RI "int \fBcarray_lastindexof\fP (\fBcarray\fP *c, type test_value, bool(*eqfunc)(type, type))"
+.br
+.ti -1c
+.RI "\fBcarray\fP * \fBcarray_subcarray_TF\fP (\fBcarray\fP *c, int from_index, int to_index, void **ok)"
+.br
+.ti -1c
+.RI "\fBcarray\fP * \fBcarray_subcarraystep_TF\fP (\fBcarray\fP *c, int from_index, int to_index, int step, void **ok)"
+.br
+.ti -1c
+.RI "type * \fBcarray_subarray_TF\fP (\fBcarray\fP *c, int from_index, int to_index, void **ok)"
+.br
+.ti -1c
+.RI "type * \fBcarray_subarraystep_TF\fP (\fBcarray\fP *c, int from_index, int to_index, int step, void **ok)"
+.br
+.ti -1c
+.RI "void \fBcarray_free_obj\fP (type val)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of the carray class\&. Contains all the function implementations and documentation\&. 
+
+
+.PP
+Definition in file \fBcarray\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for C-Array from the source code\&.

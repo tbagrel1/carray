@@ -1,0 +1,269 @@
+\section{carray.\+h File Reference}
+\label{carray_8h}\index{carray.\+h@{carray.\+h}}
+
+
+Header of the carray class. Contains all function declarations and preprocessor directives.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+Include dependency graph for carray.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{carray_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{carray_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf carray}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+P\+A\+C\+E\+\_\+\+I\+N\+I\+T\+\_\+\+F\+L\+AT}~8
+\item 
+\#define {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+P\+A\+C\+E\+\_\+\+I\+N\+I\+T\+\_\+\+P\+E\+R\+C\+E\+NT}~1.\+25
+\item 
+\#define {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+P\+A\+C\+E\+\_\+\+I\+N\+CR}~2.\+0
+\item 
+\#define {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}~2.\+5
+\item 
+\#define {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+P\+E\+R\+C\+E\+NT}~1.\+25
+\item 
+\#define {\bfseries P\+R\+I\+M\+E\+\_\+\+C\+ST}~31
+\item 
+\#define {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+A\+L\+UE}~N\+U\+LL
+\item 
+\#define {\bfseries of\+\_\+\+Char}~$\ast$(char$\ast$)
+\item 
+\#define {\bfseries of\+\_\+s\+Char}~$\ast$(signed char$\ast$)
+\item 
+\#define {\bfseries of\+\_\+u\+Char}~$\ast$(unsigned char$\ast$)
+\item 
+\#define {\bfseries of\+\_\+\+Short}~$\ast$(short$\ast$)
+\item 
+\#define {\bfseries of\+\_\+s\+Short}~$\ast$(signed short$\ast$)
+\item 
+\#define {\bfseries of\+\_\+u\+Short}~$\ast$(unsigned short$\ast$)
+\item 
+\#define {\bfseries of\+\_\+\+Int}~$\ast$(int$\ast$)
+\item 
+\#define {\bfseries of\+\_\+s\+Int}~$\ast$(signed int$\ast$)
+\item 
+\#define {\bfseries of\+\_\+u\+Int}~$\ast$(unsigned int$\ast$)
+\item 
+\#define {\bfseries of\+\_\+\+Long}~$\ast$(long$\ast$)
+\item 
+\#define {\bfseries of\+\_\+l\+Long}~$\ast$(long long$\ast$)
+\item 
+\#define {\bfseries of\+\_\+s\+Long}~$\ast$(signed long$\ast$)
+\item 
+\#define {\bfseries of\+\_\+sl\+Long}~$\ast$(signed long long$\ast$)
+\item 
+\#define {\bfseries of\+\_\+u\+Long}~$\ast$(unsigned long$\ast$)
+\item 
+\#define {\bfseries of\+\_\+ul\+Long}~$\ast$(unsigned long long$\ast$)
+\item 
+\#define {\bfseries of\+\_\+\+Float}~$\ast$(float$\ast$)
+\item 
+\#define {\bfseries of\+\_\+\+Double}~$\ast$(double$\ast$)
+\item 
+\#define {\bfseries of\+\_\+l\+Double}~$\ast$(long double$\ast$)
+\item 
+\#define {\bfseries of\+\_\+\+Bool}~$\ast$(bool$\ast$)
+\item 
+\#define {\bfseries of\+\_\+\+String}~(char$\ast$)
+\item 
+\#define {\bfseries Char}(expr)
+\item 
+\#define {\bfseries s\+Char}(expr)
+\item 
+\#define {\bfseries u\+Char}(expr)
+\item 
+\#define {\bfseries Short}(expr)
+\item 
+\#define {\bfseries s\+Short}(expr)
+\item 
+\#define {\bfseries u\+Short}(expr)
+\item 
+\#define {\bfseries Int}(expr)
+\item 
+\#define {\bfseries s\+Int}(expr)
+\item 
+\#define {\bfseries u\+Int}(expr)
+\item 
+\#define {\bfseries Long}(expr)
+\item 
+\#define {\bfseries l\+Long}(expr)
+\item 
+\#define {\bfseries s\+Long}(expr)
+\item 
+\#define {\bfseries sl\+Long}(expr)
+\item 
+\#define {\bfseries u\+Long}(expr)
+\item 
+\#define {\bfseries ul\+Long}(expr)
+\item 
+\#define {\bfseries Float}(expr)
+\item 
+\#define {\bfseries Double}(expr)
+\item 
+\#define {\bfseries l\+Double}(expr)
+\item 
+\#define {\bfseries Bool}(expr)
+\item 
+\#define {\bfseries String}(expr)
+\item 
+\#define {\bfseries free\+\_\+\+Obj}~\&{\bf carray\+\_\+free\+\_\+obj}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct {\bf carray} {\bf carray}
+\item 
+typedef unsigned int {\bfseries hashtype}
+\item 
+typedef void $\ast$ {\bfseries type}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf carray\+\_\+free\+\_\+obj} (type)
+\item 
+{\bf carray} $\ast$ {\bf carray\+\_\+new} ()
+\item 
+{\bf carray} $\ast$ {\bf carray\+\_\+new\+\_\+\+I\+SC} (size\+\_\+t)
+\item 
+{\bf carray} $\ast$ {\bf carray\+\_\+new\+\_\+\+CC} ({\bf carray} $\ast$)
+\item 
+{\bf carray} $\ast$ {\bf carray\+\_\+new\+\_\+\+C\+I\+SC} ({\bf carray} $\ast$, size\+\_\+t)
+\item 
+void {\bfseries carray\+\_\+free} ({\bf carray} $\ast$, void(type))
+\item 
+size\+\_\+t {\bf carray\+\_\+getsize} ({\bf carray} $\ast$)
+\item 
+void {\bf carray\+\_\+clear} ({\bf carray} $\ast$)
+\item 
+bool {\bf carray\+\_\+isempty} ({\bf carray} $\ast$)
+\item 
+size\+\_\+t {\bf carray\+\_\+getspace} ({\bf carray} $\ast$)
+\item 
+void {\bf carray\+\_\+setspace} ({\bf carray} $\ast$, size\+\_\+t, void $\ast$$\ast$)
+\item 
+void {\bf carray\+\_\+adjust} ({\bf carray} $\ast$, void $\ast$$\ast$)
+\item 
+size\+\_\+t {\bf carray\+\_\+getreadposition} ({\bf carray} $\ast$)
+\item 
+size\+\_\+t {\bf carray\+\_\+readingsremaining} ({\bf carray} $\ast$)
+\item 
+void {\bf carray\+\_\+setreadposition} ({\bf carray} $\ast$, int, void $\ast$$\ast$)
+\item 
+type $\ast$ {\bf carray\+\_\+getarray} ({\bf carray} $\ast$)
+\item 
+type {\bf carray\+\_\+read} ({\bf carray} $\ast$, void $\ast$$\ast$ok)
+\item 
+void {\bf carray\+\_\+reverse} ({\bf carray} $\ast$)
+\item 
+{\bf carray} $\ast$ {\bf carray\+\_\+reversed\+\_\+\+TF} ({\bf carray} $\ast$)
+\item 
+void {\bf carray\+\_\+append} ({\bf carray} $\ast$, {\bf carray} $\ast$, void $\ast$$\ast$)
+\item 
+{\bf carray} $\ast$ {\bf carray\+\_\+concat\+\_\+\+TF} ({\bf carray} $\ast$, {\bf carray} $\ast$)
+\item 
+char $\ast$ {\bfseries carray\+\_\+tostring\+\_\+\+TF} ({\bf carray} $\ast$, char $\ast$(type), char $\ast$, char $\ast$, char $\ast$, char $\ast$)
+\item 
+hashtype {\bfseries carray\+\_\+hashcode} ({\bf carray} $\ast$, hashtype(type))
+\item 
+bool {\bfseries carray\+\_\+equal} ({\bf carray} $\ast$, {\bf carray} $\ast$, bool(type, type))
+\item 
+int {\bfseries carray\+\_\+indexof} ({\bf carray} $\ast$, type, bool(type, type))
+\item 
+int {\bfseries carray\+\_\+lastindexof} ({\bf carray} $\ast$, type, bool(type, type))
+\item 
+bool {\bfseries carray\+\_\+contains} ({\bf carray} $\ast$, type, bool(type, type))
+\item 
+{\bf carray} $\ast$ {\bf carray\+\_\+subcarray\+\_\+\+TF} ({\bf carray} $\ast$, int, int, void $\ast$$\ast$)
+\item 
+{\bf carray} $\ast$ {\bf carray\+\_\+subcarraystep\+\_\+\+TF} ({\bf carray} $\ast$, int, int, int, void $\ast$$\ast$)
+\item 
+type $\ast$ {\bf carray\+\_\+subarray\+\_\+\+TF} ({\bf carray} $\ast$, int, int, void $\ast$$\ast$)
+\item 
+type $\ast$ {\bf carray\+\_\+subarraystep\+\_\+\+TF} ({\bf carray} $\ast$, int, int, int, void $\ast$$\ast$)
+\item 
+type $\ast$ {\bf carray\+\_\+toarray\+\_\+\+TF} ({\bf carray} $\ast$)
+\item 
+type {\bf carray\+\_\+get} ({\bf carray} $\ast$, int, void $\ast$$\ast$)
+\item 
+void {\bf carray\+\_\+add} ({\bf carray} $\ast$, int, type, void $\ast$$\ast$)
+\item 
+void {\bf carray\+\_\+push} ({\bf carray} $\ast$, type)
+\item 
+void {\bf carray\+\_\+ins} ({\bf carray} $\ast$, type)
+\item 
+void {\bf carray\+\_\+set} ({\bf carray} $\ast$, int, type, void $\ast$$\ast$)
+\item 
+void {\bf carray\+\_\+safeset} ({\bf carray} $\ast$, int, type, void $\ast$$\ast$)
+\item 
+type {\bf carray\+\_\+remove} ({\bf carray} $\ast$, int, void $\ast$$\ast$)
+\item 
+type {\bf carray\+\_\+pop} ({\bf carray} $\ast$)
+\item 
+bool {\bfseries carray\+\_\+remove\+\_\+elt} ({\bf carray} $\ast$, type, bool(type, type))
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ {\bfseries Char\+\_\+holder}
+\item 
+signed char $\ast$ {\bfseries s\+Char\+\_\+holder}
+\item 
+unsigned char $\ast$ {\bfseries u\+Char\+\_\+holder}
+\item 
+short $\ast$ {\bfseries Short\+\_\+holder}
+\item 
+signed short $\ast$ {\bfseries s\+Short\+\_\+holder}
+\item 
+unsigned short $\ast$ {\bfseries u\+Short\+\_\+holder}
+\item 
+int $\ast$ {\bfseries Int\+\_\+holder}
+\item 
+signed int $\ast$ {\bfseries s\+Int\+\_\+holder}
+\item 
+unsigned int $\ast$ {\bfseries u\+Int\+\_\+holder}
+\item 
+long $\ast$ {\bfseries Long\+\_\+holder}
+\item 
+long long $\ast$ {\bfseries l\+Long\+\_\+holder}
+\item 
+signed long $\ast$ {\bfseries s\+Long\+\_\+holder}
+\item 
+signed long long $\ast$ {\bfseries sl\+Long\+\_\+holder}
+\item 
+unsigned long $\ast$ {\bfseries u\+Long\+\_\+holder}
+\item 
+unsigned long long $\ast$ {\bfseries ul\+Long\+\_\+holder}
+\item 
+float $\ast$ {\bfseries Float\+\_\+holder}
+\item 
+double $\ast$ {\bfseries Double\+\_\+holder}
+\item 
+long double $\ast$ {\bfseries l\+Double\+\_\+holder}
+\item 
+bool $\ast$ {\bfseries Bool\+\_\+holder}
+\item 
+char $\ast$ {\bfseries String\+\_\+holder}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header of the carray class. Contains all function declarations and preprocessor directives. 
+

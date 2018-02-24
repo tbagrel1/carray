@@ -1,0 +1,793 @@
+\section{C-\/\+Array methods}
+\label{group__method__group}\index{C-\/\+Array methods@{C-\/\+Array methods}}
+Collaboration diagram for C-\/\+Array methods\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{group__method__group}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf carray} $\ast$ {\bf carray\+\_\+new} ()
+\item 
+{\bf carray} $\ast$ {\bf carray\+\_\+new\+\_\+\+I\+SC} (size\+\_\+t)
+\item 
+{\bf carray} $\ast$ {\bf carray\+\_\+new\+\_\+\+CC} ({\bf carray} $\ast$)
+\item 
+{\bf carray} $\ast$ {\bf carray\+\_\+new\+\_\+\+C\+I\+SC} ({\bf carray} $\ast$, size\+\_\+t)
+\item 
+void {\bfseries carray\+\_\+free} ({\bf carray} $\ast$, void(type))\label{group__method__group_ga07e0bf89d4437f8fe81c79101c3ca92c}
+
+\item 
+size\+\_\+t {\bf carray\+\_\+getsize} ({\bf carray} $\ast$)
+\item 
+void {\bf carray\+\_\+clear} ({\bf carray} $\ast$)
+\item 
+bool {\bf carray\+\_\+isempty} ({\bf carray} $\ast$)
+\item 
+size\+\_\+t {\bf carray\+\_\+getspace} ({\bf carray} $\ast$)
+\item 
+void {\bf carray\+\_\+setspace} ({\bf carray} $\ast$, size\+\_\+t, void $\ast$$\ast$)
+\item 
+void {\bf carray\+\_\+adjust} ({\bf carray} $\ast$, void $\ast$$\ast$)
+\item 
+size\+\_\+t {\bf carray\+\_\+getreadposition} ({\bf carray} $\ast$)
+\item 
+size\+\_\+t {\bf carray\+\_\+readingsremaining} ({\bf carray} $\ast$)
+\item 
+void {\bf carray\+\_\+setreadposition} ({\bf carray} $\ast$, int, void $\ast$$\ast$)
+\item 
+type $\ast$ {\bf carray\+\_\+getarray} ({\bf carray} $\ast$)
+\item 
+type {\bf carray\+\_\+read} ({\bf carray} $\ast$, void $\ast$$\ast$ok)
+\item 
+void {\bf carray\+\_\+reverse} ({\bf carray} $\ast$)
+\item 
+{\bf carray} $\ast$ {\bf carray\+\_\+reversed\+\_\+\+TF} ({\bf carray} $\ast$)
+\item 
+void {\bf carray\+\_\+append} ({\bf carray} $\ast$, {\bf carray} $\ast$, void $\ast$$\ast$)
+\item 
+{\bf carray} $\ast$ {\bf carray\+\_\+concat\+\_\+\+TF} ({\bf carray} $\ast$, {\bf carray} $\ast$)
+\item 
+char $\ast$ {\bfseries carray\+\_\+tostring\+\_\+\+TF} ({\bf carray} $\ast$, char $\ast$(type), char $\ast$, char $\ast$, char $\ast$, char $\ast$)\label{group__method__group_ga8c5907136724e99dc8212d9c333ab027}
+
+\item 
+hashtype {\bfseries carray\+\_\+hashcode} ({\bf carray} $\ast$, hashtype(type))\label{group__method__group_gab6fce3c1883194f7b4e298d108249b00}
+
+\item 
+bool {\bfseries carray\+\_\+equal} ({\bf carray} $\ast$, {\bf carray} $\ast$, bool(type, type))\label{group__method__group_gaccb5ee3de6441dcf90e5ae9c214d6858}
+
+\item 
+int {\bfseries carray\+\_\+indexof} ({\bf carray} $\ast$, type, bool(type, type))\label{group__method__group_ga097246bae1483f9b0aec8fed166a2ba5}
+
+\item 
+int {\bfseries carray\+\_\+lastindexof} ({\bf carray} $\ast$, type, bool(type, type))\label{group__method__group_ga322e73429a9d78339367f844d5aa74cd}
+
+\item 
+bool {\bfseries carray\+\_\+contains} ({\bf carray} $\ast$, type, bool(type, type))\label{group__method__group_gac98417b7832e24a9aa15ef44681b728e}
+
+\item 
+{\bf carray} $\ast$ {\bf carray\+\_\+subcarray\+\_\+\+TF} ({\bf carray} $\ast$, int, int, void $\ast$$\ast$)
+\item 
+{\bf carray} $\ast$ {\bf carray\+\_\+subcarraystep\+\_\+\+TF} ({\bf carray} $\ast$, int, int, int, void $\ast$$\ast$)
+\item 
+type $\ast$ {\bf carray\+\_\+subarray\+\_\+\+TF} ({\bf carray} $\ast$, int, int, void $\ast$$\ast$)
+\item 
+type $\ast$ {\bf carray\+\_\+subarraystep\+\_\+\+TF} ({\bf carray} $\ast$, int, int, int, void $\ast$$\ast$)
+\item 
+type $\ast$ {\bf carray\+\_\+toarray\+\_\+\+TF} ({\bf carray} $\ast$)
+\item 
+type {\bf carray\+\_\+get} ({\bf carray} $\ast$, int, void $\ast$$\ast$)
+\item 
+void {\bf carray\+\_\+add} ({\bf carray} $\ast$, int, type, void $\ast$$\ast$)
+\item 
+void {\bf carray\+\_\+push} ({\bf carray} $\ast$, type)
+\item 
+void {\bf carray\+\_\+ins} ({\bf carray} $\ast$, type)
+\item 
+void {\bf carray\+\_\+set} ({\bf carray} $\ast$, int, type, void $\ast$$\ast$)
+\item 
+void {\bf carray\+\_\+safeset} ({\bf carray} $\ast$, int, type, void $\ast$$\ast$)
+\item 
+type {\bf carray\+\_\+remove} ({\bf carray} $\ast$, int, void $\ast$$\ast$)
+\item 
+type {\bf carray\+\_\+pop} ({\bf carray} $\ast$)
+\item 
+bool {\bfseries carray\+\_\+remove\+\_\+elt} ({\bf carray} $\ast$, type, bool(type, type))\label{group__method__group_gaf0547e1fd95952667b22f433485ad7fd}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+add@{carray\+\_\+add}}
+\index{carray\+\_\+add@{carray\+\_\+add}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+add(carray $\ast$, int, type, void $\ast$$\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void carray\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c, }
+\item[{int}]{index, }
+\item[{type}]{new\+\_\+value, }
+\item[{void $\ast$$\ast$}]{ok}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga7007ad6008499ca9362a9201aa61fa4d}
+Adds the specified element at the specified index in the carray. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+{\em index} & index where to insert the specified element. The element will be inserted at this exact position, and subsequent elements will be shifted. \\
+\hline
+{\em new\+\_\+value} & element to insert at the specified index \\
+\hline
+{\em ok} & validation flag \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 725 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+adjust@{carray\+\_\+adjust}}
+\index{carray\+\_\+adjust@{carray\+\_\+adjust}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+adjust(carray $\ast$, void $\ast$$\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void carray\+\_\+adjust (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c, }
+\item[{void $\ast$$\ast$}]{ok}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga0539a588e5172e5d7bcdb8ff8a4c60e1}
+Enventually shrinks the size of the internal representation of the carray if free space exceed the threshold. ok will hold the carray address if a shrinking was made, and N\+U\+LL otherwise. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+{\em ok} & validation flag \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 386 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+append@{carray\+\_\+append}}
+\index{carray\+\_\+append@{carray\+\_\+append}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+append(carray $\ast$, carray $\ast$, void $\ast$$\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void carray\+\_\+append (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c, }
+\item[{{\bf carray} $\ast$}]{o, }
+\item[{void $\ast$$\ast$}]{ok}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga49f7fa113929359b84a5bdd6987674b7}
+Append the second specified carray at the end of the first one. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+{\em o} & the carray to put at the end of the first one \\
+\hline
+{\em ok} & validation flag \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 251 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+clear@{carray\+\_\+clear}}
+\index{carray\+\_\+clear@{carray\+\_\+clear}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+clear(carray $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void carray\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga19dffa556ed3cf5bbabe82559d80057f}
+Clears the content of the carray. Be careful, this function D\+O\+E\+SN\textquotesingle{}T free the space allowed for the internal representation of the carray. Use carray\+\_\+adjust for that. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 652 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+concat\+\_\+\+TF@{carray\+\_\+concat\+\_\+\+TF}}
+\index{carray\+\_\+concat\+\_\+\+TF@{carray\+\_\+concat\+\_\+\+TF}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+concat\+\_\+\+T\+F(carray $\ast$, carray $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf carray}$\ast$ carray\+\_\+concat\+\_\+\+TF (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{a, }
+\item[{{\bf carray} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\label{group__method__group_gadb3f6f5b18c2178abf1be668b3d99786}
+Concatenates both specified carrays into a new one which must be freed after use. 
+\begin{DoxyParams}{Parameters}
+{\em a} & the first carray to concatenate \\
+\hline
+{\em b} & the second carray to concatenate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a concatenated version of carrays a and b 
+\end{DoxyReturn}
+
+
+Definition at line 438 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+get@{carray\+\_\+get}}
+\index{carray\+\_\+get@{carray\+\_\+get}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+get(carray $\ast$, int, void $\ast$$\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}type carray\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c, }
+\item[{int}]{index, }
+\item[{void $\ast$$\ast$}]{ok}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga44baea86b47d32153aa1e706cbabce71}
+Gets the element at the specified index in the carray. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+{\em index} & index where element will be retrieved \\
+\hline
+{\em ok} & validation flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the element at the specified index if index is correct; default type value otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 667 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+getarray@{carray\+\_\+getarray}}
+\index{carray\+\_\+getarray@{carray\+\_\+getarray}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+getarray(carray $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}type$\ast$ carray\+\_\+getarray (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga92b8339728af52a40808ae84b29c8fde}
+Internal array getter. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the internal representation of the carray 
+\end{DoxyReturn}
+
+
+Definition at line 320 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+getreadposition@{carray\+\_\+getreadposition}}
+\index{carray\+\_\+getreadposition@{carray\+\_\+getreadposition}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+getreadposition(carray $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t carray\+\_\+getreadposition (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{group__method__group_gae1a5f220918573712917088e2cf8b629}
+Read position getter. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the current read position 
+\end{DoxyReturn}
+
+
+Definition at line 276 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+getsize@{carray\+\_\+getsize}}
+\index{carray\+\_\+getsize@{carray\+\_\+getsize}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+getsize(carray $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t carray\+\_\+getsize (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{group__method__group_gac74d4139e9fbe71041884a05d09f3756}
+Size getter. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the size of the carray 
+\end{DoxyReturn}
+
+
+Definition at line 138 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+getspace@{carray\+\_\+getspace}}
+\index{carray\+\_\+getspace@{carray\+\_\+getspace}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+getspace(carray $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t carray\+\_\+getspace (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga8c7af49588bf2e372dc53317e4c9d2a6}
+Space getter. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the space (in nb of elements) of the carray 
+\end{DoxyReturn}
+
+
+Definition at line 148 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+ins@{carray\+\_\+ins}}
+\index{carray\+\_\+ins@{carray\+\_\+ins}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+ins(carray $\ast$, type)}]{\setlength{\rightskip}{0pt plus 5cm}void carray\+\_\+ins (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c, }
+\item[{type}]{value}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga788eb2ef7c6757449184696d63905868}
+Inserts the specified value at the beginning of the carray. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+{\em value} & the element to insert at the end of the carray \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 362 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+isempty@{carray\+\_\+isempty}}
+\index{carray\+\_\+isempty@{carray\+\_\+isempty}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+isempty(carray $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}bool carray\+\_\+isempty (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{group__method__group_gae07de537db8420ca95e6ab69d63c074e}
+Returns true if the carray is empty, false otherwise 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the carray is empty, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 584 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+new@{carray\+\_\+new}}
+\index{carray\+\_\+new@{carray\+\_\+new}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+new()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf carray}$\ast$ carray\+\_\+new (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group__method__group_gadab194a97d2da09dbb1ef38a1e7e06ce}
+Constructor for carray. Returns a pointer to the created carray which must be freed after use. \begin{DoxyReturn}{Returns}
+a pointer to the created carray 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+new\+\_\+\+CC@{carray\+\_\+new\+\_\+\+CC}}
+\index{carray\+\_\+new\+\_\+\+CC@{carray\+\_\+new\+\_\+\+CC}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+new\+\_\+\+C\+C(carray $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf carray}$\ast$ carray\+\_\+new\+\_\+\+CC (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{copy\+\_\+carray}
+\end{DoxyParamCaption}
+)}\label{group__method__group_gaeabc3ec16c6b5a5aea9f67a09f4a1bc8}
+Copy constructor for carray. The created carray is the exact copy of the specified one with a bit more space than the length of the specified one. Returns a pointer to the created carray which must be freed after use. 
+\begin{DoxyParams}{Parameters}
+{\em copy\+\_\+carray} & the carray to be copied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the created carray 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+new\+\_\+\+C\+I\+SC@{carray\+\_\+new\+\_\+\+C\+I\+SC}}
+\index{carray\+\_\+new\+\_\+\+C\+I\+SC@{carray\+\_\+new\+\_\+\+C\+I\+SC}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+new\+\_\+\+C\+I\+S\+C(carray $\ast$, size\+\_\+t)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf carray}$\ast$ carray\+\_\+new\+\_\+\+C\+I\+SC (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{copy\+\_\+carray, }
+\item[{size\+\_\+t}]{init\+\_\+space}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga104e23dc7f4c88209beda41f0c0e142c}
+Copy constructor for carray with init\+\_\+space specified. This carray have at least init\+\_\+space slots at instanciation, and hold the exact content of the specified carray. Returns a pointer to the created carray which must be freed after use; if init\+\_\+space is shorter than the length of the carray to be copied, returns N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em copy\+\_\+carray} & the carray to be copied \\
+\hline
+{\em init\+\_\+space} & Initial space (number of elements) of the carray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the created carray 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+new\+\_\+\+I\+SC@{carray\+\_\+new\+\_\+\+I\+SC}}
+\index{carray\+\_\+new\+\_\+\+I\+SC@{carray\+\_\+new\+\_\+\+I\+SC}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+new\+\_\+\+I\+S\+C(size\+\_\+t)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf carray}$\ast$ carray\+\_\+new\+\_\+\+I\+SC (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{init\+\_\+space}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga931db559a285403631ad758f4d709b67}
+Constructor for carray with specified init\+\_\+space. This carray have at least init\+\_\+space slots at instanciation. Returns a pointer to the created carray which must be freed after use; if init\+\_\+space is not valid, returns N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em init\+\_\+space} & Initial space (number of elements) of the carray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the created carray 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+pop@{carray\+\_\+pop}}
+\index{carray\+\_\+pop@{carray\+\_\+pop}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+pop(carray $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}type carray\+\_\+pop (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{group__method__group_gaea9c2dc53f71b9d1352692d0fb6cedbc}
+Removes the last element of the carray and returns it. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the last element of the carray 
+\end{DoxyReturn}
+
+
+Definition at line 373 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+push@{carray\+\_\+push}}
+\index{carray\+\_\+push@{carray\+\_\+push}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+push(carray $\ast$, type)}]{\setlength{\rightskip}{0pt plus 5cm}void carray\+\_\+push (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c, }
+\item[{type}]{value}
+\end{DoxyParamCaption}
+)}\label{group__method__group_gab61b2e0aae64e50d1b344d012fa8c065}
+Pushes the specified value at the end of the carray. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+{\em value} & the element to push at the end of the carray \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 351 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+read@{carray\+\_\+read}}
+\index{carray\+\_\+read@{carray\+\_\+read}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+read(carray $\ast$, void $\ast$$\ast$ok)}]{\setlength{\rightskip}{0pt plus 5cm}type carray\+\_\+read (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c, }
+\item[{void $\ast$$\ast$}]{ok}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga005aeeddcf5d255af7de0a50e9ef082d}
+Read method. Returns elt at the current read position and increases read position by 1. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+{\em ok} & validation flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the element at the current read position; default type value if there\textquotesingle{}s no element to be read 
+\end{DoxyReturn}
+
+
+Definition at line 335 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+readingsremaining@{carray\+\_\+readingsremaining}}
+\index{carray\+\_\+readingsremaining@{carray\+\_\+readingsremaining}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+readingsremaining(carray $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t carray\+\_\+readingsremaining (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{group__method__group_gab01ec7c1097eb74be49b9b6bf100ee51}
+Gets the number of read operation remaining before reaching the end of the carray. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of read possible before the end of the carray 
+\end{DoxyReturn}
+
+
+Definition at line 310 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+remove@{carray\+\_\+remove}}
+\index{carray\+\_\+remove@{carray\+\_\+remove}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+remove(carray $\ast$, int, void $\ast$$\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}type carray\+\_\+remove (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c, }
+\item[{int}]{index, }
+\item[{void $\ast$$\ast$}]{ok}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga82a6b2e3ddd4d340b9a37458aefe93c9}
+Removes the element at the specified index and returns it. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+{\em index} & index where element will be removed. The element will be removed at this exact position, and subsequent elements will be shifted. \\
+\hline
+{\em ok} & validation flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the element which have been removed if the index is correct, default type value otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 778 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+reverse@{carray\+\_\+reverse}}
+\index{carray\+\_\+reverse@{carray\+\_\+reverse}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+reverse(carray $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void carray\+\_\+reverse (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga36c87cf9364d839f4e6b5e90b328242c}
+Reverses the specified carray in-\/place. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 402 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+reversed\+\_\+\+TF@{carray\+\_\+reversed\+\_\+\+TF}}
+\index{carray\+\_\+reversed\+\_\+\+TF@{carray\+\_\+reversed\+\_\+\+TF}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+reversed\+\_\+\+T\+F(carray $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf carray}$\ast$ carray\+\_\+reversed\+\_\+\+TF (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{group__method__group_gad40bf285cffc94e3ca2313f2a3f2e454}
+Returns a reversed copy of the specified carray which must be freed after use. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reversed copy of the specified carray 
+\end{DoxyReturn}
+
+
+Definition at line 419 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+safeset@{carray\+\_\+safeset}}
+\index{carray\+\_\+safeset@{carray\+\_\+safeset}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+safeset(carray $\ast$, int, type, void $\ast$$\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void carray\+\_\+safeset (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c, }
+\item[{int}]{index, }
+\item[{type}]{value, }
+\item[{void $\ast$$\ast$}]{ok}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga8aafdb0a9f82297c5cb2856c62278446}
+Used to set an element somewhere in the carray even if this cell is not already used by the carray, for example, to set carray[8] with a length-\/4 carray. Unused cells until the specified one are set with the default type value. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+{\em index} & index where to put the specified value; can be larger than the carray size \\
+\hline
+{\em value} & value to be put at the specified index \\
+\hline
+{\em ok} & validation flag \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 207 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+set@{carray\+\_\+set}}
+\index{carray\+\_\+set@{carray\+\_\+set}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+set(carray $\ast$, int, type, void $\ast$$\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void carray\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c, }
+\item[{int}]{index, }
+\item[{type}]{new\+\_\+value, }
+\item[{void $\ast$$\ast$}]{ok}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga5c71c073ef57ff114284cc5e5d402135}
+Sets the element at the specified index in the carray to the specified value. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+{\em index} & index where element will be set \\
+\hline
+{\em new\+\_\+value} & new value for this element \\
+\hline
+{\em ok} & validation flag \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 697 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+setreadposition@{carray\+\_\+setreadposition}}
+\index{carray\+\_\+setreadposition@{carray\+\_\+setreadposition}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+setreadposition(carray $\ast$, int, void $\ast$$\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void carray\+\_\+setreadposition (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c, }
+\item[{int}]{new\+\_\+read\+\_\+position, }
+\item[{void $\ast$$\ast$}]{ok}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga6c7a383d4ea39f2fe5a24e7a8e5b84ca}
+Read position setter. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+{\em new\+\_\+read\+\_\+position} & new read position \\
+\hline
+{\em ok} & validation flag \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 289 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+setspace@{carray\+\_\+setspace}}
+\index{carray\+\_\+setspace@{carray\+\_\+setspace}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+setspace(carray $\ast$, size\+\_\+t, void $\ast$$\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void carray\+\_\+setspace (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c, }
+\item[{size\+\_\+t}]{new\+\_\+space, }
+\item[{void $\ast$$\ast$}]{ok}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga6f4f0a466d5555450a81ef218549da36}
+Space setter. Can be used to modify the space allowed for the internal representation of the carray. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+{\em new\+\_\+space} & new space (in nb of elements) for the carray \\
+\hline
+{\em validation} & flag \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 162 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+subarray\+\_\+\+TF@{carray\+\_\+subarray\+\_\+\+TF}}
+\index{carray\+\_\+subarray\+\_\+\+TF@{carray\+\_\+subarray\+\_\+\+TF}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+subarray\+\_\+\+T\+F(carray $\ast$, int, int, void $\ast$$\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}type$\ast$ carray\+\_\+subarray\+\_\+\+TF (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c, }
+\item[{int}]{from\+\_\+index, }
+\item[{int}]{to\+\_\+index, }
+\item[{void $\ast$$\ast$}]{ok}
+\end{DoxyParamCaption}
+)}\label{group__method__group_gab6ed9d6e46b2114da81677e876b2db8f}
+Returns a smaller vanilla array which holds values from index \char`\"{}from\+\_\+index\char`\"{} (included) to index \char`\"{}to\+\_\+index\char`\"{} (excluded). If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+{\em from\+\_\+index} & beginning index \\
+\hline
+{\em to\+\_\+index} & ending index \\
+\hline
+{\em ok} & validation flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sub-\/vanilla array if the indices are correct, N\+U\+LL otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 977 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+subarraystep\+\_\+\+TF@{carray\+\_\+subarraystep\+\_\+\+TF}}
+\index{carray\+\_\+subarraystep\+\_\+\+TF@{carray\+\_\+subarraystep\+\_\+\+TF}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+subarraystep\+\_\+\+T\+F(carray $\ast$, int, int, int, void $\ast$$\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}type$\ast$ carray\+\_\+subarraystep\+\_\+\+TF (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c, }
+\item[{int}]{from\+\_\+index, }
+\item[{int}]{to\+\_\+index, }
+\item[{int}]{step, }
+\item[{void $\ast$$\ast$}]{ok}
+\end{DoxyParamCaption}
+)}\label{group__method__group_gaadc4f3a361052de0b490ec338b8ef70e}
+Returns a smaller vanilla array which holds values from index \char`\"{}from\+\_\+index\char`\"{} (included) to index \char`\"{}to\+\_\+index\char`\"{} (excluded) according to the specified step. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+{\em from\+\_\+index} & beginning index \\
+\hline
+{\em to\+\_\+index} & ending index \\
+\hline
+{\em step} & item selecting step \\
+\hline
+{\em ok} & validation flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sub-\/vanilla array if the indices are correct, N\+U\+LL otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 1019 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+subcarray\+\_\+\+TF@{carray\+\_\+subcarray\+\_\+\+TF}}
+\index{carray\+\_\+subcarray\+\_\+\+TF@{carray\+\_\+subcarray\+\_\+\+TF}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+subcarray\+\_\+\+T\+F(carray $\ast$, int, int, void $\ast$$\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf carray}$\ast$ carray\+\_\+subcarray\+\_\+\+TF (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c, }
+\item[{int}]{from\+\_\+index, }
+\item[{int}]{to\+\_\+index, }
+\item[{void $\ast$$\ast$}]{ok}
+\end{DoxyParamCaption}
+)}\label{group__method__group_gab8d960fbe83f10d447bc6626ce986d4b}
+Returns a smaller carray which holds values from index \char`\"{}from\+\_\+index\char`\"{} (included) to index \char`\"{}to\+\_\+index\char`\"{} (excluded). If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+{\em from\+\_\+index} & beginning index \\
+\hline
+{\em to\+\_\+index} & ending index \\
+\hline
+{\em ok} & validation flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sub-\/carray if the indices are correct, N\+U\+LL otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 864 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+subcarraystep\+\_\+\+TF@{carray\+\_\+subcarraystep\+\_\+\+TF}}
+\index{carray\+\_\+subcarraystep\+\_\+\+TF@{carray\+\_\+subcarraystep\+\_\+\+TF}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+subcarraystep\+\_\+\+T\+F(carray $\ast$, int, int, int, void $\ast$$\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf carray}$\ast$ carray\+\_\+subcarraystep\+\_\+\+TF (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c, }
+\item[{int}]{from\+\_\+index, }
+\item[{int}]{to\+\_\+index, }
+\item[{int}]{step, }
+\item[{void $\ast$$\ast$}]{ok}
+\end{DoxyParamCaption}
+)}\label{group__method__group_ga439225970a75088f353a88f65cc9ae14}
+Returns a smaller carray which holds values from index \char`\"{}from\+\_\+index\char`\"{} (included) to index \char`\"{}to\+\_\+index\char`\"{} (excluded) according to the specified step. If params are correct and if the operation works, ok will hold the carray address; otherwise, it will hold N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+{\em from\+\_\+index} & beginning index \\
+\hline
+{\em to\+\_\+index} & ending index \\
+\hline
+{\em step} & item selecting step \\
+\hline
+{\em ok} & validation flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sub-\/carray if the indices are correct, N\+U\+LL otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 908 of file carray.\+c.
+
+\index{C-\/\+Array methods@{C-\/\+Array methods}!carray\+\_\+toarray\+\_\+\+TF@{carray\+\_\+toarray\+\_\+\+TF}}
+\index{carray\+\_\+toarray\+\_\+\+TF@{carray\+\_\+toarray\+\_\+\+TF}!C-\/\+Array methods@{C-\/\+Array methods}}
+\subsubsection[{carray\+\_\+toarray\+\_\+\+T\+F(carray $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}type$\ast$ carray\+\_\+toarray\+\_\+\+TF (
+\begin{DoxyParamCaption}
+\item[{{\bf carray} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\label{group__method__group_gac9c6fa6721545432cce309518299ae10}
+Returns a vanilla array version of the carray. 
+\begin{DoxyParams}{Parameters}
+{\em c} & the carray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vanilla array version of the carray 
+\end{DoxyReturn}
+
+
+Definition at line 618 of file carray.\+c.
+

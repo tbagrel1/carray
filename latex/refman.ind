@@ -1,0 +1,314 @@
+\begin{theindex}
+
+  \item {Bool}
+    \subitem {Preprocessor macros}, 29
+
+  \indexspace
+
+  \item {C-\/\+Array class}, 9
+    \subitem {carray\+\_\+add}, 10
+    \subitem {carray\+\_\+addspace}, 11
+    \subitem {carray\+\_\+adjust}, 11
+    \subitem {carray\+\_\+append}, 11
+    \subitem {carray\+\_\+clear}, 11
+    \subitem {carray\+\_\+concat\+\_\+\+TF}, 12
+    \subitem {carray\+\_\+contains}, 12
+    \subitem {carray\+\_\+equal}, 12
+    \subitem {carray\+\_\+free}, 13
+    \subitem {carray\+\_\+free\+\_\+obj}, 13
+    \subitem {carray\+\_\+get}, 13
+    \subitem {carray\+\_\+getarray}, 14
+    \subitem {carray\+\_\+getreadposition}, 14
+    \subitem {carray\+\_\+getsize}, 14
+    \subitem {carray\+\_\+getspace}, 14
+    \subitem {carray\+\_\+hashcode}, 15
+    \subitem {carray\+\_\+indexof}, 15
+    \subitem {carray\+\_\+ins}, 15
+    \subitem {carray\+\_\+isempty}, 16
+    \subitem {carray\+\_\+lastindexof}, 16
+    \subitem {carray\+\_\+new}, 16
+    \subitem {carray\+\_\+new\+\_\+\+C\+I\+SC}, 17
+    \subitem {carray\+\_\+new\+\_\+\+CC}, 17
+    \subitem {carray\+\_\+new\+\_\+\+I\+SC}, 17
+    \subitem {carray\+\_\+pop}, 18
+    \subitem {carray\+\_\+push}, 18
+    \subitem {carray\+\_\+read}, 18
+    \subitem {carray\+\_\+readingsremaining}, 18
+    \subitem {carray\+\_\+remove}, 19
+    \subitem {carray\+\_\+remove\+\_\+elt}, 19
+    \subitem {carray\+\_\+reverse}, 19
+    \subitem {carray\+\_\+reversed\+\_\+\+TF}, 20
+    \subitem {carray\+\_\+safeset}, 20
+    \subitem {carray\+\_\+set}, 20
+    \subitem {carray\+\_\+setreadposition}, 21
+    \subitem {carray\+\_\+setspace}, 21
+    \subitem {carray\+\_\+subarray\+\_\+\+TF}, 21
+    \subitem {carray\+\_\+subarraystep\+\_\+\+TF}, 22
+    \subitem {carray\+\_\+subcarray\+\_\+\+TF}, 22
+    \subitem {carray\+\_\+subcarraystep\+\_\+\+TF}, 22
+    \subitem {carray\+\_\+toarray\+\_\+\+TF}, 23
+    \subitem {carray\+\_\+tostring\+\_\+\+TF}, 23
+    \subitem {fatal\+\_\+error}, 23
+  \item {C-\/\+Array core}, 34
+  \item {C-\/\+Array methods}, 35
+    \subitem {carray\+\_\+add}, 36
+    \subitem {carray\+\_\+adjust}, 36
+    \subitem {carray\+\_\+append}, 36
+    \subitem {carray\+\_\+clear}, 36
+    \subitem {carray\+\_\+concat\+\_\+\+TF}, 37
+    \subitem {carray\+\_\+get}, 37
+    \subitem {carray\+\_\+getarray}, 37
+    \subitem {carray\+\_\+getreadposition}, 38
+    \subitem {carray\+\_\+getsize}, 38
+    \subitem {carray\+\_\+getspace}, 38
+    \subitem {carray\+\_\+ins}, 39
+    \subitem {carray\+\_\+isempty}, 39
+    \subitem {carray\+\_\+new}, 39
+    \subitem {carray\+\_\+new\+\_\+\+C\+I\+SC}, 40
+    \subitem {carray\+\_\+new\+\_\+\+CC}, 39
+    \subitem {carray\+\_\+new\+\_\+\+I\+SC}, 40
+    \subitem {carray\+\_\+pop}, 40
+    \subitem {carray\+\_\+push}, 41
+    \subitem {carray\+\_\+read}, 41
+    \subitem {carray\+\_\+readingsremaining}, 41
+    \subitem {carray\+\_\+remove}, 42
+    \subitem {carray\+\_\+reverse}, 42
+    \subitem {carray\+\_\+reversed\+\_\+\+TF}, 42
+    \subitem {carray\+\_\+safeset}, 42
+    \subitem {carray\+\_\+set}, 43
+    \subitem {carray\+\_\+setreadposition}, 43
+    \subitem {carray\+\_\+setspace}, 43
+    \subitem {carray\+\_\+subarray\+\_\+\+TF}, 44
+    \subitem {carray\+\_\+subarraystep\+\_\+\+TF}, 44
+    \subitem {carray\+\_\+subcarray\+\_\+\+TF}, 44
+    \subitem {carray\+\_\+subcarraystep\+\_\+\+TF}, 45
+    \subitem {carray\+\_\+toarray\+\_\+\+TF}, 45
+  \item {carray}, 47
+    \subitem {Constants for C-\/\+Array class}, 26
+  \item {carray.\+c}, 49
+  \item {carray.\+h}, 50
+  \item {carray\+\_\+add}
+    \subitem {C-\/\+Array class}, 10
+    \subitem {C-\/\+Array methods}, 36
+  \item {carray\+\_\+addspace}
+    \subitem {C-\/\+Array class}, 11
+  \item {carray\+\_\+adjust}
+    \subitem {C-\/\+Array class}, 11
+    \subitem {C-\/\+Array methods}, 36
+  \item {carray\+\_\+append}
+    \subitem {C-\/\+Array class}, 11
+    \subitem {C-\/\+Array methods}, 36
+  \item {carray\+\_\+clear}
+    \subitem {C-\/\+Array class}, 11
+    \subitem {C-\/\+Array methods}, 36
+  \item {carray\+\_\+concat\+\_\+\+TF}
+    \subitem {C-\/\+Array class}, 12
+    \subitem {C-\/\+Array methods}, 37
+  \item {carray\+\_\+contains}
+    \subitem {C-\/\+Array class}, 12
+  \item {carray\+\_\+equal}
+    \subitem {C-\/\+Array class}, 12
+  \item {carray\+\_\+free}
+    \subitem {C-\/\+Array class}, 13
+  \item {carray\+\_\+free\+\_\+obj}
+    \subitem {C-\/\+Array class}, 13
+    \subitem {Preprocessor macros}, 33
+  \item {carray\+\_\+get}
+    \subitem {C-\/\+Array class}, 13
+    \subitem {C-\/\+Array methods}, 37
+  \item {carray\+\_\+getarray}
+    \subitem {C-\/\+Array class}, 14
+    \subitem {C-\/\+Array methods}, 37
+  \item {carray\+\_\+getreadposition}
+    \subitem {C-\/\+Array class}, 14
+    \subitem {C-\/\+Array methods}, 38
+  \item {carray\+\_\+getsize}
+    \subitem {C-\/\+Array class}, 14
+    \subitem {C-\/\+Array methods}, 38
+  \item {carray\+\_\+getspace}
+    \subitem {C-\/\+Array class}, 14
+    \subitem {C-\/\+Array methods}, 38
+  \item {carray\+\_\+hashcode}
+    \subitem {C-\/\+Array class}, 15
+  \item {carray\+\_\+indexof}
+    \subitem {C-\/\+Array class}, 15
+  \item {carray\+\_\+ins}
+    \subitem {C-\/\+Array class}, 15
+    \subitem {C-\/\+Array methods}, 39
+  \item {carray\+\_\+isempty}
+    \subitem {C-\/\+Array class}, 16
+    \subitem {C-\/\+Array methods}, 39
+  \item {carray\+\_\+lastindexof}
+    \subitem {C-\/\+Array class}, 16
+  \item {carray\+\_\+new}
+    \subitem {C-\/\+Array class}, 16
+    \subitem {C-\/\+Array methods}, 39
+  \item {carray\+\_\+new\+\_\+\+C\+I\+SC}
+    \subitem {C-\/\+Array class}, 17
+    \subitem {C-\/\+Array methods}, 40
+  \item {carray\+\_\+new\+\_\+\+CC}
+    \subitem {C-\/\+Array class}, 17
+    \subitem {C-\/\+Array methods}, 39
+  \item {carray\+\_\+new\+\_\+\+I\+SC}
+    \subitem {C-\/\+Array class}, 17
+    \subitem {C-\/\+Array methods}, 40
+  \item {carray\+\_\+pop}
+    \subitem {C-\/\+Array class}, 18
+    \subitem {C-\/\+Array methods}, 40
+  \item {carray\+\_\+push}
+    \subitem {C-\/\+Array class}, 18
+    \subitem {C-\/\+Array methods}, 41
+  \item {carray\+\_\+read}
+    \subitem {C-\/\+Array class}, 18
+    \subitem {C-\/\+Array methods}, 41
+  \item {carray\+\_\+readingsremaining}
+    \subitem {C-\/\+Array class}, 18
+    \subitem {C-\/\+Array methods}, 41
+  \item {carray\+\_\+remove}
+    \subitem {C-\/\+Array class}, 19
+    \subitem {C-\/\+Array methods}, 42
+  \item {carray\+\_\+remove\+\_\+elt}
+    \subitem {C-\/\+Array class}, 19
+  \item {carray\+\_\+reverse}
+    \subitem {C-\/\+Array class}, 19
+    \subitem {C-\/\+Array methods}, 42
+  \item {carray\+\_\+reversed\+\_\+\+TF}
+    \subitem {C-\/\+Array class}, 20
+    \subitem {C-\/\+Array methods}, 42
+  \item {carray\+\_\+safeset}
+    \subitem {C-\/\+Array class}, 20
+    \subitem {C-\/\+Array methods}, 42
+  \item {carray\+\_\+set}
+    \subitem {C-\/\+Array class}, 20
+    \subitem {C-\/\+Array methods}, 43
+  \item {carray\+\_\+setreadposition}
+    \subitem {C-\/\+Array class}, 21
+    \subitem {C-\/\+Array methods}, 43
+  \item {carray\+\_\+setspace}
+    \subitem {C-\/\+Array class}, 21
+    \subitem {C-\/\+Array methods}, 43
+  \item {carray\+\_\+subarray\+\_\+\+TF}
+    \subitem {C-\/\+Array class}, 21
+    \subitem {C-\/\+Array methods}, 44
+  \item {carray\+\_\+subarraystep\+\_\+\+TF}
+    \subitem {C-\/\+Array class}, 22
+    \subitem {C-\/\+Array methods}, 44
+  \item {carray\+\_\+subcarray\+\_\+\+TF}
+    \subitem {C-\/\+Array class}, 22
+    \subitem {C-\/\+Array methods}, 44
+  \item {carray\+\_\+subcarraystep\+\_\+\+TF}
+    \subitem {C-\/\+Array class}, 22
+    \subitem {C-\/\+Array methods}, 45
+  \item {carray\+\_\+toarray\+\_\+\+TF}
+    \subitem {C-\/\+Array class}, 23
+    \subitem {C-\/\+Array methods}, 45
+  \item {carray\+\_\+tostring\+\_\+\+TF}
+    \subitem {C-\/\+Array class}, 23
+  \item {Char}
+    \subitem {Preprocessor macros}, 29
+  \item {Constants for C-\/\+Array class}, 25
+    \subitem {carray}, 26
+    \subitem {D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+P\+E\+R\+C\+E\+NT}, 
+		25
+    \subitem {D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}, 
+		25
+    \subitem {D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+P\+A\+C\+E\+\_\+\+I\+N\+CR}, 
+		25
+    \subitem {D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+P\+A\+C\+E\+\_\+\+I\+N\+I\+T\+\_\+\+F\+L\+AT}, 
+		25
+    \subitem {D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+P\+A\+C\+E\+\_\+\+I\+N\+I\+T\+\_\+\+P\+E\+R\+C\+E\+NT}, 
+		26
+
+  \indexspace
+
+  \item {D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+P\+E\+R\+C\+E\+NT}
+    \subitem {Constants for C-\/\+Array class}, 25
+  \item {D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}
+    \subitem {Constants for C-\/\+Array class}, 25
+  \item {D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+P\+A\+C\+E\+\_\+\+I\+N\+CR}
+    \subitem {Constants for C-\/\+Array class}, 25
+  \item {D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+P\+A\+C\+E\+\_\+\+I\+N\+I\+T\+\_\+\+F\+L\+AT}
+    \subitem {Constants for C-\/\+Array class}, 25
+  \item {D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+P\+A\+C\+E\+\_\+\+I\+N\+I\+T\+\_\+\+P\+E\+R\+C\+E\+NT}
+    \subitem {Constants for C-\/\+Array class}, 26
+  \item {Double}
+    \subitem {Preprocessor macros}, 29
+
+  \indexspace
+
+  \item {fatal\+\_\+error}
+    \subitem {C-\/\+Array class}, 23
+  \item {Float}
+    \subitem {Preprocessor macros}, 30
+
+  \indexspace
+
+  \item {Implementation specific constants and aliases}, 27
+  \item {Int}
+    \subitem {Preprocessor macros}, 30
+
+  \indexspace
+
+  \item {l\+Double}
+    \subitem {Preprocessor macros}, 30
+  \item {l\+Long}
+    \subitem {Preprocessor macros}, 30
+  \item {Long}
+    \subitem {Preprocessor macros}, 30
+
+  \indexspace
+
+  \item {Preprocessor macros}, 28
+    \subitem {Bool}, 29
+    \subitem {carray\+\_\+free\+\_\+obj}, 33
+    \subitem {Char}, 29
+    \subitem {Double}, 29
+    \subitem {Float}, 30
+    \subitem {Int}, 30
+    \subitem {l\+Double}, 30
+    \subitem {l\+Long}, 30
+    \subitem {Long}, 30
+    \subitem {s\+Char}, 31
+    \subitem {s\+Int}, 31
+    \subitem {s\+Long}, 31
+    \subitem {s\+Short}, 32
+    \subitem {Short}, 31
+    \subitem {sl\+Long}, 31
+    \subitem {String}, 32
+    \subitem {u\+Char}, 32
+    \subitem {u\+Int}, 32
+    \subitem {u\+Long}, 33
+    \subitem {u\+Short}, 33
+    \subitem {ul\+Long}, 32
+
+  \indexspace
+
+  \item {s\+Char}
+    \subitem {Preprocessor macros}, 31
+  \item {s\+Int}
+    \subitem {Preprocessor macros}, 31
+  \item {s\+Long}
+    \subitem {Preprocessor macros}, 31
+  \item {s\+Short}
+    \subitem {Preprocessor macros}, 32
+  \item {Short}
+    \subitem {Preprocessor macros}, 31
+  \item {sl\+Long}
+    \subitem {Preprocessor macros}, 31
+  \item {String}
+    \subitem {Preprocessor macros}, 32
+
+  \indexspace
+
+  \item {u\+Char}
+    \subitem {Preprocessor macros}, 32
+  \item {u\+Int}
+    \subitem {Preprocessor macros}, 32
+  \item {u\+Long}
+    \subitem {Preprocessor macros}, 33
+  \item {u\+Short}
+    \subitem {Preprocessor macros}, 33
+  \item {ul\+Long}
+    \subitem {Preprocessor macros}, 32
+
+\end{theindex}

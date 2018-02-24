@@ -2,6 +2,11 @@
 // Created by thomas on 09/09/17.
 //
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 /**
  * \file carray.h
  * \brief Header of the carray class.
@@ -63,6 +68,7 @@ typedef struct carray carray;
  * @{
  */
 typedef unsigned int hashtype;
+#define DEFAULT_HASHTYPE_VALUE 0
 #define PRIME_CST 31
 typedef void *type;
 #define DEFAULT_TYPE_VALUE NULL
@@ -97,98 +103,98 @@ typedef void *type;
 
 char *Char_holder;
 #define Char(expr) \
-    (Char_holder = malloc(sizeof(char)), \
-     *Char_holder = (expr), Char_holder)
+    (Char_holder = (char*)malloc(sizeof(char)), \
+     *Char_holder = (expr), (void*)(Char_holder))
 
 signed char *sChar_holder;
 #define sChar(expr) \
-    (sChar_holder = malloc(sizeof(signed char)), \
-     *sChar_holder = (expr), sChar_holder)
+    (sChar_holder = (signed char*)malloc(sizeof(signed char)), \
+     *sChar_holder = (expr), (void*)(sChar_holder))
 
 unsigned char *uChar_holder;
 #define uChar(expr) \
-    (uChar_holder = malloc(sizeof(unsigned char)), \
-     *uChar_holder = (expr), uChar_holder)
+    (uChar_holder = (unsigned char*)malloc(sizeof(unsigned char)), \
+     *uChar_holder = (expr), (void*)(uChar_holder))
 
 short *Short_holder;
 #define Short(expr) \
-    (Short_holder = malloc(sizeof(short)), \
-     *Short_holder = (expr), Short_holder)
+    (Short_holder = (short*)malloc(sizeof(short)), \
+     *Short_holder = (expr), (void*)(Short_holder))
 
 signed short *sShort_holder;
 #define sShort(expr) \
-    (sShort_holder = malloc(sizeof(signed short)), \
-     *sShort_holder = (expr), sShort_holder)
+    (sShort_holder = (signed short*)malloc(sizeof(signed short)), \
+     *sShort_holder = (expr), (void*)(sShort_holder))
 
 unsigned short *uShort_holder;
 #define uShort(expr) \
-    (uShort_holder = malloc(sizeof(unsigned short)), \
-     *uShort_holder = (expr), uShort_holder)
+    (uShort_holder = (unsigned short*)malloc(sizeof(unsigned short)), \
+     *uShort_holder = (expr), (void*)(uShort_holder))
 
 int *Int_holder;
 #define Int(expr) \
-    (Int_holder = malloc(sizeof(int)), \
-     *Int_holder = (expr), Int_holder)
+    (Int_holder = (int*)malloc(sizeof(int)), \
+     *Int_holder = (expr), (void*)(Int_holder))
 
 signed int *sInt_holder;
 #define sInt(expr) \
-    (sInt_holder = malloc(sizeof(signed int)), \
-     *sInt_holder = (expr), sInt_holder)
+    (sInt_holder = (signed int*)malloc(sizeof(signed int)), \
+     *sInt_holder = (expr), (void*)(sInt_holder))
 
 unsigned int *uInt_holder;
 #define uInt(expr) \
-    (uInt_holder = malloc(sizeof(unsigned int)), \
-     *uInt_holder = (expr), uInt_holder)
+    (uInt_holder = (unsigned int*)malloc(sizeof(unsigned int)), \
+     *uInt_holder = (expr), (void*)(uInt_holder))
 
 long *Long_holder;
 #define Long(expr) \
-    (Long_holder = malloc(sizeof(long)), \
-     *Long_holder = (expr), Long_holder)
+    (Long_holder = (long*)malloc(sizeof(long)), \
+     *Long_holder = (expr), (void*)(Long_holder))
 
 long long *lLong_holder;
 #define lLong(expr) \
-    (lLong_holder = malloc(sizeof(long long)), \
-     *lLong_holder = (expr), lLong_holder)
+    (lLong_holder = (long long*)malloc(sizeof(long long)), \
+     *lLong_holder = (expr), (void*)(lLong_holder))
 
 signed long *sLong_holder;
 #define sLong(expr) \
-    (sLong_holder = malloc(sizeof(signed long)), \
-     *sLong_holder = (expr), sLong_holder)
+    (sLong_holder = (signed long*)malloc(sizeof(signed long)), \
+     *sLong_holder = (expr), (void*)(sLong_holder))
 
 signed long long *slLong_holder;
 #define slLong(expr) \
-    (slLong_holder = malloc(sizeof(signed long long)), \
-     *slLong_holder = (expr), slLong_holder)
+    (slLong_holder = (signed long long*)malloc(sizeof(signed long long)), \
+     *slLong_holder = (expr), (void*)(slLong_holder))
 
 unsigned long *uLong_holder;
 #define uLong(expr) \
-    (uLong_holder = malloc(sizeof(unsigned long)), \
-     *uLong_holder = (expr), uLong_holder)
+    (uLong_holder = (unsigned long*)malloc(sizeof(unsigned long)), \
+     *uLong_holder = (expr), (void*)(uLong_holder))
 
 unsigned long long *ulLong_holder;
 #define ulLong(expr) \
-    (ulLong_holder = malloc(sizeof(unsigned long long)), \
-     *ulLong_holder = (expr), ulLong_holder)
+    (ulLong_holder = (unsigned long long*)malloc(sizeof(unsigned long long)), \
+     *ulLong_holder = (expr), (void*)(ulLong_holder))
 
 float *Float_holder;
 #define Float(expr) \
-    (Float_holder = malloc(sizeof(float)), \
-     *Float_holder = (expr), Float_holder)
+    (Float_holder = (float*)malloc(sizeof(float)), \
+     *Float_holder = (expr), (void*)(Float_holder))
 
 double *Double_holder;
 #define Double(expr) \
-    (Double_holder = malloc(sizeof(double)), \
-     *Double_holder = (expr), Double_holder)
+    (Double_holder = (double*)malloc(sizeof(double)), \
+     *Double_holder = (expr), (void*)(Double_holder))
 
 long double *lDouble_holder;
 #define lDouble(expr) \
-    (lDouble_holder = malloc(sizeof(long double)), \
-     *lDouble_holder = (expr), lDouble_holder)
+    (lDouble_holder = (long double*)malloc(sizeof(long double)), \
+     *lDouble_holder = (expr), (void*)(lDouble_holder))
 
 bool *Bool_holder;
 #define Bool(expr) \
-    (Bool_holder = malloc(sizeof(bool)), \
-     *Bool_holder = (expr), Bool_holder)
+    (Bool_holder = (bool*)malloc(sizeof(bool)), \
+     *Bool_holder = (expr), (void*)(Bool_holder))
 
 char *String_holder;
 #define String(expr) \
@@ -249,6 +255,8 @@ bool carray_isempty(carray *);
 size_t carray_getspace(carray *);
 
 void carray_setspace(carray *, size_t, void **);
+
+void carray_addspace(carray *, void **);
 
 void carray_adjust(carray *, void **);
 
@@ -320,3 +328,7 @@ bool carray_remove_elt(carray *, type, bool(type, type));
  */
 
 #endif //TBAGREL_PROJECT_CARRAY_H
+
+#ifdef __cplusplus
+}
+#endif
