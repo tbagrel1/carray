@@ -41,4 +41,4 @@ int main(int argc, char **argv) {
 ## Author
 
 Thomas BAGREL, student in Lycée H. Poincaré, Nancy, France  
-[Contact me at <tomsb07 _at_ gmail _dot_ com>!](mailto:tomsb07@gmail.com)
+[Contact me at: tomsb07 _at_ gmail _dot_ com!](mailto:tomsb07@gmail.com)
