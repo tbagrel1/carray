@@ -1,2 +1,1 @@
-/usr/bin/ar qc libcvector.a  CMakeFiles/cvector.dir/main.c.o
-/usr/bin/ranlib libcvector.a
+/usr/bin/cc -g   CMakeFiles/cvector.dir/main.c.o  -o cvector -lm 

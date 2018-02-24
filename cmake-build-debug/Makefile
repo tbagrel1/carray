@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named cvector_tests
+
+# Build rule for target.
+cvector_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cvector_tests
+.PHONY : cvector_tests
+
+# fast build rule for target.
+cvector_tests/fast:
+	$(MAKE) -f CMakeFiles/cvector_tests.dir/build.make CMakeFiles/cvector_tests.dir/build
+.PHONY : cvector_tests/fast
+
+#=============================================================================
 # Target rules for targets named cvector
 
 # Build rule for target.
@@ -150,6 +163,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/cvector.dir/build.make CMakeFiles/cvector.dir/main.c.s
 .PHONY : main.c.s
 
+tests/tests.o: tests/tests.cpp.o
+
+.PHONY : tests/tests.o
+
+# target to build an object file
+tests/tests.cpp.o:
+	$(MAKE) -f CMakeFiles/cvector_tests.dir/build.make CMakeFiles/cvector_tests.dir/tests/tests.cpp.o
+.PHONY : tests/tests.cpp.o
+
+tests/tests.i: tests/tests.cpp.i
+
+.PHONY : tests/tests.i
+
+# target to preprocess a source file
+tests/tests.cpp.i:
+	$(MAKE) -f CMakeFiles/cvector_tests.dir/build.make CMakeFiles/cvector_tests.dir/tests/tests.cpp.i
+.PHONY : tests/tests.cpp.i
+
+tests/tests.s: tests/tests.cpp.s
+
+.PHONY : tests/tests.s
+
+# target to generate assembly for a file
+tests/tests.cpp.s:
+	$(MAKE) -f CMakeFiles/cvector_tests.dir/build.make CMakeFiles/cvector_tests.dir/tests/tests.cpp.s
+.PHONY : tests/tests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -157,11 +197,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... cvector_tests"
 	@echo "... rebuild_cache"
 	@echo "... cvector"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... tests/tests.o"
+	@echo "... tests/tests.i"
+	@echo "... tests/tests.s"
 .PHONY : help
 
 

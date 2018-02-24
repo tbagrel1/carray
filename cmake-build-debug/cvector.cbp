@@ -27,6 +27,54 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="cvector_tests">
+				<Option output="/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/cvector_tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 cvector_tests"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cvector_tests/fast">
+				<Option output="/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/cvector_tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 cvector_tests/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug"/>
 				<Option type="4"/>
@@ -38,12 +86,16 @@
 				</MakeCommands>
 			</Target>
 			<Target title="cvector">
-				<Option output="/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/libcvector.a" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/cvector" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="2"/>
+				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -58,12 +110,16 @@
 				</MakeCommands>
 			</Target>
 			<Target title="cvector/fast">
-				<Option output="/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/libcvector.a" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/cvector" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="2"/>
+				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -79,10 +135,18 @@
 			</Target>
 		</Build>
 		<Unit filename="/home/thomas/Drive/tbagrel/dev/c/cvector/cvector.h">
+			<Option target="cvector_tests"/>
 			<Option target="cvector"/>
 		</Unit>
 		<Unit filename="/home/thomas/Drive/tbagrel/dev/c/cvector/main.c">
 			<Option target="cvector"/>
+		</Unit>
+		<Unit filename="/home/thomas/Drive/tbagrel/dev/c/cvector/tests/cvector_import.h">
+			<Option target="cvector_tests"/>
+			<Option target="cvector"/>
+		</Unit>
+		<Unit filename="/home/thomas/Drive/tbagrel/dev/c/cvector/tests/tests.cpp">
+			<Option target="cvector_tests"/>
 		</Unit>
 		<Unit filename="/home/thomas/Drive/tbagrel/dev/c/cvector/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

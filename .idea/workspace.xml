@@ -3,6 +3,7 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
       <config projectName="cvector" targetName="cvector" />
+      <config projectName="cvector" targetName="cvector_tests" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -12,358 +13,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ed4805a-37ed-4d4a-b990-0632b19b0bda" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/thomas.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/errorno.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tests/cvector_import.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tests/tests.cpp" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/_main.c" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/carray.c" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/carray.h" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/carray_is_working.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/catch.hpp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/_c_make_c_compiler_id_8c.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/_c_make_c_compiler_id_8c.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/_c_make_c_compiler_id_8c_source.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/_c_make_c_x_x_compiler_id_8cpp.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/_c_make_c_x_x_compiler_id_8cpp.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/_c_make_c_x_x_compiler_id_8cpp_source.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/_r_e_a_d_m_e_8md.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/_r_e_a_d_m_e_8md_source.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/annotated.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/annotated_dup.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/arrowdown.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/arrowright.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/bc_s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/bdwn.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/carray_8c.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/carray_8c.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/carray_8c__incl.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/carray_8c__incl.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/carray_8c__incl.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/carray_8c_source.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/carray_8h.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/carray_8h.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/carray_8h__dep__incl.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/carray_8h__dep__incl.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/carray_8h__dep__incl.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/carray_8h__incl.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/carray_8h__incl.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/carray_8h__incl.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/carray_8h_source.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/classes.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/closed.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/dir_2676cc314455a3554bf96ebb25d8a9e1.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/dir_2676cc314455a3554bf96ebb25d8a9e1.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/dir_739bc212bfd731a9b0f1a6fe9553f49a.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/dir_739bc212bfd731a9b0f1a6fe9553f49a.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/dir_95e29a8b8ee7c54052c171a88bb95675.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/dir_95e29a8b8ee7c54052c171a88bb95675.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/dir_d51ff6810eea7fa52a558f76681df083.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/dir_d51ff6810eea7fa52a558f76681df083.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/dir_f89abcb304c928c7d889aa5625570de5.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/dir_f89abcb304c928c7d889aa5625570de5.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/doc.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/doxygen.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/doxygen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/dynsections.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/feature__tests_8c.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/feature__tests_8c.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/feature__tests_8c_source.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/feature__tests_8cxx.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/feature__tests_8cxx.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/feature__tests_8cxx_source.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/files.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/files.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/folderclosed.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/folderopen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/functions.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/functions_vars.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/globals.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/globals_defs.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/globals_func.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/globals_type.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/globals_vars.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/graph_legend.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/graph_legend.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/graph_legend.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__carray__group.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__carray__group.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__carray__group.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__carray__group.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__carray__group.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__core__group.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__core__group.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__core__group.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__core__group.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__core__group.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__cst__group.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__cst__group.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__cst__group.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__cst__group.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__cst__group.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__impl__group.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__impl__group.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__impl__group.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__impl__group.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__method__group.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__method__group.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__method__group.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__method__group.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__method__group.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__prep__group.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__prep__group.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__prep__group.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__prep__group.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/group__prep__group.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/macro__generator_8py.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/macro__generator_8py.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/macro__generator_8py_source.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/main_8c.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/main_8c.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/main_8c__incl.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/main_8c__incl.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/main_8c__incl.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/main_8c_source.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/md_README.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/modules.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/modules.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/namespacemacro__generator.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/namespacemembers.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/namespacemembers_func.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/namespacemembers_vars.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/namespaces.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/namespaces.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/nav_f.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/nav_g.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/nav_h.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/navtree.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/navtree.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/navtreedata.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/navtreeindex0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/navtreeindex1.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/open.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/pages.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/resize.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_0.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_1.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_1.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_2.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_3.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_3.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_4.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_4.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_5.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_5.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_6.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_6.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_7.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_7.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_8.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_8.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_9.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_9.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_a.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_a.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_b.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_b.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_c.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_c.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_d.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_d.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_e.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_e.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_f.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_f.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_0.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_0.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_1.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_1.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_2.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_3.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_3.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_4.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_4.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_5.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_5.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_6.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_6.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_7.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_7.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_8.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_8.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_9.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_9.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_a.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_a.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_b.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/defines_b.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/files_0.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/files_0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/files_1.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/files_1.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/files_2.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/files_2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/files_3.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/files_3.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/functions_0.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/functions_0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/functions_1.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/functions_1.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/functions_2.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/functions_2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/functions_3.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/functions_3.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/functions_4.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/functions_4.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/groups_0.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/groups_0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/groups_1.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/groups_1.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/groups_2.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/groups_2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/mag_sel.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/namespaces_0.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/namespaces_0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/nomatches.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/pages_0.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/pages_0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/search.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/search.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/search_l.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/search_m.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/search_r.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/searchdata.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/typedefs_0.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/typedefs_0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/typedefs_1.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/typedefs_1.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/typedefs_2.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/typedefs_2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/typedefs_3.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/typedefs_3.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_0.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_1.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_1.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_2.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_3.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_3.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_4.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_4.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_5.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_5.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_6.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_6.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_7.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_7.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_8.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_8.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_9.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/variables_9.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/splitbar.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/structcarray-members.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/structcarray.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/structcarray.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/sync_off.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/sync_on.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/tab_a.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/tab_b.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/tab_h.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/tab_s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/tabs.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/Makefile" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/_c_make_c_compiler_id_8c.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/_c_make_c_x_x_compiler_id_8cpp.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/_r_e_a_d_m_e_8md.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/annotated.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/carray_8c.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/carray_8c__incl.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/carray_8c__incl.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/carray_8h.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/carray_8h__dep__incl.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/carray_8h__dep__incl.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/carray_8h__incl.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/carray_8h__incl.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/dir_2676cc314455a3554bf96ebb25d8a9e1.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/dir_739bc212bfd731a9b0f1a6fe9553f49a.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/dir_95e29a8b8ee7c54052c171a88bb95675.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/dir_d51ff6810eea7fa52a558f76681df083.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/dir_f89abcb304c928c7d889aa5625570de5.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/doxygen.sty" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/feature__tests_8c.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/feature__tests_8cxx.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/files.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__carray__group.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__carray__group.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__carray__group.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__core__group.aux" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__core__group.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__core__group.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__core__group.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__cst__group.aux" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__cst__group.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__cst__group.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__cst__group.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__impl__group.aux" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__impl__group.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__impl__group.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__impl__group.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__method__group.aux" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__method__group.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__method__group.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__method__group.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__prep__group.aux" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__prep__group.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__prep__group.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/group__prep__group.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/macro__generator_8py.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/main_8c.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/main_8c__incl.md5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/main_8c__incl.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/md_README.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/modules.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/namespacemacro__generator.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/namespaces.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/refman.aux" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/refman.idx" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/refman.ilg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/refman.ind" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/refman.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/refman.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/refman.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/refman.toc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/structcarray.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/macro_generator.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/CMakeCCompilerId.c.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/CMakeCXXCompilerId.cpp.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/README.md.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/_home_thomas_OneDrive_tbagrel_dev_cpp_tbagrel_project_cmake-build-debug_.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/_home_thomas_OneDrive_tbagrel_dev_cpp_tbagrel_project_cmake-build-debug_CMakeFiles_.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/_home_thomas_OneDrive_tbagrel_dev_cpp_tbagrel_project_cmake-build-debug_CMakeFiles_3.8.2_.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/_home_thomas_OneDrive_tbagrel_dev_cpp_tbagrel_project_cmake-build-debug_CMakeFiles_3.8.2_CompilerIdCXX_.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/_home_thomas_OneDrive_tbagrel_dev_cpp_tbagrel_project_cmake-build-debug_CMakeFiles_3.8.2_CompilerIdC_.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/carray.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/carray.c.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/carray.h.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/carray_group.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/core_group.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/cst_group.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/feature_tests.c.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/feature_tests.cxx.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/impl_group.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/macro_generator.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/macro_generator.py.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/main.c.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/md__r_e_a_d_m_e.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/method_group.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/man/man3/prep_group.3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test_carray.cpp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.4/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.4/CMakeCCompiler.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.4/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.4/CMakeSystem.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.4/CompilerIdC/CMakeCCompilerId.c" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.4/CompilerIdC/CMakeCCompilerId.c" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeCCompiler.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeSystem.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cvector.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cvector.dir/DependInfo.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cvector.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cvector.dir/build.make" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cvector.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cvector.dir/cmake_clean.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cvector.dir/cmake_clean_target.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cvector.dir/cmake_clean_target.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cvector.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cvector.dir/depend.make" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cvector.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cvector.dir/flags.make" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cvector.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cvector.dir/link.txt" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cvector.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/cvector.cbp" />
+      <change beforePath="$PROJECT_DIR$/cvector.h" afterPath="$PROJECT_DIR$/cvector.h" />
+      <change beforePath="$PROJECT_DIR$/docs/html/cvector_8h.html" afterPath="$PROJECT_DIR$/docs/html/cvector_8h.html" />
+      <change beforePath="$PROJECT_DIR$/docs/html/cvector_8h_source.html" afterPath="$PROJECT_DIR$/docs/html/cvector_8h_source.html" />
+      <change beforePath="$PROJECT_DIR$/docs/html/globals.html" afterPath="$PROJECT_DIR$/docs/html/globals.html" />
+      <change beforePath="$PROJECT_DIR$/docs/html/globals_defs.html" afterPath="$PROJECT_DIR$/docs/html/globals_defs.html" />
+      <change beforePath="$PROJECT_DIR$/docs/man/man3/cvector.h.3" afterPath="$PROJECT_DIR$/docs/man/man3/cvector.h.3" />
+      <change beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -375,36 +66,104 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cvector.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cvector.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4560">
-              <caret line="320" column="19" lean-forward="false" selection-start-line="320" selection-start-column="19" selection-end-line="320" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#141#218#0" expanded="true" />
-                <element signature="e#879#1120#0" expanded="true" />
-                <element signature="e#10294#10516#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="380">
-                <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="cvector.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/cvector.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="10906">
+                  <caret line="783" column="9" lean-forward="false" selection-start-line="783" selection-start-column="9" selection-end-line="783" selection-end-column="9" />
+                  <folding>
+                    <element signature="e#0#19#0" expanded="true" />
+                    <element signature="e#1150#1391#0" expanded="true" />
+                    <element signature="e#4364#4423#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="errorno.md" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/errorno.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="FIRST">
+                  <first_editor relative-caret-position="171">
+                    <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+                    <folding />
+                  </first_editor>
+                  <second_editor />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tests.cpp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/tests.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="342">
+                  <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+                  <folding>
+                    <element signature="e#0#24#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/main.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="152">
+                  <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+                  <folding>
+                    <element signature="e#0#18#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="228">
+                  <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="FIRST">
+                  <first_editor relative-caret-position="195">
+                    <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+                    <folding />
+                  </first_editor>
+                  <second_editor />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="cvector.h" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/cvector.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="323">
+                  <caret line="177" column="40" lean-forward="false" selection-start-line="177" selection-start-column="40" selection-end-line="177" selection-end-column="40" />
+                  <folding>
+                    <element signature="e#0#19#0" expanded="true" />
+                    <element signature="e#1150#1391#0" expanded="true" />
+                    <element signature="e#4364#4423#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -412,6 +171,11 @@
       <find>#define cvector_readjust CONCAT(CVECTOR_T, _cvector__readjust)</find>
       <find>INIT_FACTOR</find>
       <find>NULL</find>
+      <find>print</find>
+      <find>0</find>
+      <find>1</find>
+      <find>return</find>
+      <find>ERROR</find>
     </findStrings>
     <replaceStrings>
       <replace>CVECTOR_T</replace>
@@ -423,9 +187,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/tests/mult_include.h" />
+        <option value="$PROJECT_DIR$/errorno.md" />
         <option value="$PROJECT_DIR$/cvector.h" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/tests/cvector_import.h" />
+        <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/tests/tests.cpp" />
       </list>
     </option>
   </component>
@@ -438,7 +207,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="25" />
     <option name="width" value="960" />
-    <option name="height" value="1053" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -466,6 +235,11 @@
             <path>
               <item name="cvector" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="cvector" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvector" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="cvector" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -473,6 +247,11 @@
               <item name="cvector" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
               <item name="latex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvector" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="cvector" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -496,16 +275,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.cvector">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+  <component name="RunManager" selected="Google Test.gtest_cvector_tests">
+    <configuration name="gtest_cvector_tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cvector" TARGET_NAME="cvector_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cvector" RUN_TARGET_NAME="cvector_tests" TEST_MODE="SUITE_TEST">
+      <envs />
+    </configuration>
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cvector" RUN_TARGET_NAME="cvector" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
     </configuration>
     <configuration name="cvector" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cvector" TARGET_NAME="cvector" CONFIG_NAME="Debug">
       <envs />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
       <item index="1" class="java.lang.String" itemvalue="Application.cvector" />
+      <item index="2" class="java.lang.String" itemvalue="Google Test.gtest_cvector_tests" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -530,7 +313,7 @@
       <workItem from="1519299417137" duration="1633000" />
       <workItem from="1519313867675" duration="2831000" />
       <workItem from="1519317849101" duration="1579000" />
-      <workItem from="1519456367786" duration="2364000" />
+      <workItem from="1519456367786" duration="15097000" />
     </task>
     <task id="LOCAL-00002" summary="+ changes on README.md because of merge">
       <created>1519458155525</created>
@@ -560,21 +343,63 @@
       <option name="project" value="LOCAL" />
       <updated>1519458390267</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="+ rm on the previous implementation: carray">
+      <created>1519458757979</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1519458757979</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="cvector_new__and__cvector_free_int - 2018.02.24 at 12h 14m 03s.xml">
+      <configuration name="cvector_new__and__cvector_free.int" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="cvector_tests - 2018.02.24 at 11h 36m 51s.xml">
+      <configuration name="cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="cvector_tests - 2018.02.24 at 11h 38m 09s.xml">
+      <configuration name="cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="cvector_tests - 2018.02.24 at 12h 00m 52s.xml">
+      <configuration name="cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="cvector_tests - 2018.02.24 at 12h 01m 12s.xml">
+      <configuration name="cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="cvector_tests - 2018.02.24 at 12h 03m 43s.xml">
+      <configuration name="cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="gtest_cvector_tests - 2018.02.24 at 12h 04m 52s.xml">
+      <configuration name="gtest_cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="gtest_cvector_tests - 2018.02.24 at 12h 08m 53s.xml">
+      <configuration name="gtest_cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="gtest_cvector_tests - 2018.02.24 at 12h 13m 35s.xml">
+      <configuration name="gtest_cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="gtest_cvector_tests - 2018.02.24 at 12h 14m 45s.xml">
+      <configuration name="gtest_cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27770000" />
+    <option name="totallyTimeSpent" value="40503000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -584,7 +409,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -599,11 +423,12 @@
     <MESSAGE value="+ error on README.md: email address" />
     <MESSAGE value="+ error on README.md: /doc/ instead of /docs/" />
     <MESSAGE value="+ error on README.md: missing /html/" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ error on README.md: missing /html/" />
+    <MESSAGE value="+ rm on the previous implementation: carray" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ rm on the previous implementation: carray" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -614,9 +439,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#141#218#0" expanded="true" />
-            <element signature="e#879#1120#0" expanded="true" />
-            <element signature="e#10294#10516#0" expanded="true" />
+            <element signature="e#1150#1391#0" expanded="true" />
+            <element signature="e#4364#4423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -627,9 +451,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#141#218#0" expanded="true" />
-            <element signature="e#879#1120#0" expanded="true" />
-            <element signature="e#10294#10516#0" expanded="true" />
+            <element signature="e#1150#1391#0" expanded="true" />
+            <element signature="e#4364#4423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -640,9 +463,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#141#218#0" expanded="true" />
-            <element signature="e#879#1120#0" expanded="true" />
-            <element signature="e#10294#10516#0" expanded="true" />
+            <element signature="e#1150#1391#0" expanded="true" />
+            <element signature="e#4364#4423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -653,9 +475,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#141#218#0" expanded="true" />
-            <element signature="e#879#1120#0" expanded="true" />
-            <element signature="e#10294#10516#0" expanded="true" />
+            <element signature="e#1150#1391#0" expanded="true" />
+            <element signature="e#4364#4423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -666,9 +487,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#141#218#0" expanded="true" />
-            <element signature="e#879#1120#0" expanded="true" />
-            <element signature="e#10294#10516#0" expanded="true" />
+            <element signature="e#1150#1391#0" expanded="true" />
+            <element signature="e#4364#4423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -679,9 +499,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#141#218#0" expanded="true" />
-            <element signature="e#879#1120#0" expanded="true" />
-            <element signature="e#10294#10516#0" expanded="true" />
+            <element signature="e#1150#1391#0" expanded="true" />
+            <element signature="e#4364#4423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -692,9 +511,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#141#218#0" expanded="true" />
-            <element signature="e#879#1120#0" expanded="true" />
-            <element signature="e#10294#10516#0" expanded="true" />
+            <element signature="e#1150#1391#0" expanded="true" />
+            <element signature="e#4364#4423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -705,9 +523,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#141#218#0" expanded="true" />
-            <element signature="e#879#1120#0" expanded="true" />
-            <element signature="e#10294#10516#0" expanded="true" />
+            <element signature="e#1150#1391#0" expanded="true" />
+            <element signature="e#4364#4423#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -715,22 +532,6 @@
     <entry file="file://$PROJECT_DIR$/library.c" />
     <entry file="file://$PROJECT_DIR$/library.h" />
     <entry file="file://$PROJECT_DIR$/cvector.c" />
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -738,27 +539,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cvector.h">
+    <entry file="file://$PROJECT_DIR$/errorno.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="171">
+            <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/libcvector.a">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4560">
-          <caret line="320" column="19" lean-forward="false" selection-start-line="320" selection-start-column="19" selection-end-line="320" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#141#218#0" expanded="true" />
-            <element signature="e#879#1120#0" expanded="true" />
-            <element signature="e#10294#10516#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="4" column="1151" lean-forward="true" selection-start-line="4" selection-start-column="1151" selection-end-line="4" selection-end-column="1151" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/mult_include.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="380">
-            <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="195">
+            <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/cvector_import.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cvector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10906">
+          <caret line="783" column="9" lean-forward="false" selection-start-line="783" selection-start-column="9" selection-end-line="783" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#1150#1391#0" expanded="true" />
+            <element signature="e#4364#4423#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/tests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

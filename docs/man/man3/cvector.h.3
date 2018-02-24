@@ -335,7 +335,7 @@
 .br
 .in -1c
 .SH "Macro Definition Documentation"
-.PP 
+.PP
 .SS "#define __cvector_extend   __##\fBCONCAT\fP(\fBCVECTOR_T\fP, _cvector__extend)"
 
 .PP
@@ -352,10 +352,10 @@ Definition at line 189 of file cvector\&.h\&.
 
 .PP
 Definition at line 13 of file cvector\&.h\&.
-.SS "#define ADDSPACE_FACTOR   2\&.0"
-Space factor used when a cvector becomes too short to hold additional values\&. It means that the new cvector will have a space for ADDSPACE_FACTOR
+.SS "#define CVECTOR_ADDSPACE_FACTOR   2\&.0"
+Space factor used when a cvector becomes too short to hold additional values\&. It means that the new cvector will have a space for CVECTOR_ADDSPACE_FACTOR
 .IP "\(bu" 2
-the old space\&. 
+the old space\&.
 .PP
 
 .PP
@@ -509,98 +509,98 @@ Definition at line 185 of file cvector\&.h\&.
 .PP
 Definition at line 179 of file cvector\&.h\&.
 .SS "#define CVECTOR_T   \fBDEFAULT_CVECTOR_T\fP"
-Type of the elements to hold in this instance of the cvector library\&. BE CAREFUL! The specified type must be a correct indentifier, since it will prefix any function of this cvector instance\&. For example #define CVECTOR_T int * should be replaced with typedef int * pint; #define CVECTOR_T pint 
+Type of the elements to hold in this instance of the cvector library\&. BE CAREFUL! The specified type must be a correct indentifier, since it will prefix any function of this cvector instance\&. For example #define CVECTOR_T int * should be replaced with typedef int * pint; #define CVECTOR_T pint
 .PP
 Definition at line 132 of file cvector\&.h\&.
 .SS "#define cvector_toarray   \fBCONCAT\fP(\fBCVECTOR_T\fP, _cvector__toarray)"
 
 .PP
 Definition at line 176 of file cvector\&.h\&.
-.SS "#define DEBUG_LEVEL   \fBDEFAULT_DEBUG_LEVEL\fP"
-Debug level used in debug print\&. Higher means more messages\&. Available levels: Error [E]: 0 Warning [W]: 1 Information [I]: 2 Log [L]: 3 
+.SS "#define CVECTOR_DEBUG_LEVEL   \fBDEFAULT_DEBUG_LEVEL\fP"
+Debug level used in debug print\&. Higher means more messages\&. Available levels: Error [E]: 0 Warning [W]: 1 Information [I]: 2 Log [L]: 3
 .PP
 Definition at line 47 of file cvector\&.h\&.
 .SS "#define DEFAULT_CVECTOR_T   int"
 
 .PP
 Definition at line 15 of file cvector\&.h\&.
-.SS "#define DEFAULT_DEBUG_LEVEL   2"
+.SS "#define DEFAULT_CVECTOR_DEBUG_LEVEL   2"
 
 .PP
 Definition at line 24 of file cvector\&.h\&.
-.SS "#define DEFAULT_DEFAULT_VALUE   0"
+.SS "#define DEFAULT_CVECTOR_DEFAULT_VALUE   0"
 
 .PP
 Definition at line 16 of file cvector\&.h\&.
-.SS "#define DEFAULT_HASH_T   size_t"
+.SS "#define DEFAULT_CVECTOR_HASH_T   size_t"
 
 .PP
 Definition at line 17 of file cvector\&.h\&.
-.SS "#define DEFAULT_PRINT_DEBUG_FUNC   \fBdefault_print_debug\fP"
+.SS "#define DEFAULT_CVECTOR_ERROR_FUNC   \fBdefault_print_debug\fP"
 
 .PP
 Definition at line 18 of file cvector\&.h\&.
-.SS "#define DEFAULT_VALUE   \fBDEFAULT_DEFAULT_VALUE\fP"
-Default value for the type of this instance of cvector, used when an error occurs and when a function needs to return a value\&. 
+.SS "#define CVECTOR_DEFAULT_VALUE   \fBDEFAULT_DEFAULT_VALUE\fP"
+Default value for the type of this instance of cvector, used when an error occurs and when a function needs to return a value\&.
 .PP
 Definition at line 140 of file cvector\&.h\&.
-.SS "#define EXTEND_FACTOR   2\&.0"
-Space factor used when a extend operation is triggered\&. It means that the new space of the cvector will be EXTEND_FACTOR * the current space\&. 
+.SS "#define CVECTOR_EXTEND_FACTOR   2\&.0"
+Space factor used when a extend operation is triggered\&. It means that the new space of the cvector will be CVECTOR_EXTEND_FACTOR * the current space\&.
 .PP
 Definition at line 109 of file cvector\&.h\&.
-.SS "#define EXTEND_THRESHOLD   0\&.90"
-Threshold from which the cvector will be extended in a readjust operation\&. It means that if the current size of the cvector is above EXTEND_THRESHOLD
+.SS "#define CVECTOR_EXTEND_THRESHOLD   0\&.90"
+Threshold from which the cvector will be extended in a readjust operation\&. It means that if the current size of the cvector is above CVECTOR_EXTEND_THRESHOLD
 .IP "\(bu" 2
-its space, it will be extended\&. Set to above 1 to prevent extend during readjust operations\&. 
+its space, it will be extended\&. Set to above 1 to prevent extend during readjust operations\&.
 .PP
 
 .PP
 Definition at line 101 of file cvector\&.h\&.
-.SS "#define HASH_T   \fBDEFAULT_HASH_T\fP"
+.SS "#define CVECTOR_HASH_T   \fBDEFAULT_HASH_T\fP"
 
 .PP
 Definition at line 144 of file cvector\&.h\&.
-.SS "#define INIT_FACTOR   1\&.25"
-Space factor used when a copy of cvector is created, or a concatenation of two cvectors\&. It means that the resulting array will have a space for INIT_FACTOR * actual size items\&. 
+.SS "#define CVECTOR_INIT_FACTOR   1\&.25"
+Space factor used when a copy of cvector is created, or a concatenation of two cvectors\&. It means that the resulting array will have a space for CVECTOR_INIT_FACTOR * actual size items\&.
 .PP
 Definition at line 64 of file cvector\&.h\&.
-.SS "#define INIT_SPACE   8"
-Space in element units of a fresh created cvector, if no space was specified\&. 
+.SS "#define CVECTOR_INIT_SPACE   8"
+Space in element units of a fresh created cvector, if no space was specified\&.
 .PP
 Definition at line 55 of file cvector\&.h\&.
 .SS "#define NOT_FOUND_INDEX   ((\fBindex_t\fP) (\-1))"
 
 .PP
 Definition at line 27 of file cvector\&.h\&.
-.SS "#define PRINT_DEBUG(level, message)"
+.SS "#define CVECTOR_ERROR(level, message)"
 \fBValue:\fP
 .PP
 .nf
-if (PRINT_DEBUG_FUNC != NULL) { \
-        PRINT_DEBUG_FUNC(level, message); \
+if (CVECTOR_ERROR_FUNC != NULL) { \
+        CVECTOR_ERROR_FUNC(level, message); \
     } \
     int EXPECT_A_SEMICOLON = 1
 .fi
 .PP
 Definition at line 19 of file cvector\&.h\&.
-.SS "#define PRINT_DEBUG_FUNC   \fBDEFAULT_PRINT_DEBUG_FUNC\fP"
-Print debug function called when some error or log message needs to be printed on the screen or the log\&. The function signature must be void print_debug(int level, const char *message) 
+.SS "#define CVECTOR_ERROR_FUNC   \fBDEFAULT_PRINT_DEBUG_FUNC\fP"
+Print debug function called when some error or log message needs to be printed on the screen or the log\&. The function signature must be void print_debug(int level, const char *message)
 .PP
 Definition at line 118 of file cvector\&.h\&.
 .SS "#define ROUND_INDEX(x)   ((\fBindex_t\fP) (lrint(x)))"
 
 .PP
 Definition at line 28 of file cvector\&.h\&.
-.SS "#define SHRINK_FACTOR   0\&.5"
-Space factor used when a shrink operation is triggered\&. It means that the new space of the cvector will be SHRINK_FACTOR * the current space\&. 
+.SS "#define CVECTOR_SHRINK_FACTOR   0\&.5"
+Space factor used when a shrink operation is triggered\&. It means that the new space of the cvector will be CVECTOR_SHRINK_FACTOR * the current space\&.
 .PP
 Definition at line 91 of file cvector\&.h\&.
-.SS "#define SHRINK_THRESHOLD   0\&.5"
-Threshold from which the cvector will be shrank in a readjust operation\&. It means that if the current size of the cvector is under SHRINK_THRESHOLD * its space, it will be shrank\&. Set to under 0 to prevent shrink during readjust operations\&. 
+.SS "#define CVECTOR_SHRINK_THRESHOLD   0\&.5"
+Threshold from which the cvector will be shrank in a readjust operation\&. It means that if the current size of the cvector is under CVECTOR_SHRINK_THRESHOLD * its space, it will be shrank\&. Set to under 0 to prevent shrink during readjust operations\&.
 .PP
 Definition at line 83 of file cvector\&.h\&.
 .SH "Typedef Documentation"
-.PP 
+.PP
 .SS "typedef struct \fBcvector\fP \fBcvector\fP"
 
 .PP
@@ -618,488 +618,488 @@ Definition at line 26 of file cvector\&.h\&.
 .PP
 Definition at line 147 of file cvector\&.h\&.
 .SH "Function Documentation"
-.PP 
+.PP
 .SS "void __cvector_setspace (\fBcvector\fP * p_cvector, \fBindex_t\fP new_space)"
-Sets space of the specified cvector to new_space 
+Sets space of the specified cvector to new_space
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .br
-\fInew_space\fP the new space for the specified cvector 
+\fInew_space\fP the new space for the specified cvector
 .RE
 .PP
 
 .PP
 Definition at line 974 of file cvector\&.h\&.
 .SS "void cvector_add (\fBcvector\fP * p_cvector, \fBvalue_t\fP value)"
-Adds the specified element at the end of the cvector\&. 
+Adds the specified element at the end of the cvector\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .br
-\fIvalue\fP the value to push at the end of the cvector 
+\fIvalue\fP the value to push at the end of the cvector
 .RE
 .PP
 
 .PP
 Definition at line 338 of file cvector\&.h\&.
 .SS "void cvector_addi (\fBcvector\fP * p_cvector, \fBvalue_t\fP value, \fBindex_t\fP index)"
-Adds the specified element a the position index in the cvector, and shift following elements to the right\&. 
+Adds the specified element a the position index in the cvector, and shift following elements to the right\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .br
-\fIvalue\fP the value to push a the position index in the cvector 
+\fIvalue\fP the value to push a the position index in the cvector
 .br
-\fIindex\fP the index where the specified value will be inserted 
+\fIindex\fP the index where the specified value will be inserted
 .RE
 .PP
 
 .PP
 Definition at line 355 of file cvector\&.h\&.
 .SS "void cvector_appendto (\fBcvector\fP * p_cvector, \fBcvector\fP * p_add)"
-Appends element of the cvector pointed by p_add at the end of the cvector pointed by p_cvector\&. 
+Appends element of the cvector pointed by p_add at the end of the cvector pointed by p_cvector\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector where elements will be appended 
+\fIp_cvector\fP a pointer to the cvector where elements will be appended
 .br
-\fIp_add\fP a pointer to the cvector containing elements to copy 
+\fIp_add\fP a pointer to the cvector containing elements to copy
 .RE
 .PP
 
 .PP
 Definition at line 586 of file cvector\&.h\&.
 .SS "void cvector_clear (\fBcvector\fP * p_cvector)"
-Removes all elements of the cvector without changing its space (that is to say without calling cvector_readjust)\&. 
+Removes all elements of the cvector without changing its space (that is to say without calling cvector_readjust)\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .RE
 .PP
 
 .PP
 Definition at line 471 of file cvector\&.h\&.
 .SS "\fBcvector\fP* cvector_concat (\fBcvector\fP * p_cvector_1, \fBcvector\fP * p_cvector_2)"
-Returns a new cvector which is the concatenation of the two specified cvectors 
+Returns a new cvector which is the concatenation of the two specified cvectors
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector_1\fP a pointer to the first cvector to concatenate 
+\fIp_cvector_1\fP a pointer to the first cvector to concatenate
 .br
-\fIp_cvector_2\fP a pointer to the first cvector to concatenate 
+\fIp_cvector_2\fP a pointer to the first cvector to concatenate
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-a pointer to the resulting cvector 
+a pointer to the resulting cvector
 .RE
 .PP
 
 .PP
 Definition at line 607 of file cvector\&.h\&.
 .SS "bool cvector_equal (\fBcvector\fP * p_cvector_1, \fBcvector\fP * p_cvector_2)"
-Returns true iif both specified cvectors are equal\&. 
+Returns true iif both specified cvectors are equal\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector_1\fP a pointer to the first cvector to test 
+\fIp_cvector_1\fP a pointer to the first cvector to test
 .br
-\fIp_cvector_2\fP a pointer to the second cvector to test 
+\fIp_cvector_2\fP a pointer to the second cvector to test
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-true if both specified cvectors are equal, false otherwise 
+true if both specified cvectors are equal, false otherwise
 .RE
 .PP
 
 .PP
 Definition at line 664 of file cvector\&.h\&.
 .SS "bool cvector_equal_func (\fBcvector\fP * p_cvector_1, \fBcvector\fP * p_cvector_2, bool(*)(\fBvalue_t\fP, \fBvalue_t\fP) equal_value)"
-Returns true iif both specified cvectors are equal according to the specified test function for values\&. 
+Returns true iif both specified cvectors are equal according to the specified test function for values\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector_1\fP a pointer to the first cvector to test 
+\fIp_cvector_1\fP a pointer to the first cvector to test
 .br
-\fIp_cvector_2\fP a pointer to the second cvector to test 
+\fIp_cvector_2\fP a pointer to the second cvector to test
 .br
-\fIequal_value\fP the test function for values\&. Its signature must be bool equal_value(value_t value_1, value_t value_2) 
+\fIequal_value\fP the test function for values\&. Its signature must be bool equal_value(value_t value_1, value_t value_2)
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-true if both specified cvectors are equal according to the test function, false otherwise 
+true if both specified cvectors are equal according to the test function, false otherwise
 .RE
 .PP
 
 .PP
 Definition at line 687 of file cvector\&.h\&.
 .SS "void cvector_free (\fBcvector\fP * p_cvector)"
-Frees the specified cvector\&. 
+Frees the specified cvector\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector to free 
+\fIp_cvector\fP a pointer to the cvector to free
 .RE
 .PP
 
 .PP
 Definition at line 304 of file cvector\&.h\&.
 .SS "void cvector_free_func (\fBcvector\fP * p_vector, void(*)(\fBvalue_t\fP) free_value)"
-Applies the specified free function of each value of the cvector, and then frees it too\&. 
+Applies the specified free function of each value of the cvector, and then frees it too\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_vector\fP a pointer to the cvector to free 
+\fIp_vector\fP a pointer to the cvector to free
 .br
-\fIfree_value\fP the function to free each value of the cvector 
+\fIfree_value\fP the function to free each value of the cvector
 .RE
 .PP
 
 .PP
 Definition at line 315 of file cvector\&.h\&.
 .SS "\fBvalue_t\fP cvector_get (\fBcvector\fP * p_cvector, \fBindex_t\fP index)"
-Returns the value at the specified index in the cvector\&. Prints an error message and returns DEFAULT_VALUE if the specified index is invalid\&. 
+Returns the value at the specified index in the cvector\&. Prints an error message and returns CVECTOR_DEFAULT_VALUE if the specified index is invalid\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .br
-\fIindex\fP the index of the value to get 
+\fIindex\fP the index of the value to get
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-the desired value if the index is correct, DEFAULT_VALUE otherwise 
+the desired value if the index is correct, CVECTOR_DEFAULT_VALUE otherwise
 .RE
 .PP
 
 .PP
 Definition at line 482 of file cvector\&.h\&.
 .SS "\fBhash_t\fP cvector_hash (\fBcvector\fP * p_cvector, \fBhash_t\fP(*)(\fBvalue_t\fP) hash_value)"
-Returns the hash of the specified cvector, using djb2 algorithm by Dan Bernstein, according to the specified hash function for values of the cvector\&. 
+Returns the hash of the specified cvector, using djb2 algorithm by Dan Bernstein, according to the specified hash function for values of the cvector\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector to hash 
+\fIp_cvector\fP a pointer to the cvector to hash
 .br
-\fIhash_value\fP hash function for values of the cvector\&. Signature of the hash value function must be hash_t hash_value(value_t value) 
+\fIhash_value\fP hash function for values of the cvector\&. Signature of the hash value function must be hash_t hash_value(value_t value)
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-the computed hash of the specified cvector 
+the computed hash of the specified cvector
 .RE
 .PP
 
 .PP
 Definition at line 649 of file cvector\&.h\&.
 .SS "\fBindex_t\fP cvector_indexof (\fBcvector\fP * p_cvector, \fBvalue_t\fP value)"
-Returns the first index where the specified value is found in the cvector\&. If the value is not found, returns NOT_FOUND_INDEX value\&. 
+Returns the first index where the specified value is found in the cvector\&. If the value is not found, returns NOT_FOUND_INDEX value\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .br
-\fIvalue\fP the value to found 
+\fIvalue\fP the value to found
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-the first index where the specified value was found, or NOT_FOUND_INDEX if it was not found 
+the first index where the specified value was found, or NOT_FOUND_INDEX if it was not found
 .RE
 .PP
 
 .PP
 Definition at line 791 of file cvector\&.h\&.
 .SS "\fBindex_t\fP cvector_indexof_func (\fBcvector\fP * p_cvector, \fBvalue_t\fP value, bool(*)(\fBvalue_t\fP, \fBvalue_t\fP) equal_value)"
-Returns the first index where the specified value is found, according to the specified test function\&. Il the value is not found, returns NOT_FOUND_INDEX value\&. 
+Returns the first index where the specified value is found, according to the specified test function\&. Il the value is not found, returns NOT_FOUND_INDEX value\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .br
-\fIvalue\fP the value to found 
+\fIvalue\fP the value to found
 .br
-\fIequal_value\fP the test function to check equality between values\&. Its signature must be bool equal_value(value_t value_1, value_t value_2) 
+\fIequal_value\fP the test function to check equality between values\&. Its signature must be bool equal_value(value_t value_1, value_t value_2)
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-the first index where the specified value was found, or NOT_FOUND_INDEX if it was not found 
+the first index where the specified value was found, or NOT_FOUND_INDEX if it was not found
 .RE
 .PP
 
 .PP
 Definition at line 813 of file cvector\&.h\&.
 .SS "\fBcvector\fP* cvector_new ()"
-Creates a new cvector which can hold at the beginning at least DEFAULT_INIT_SPACE elements\&. 
+Creates a new cvector which can hold at the beginning at least DEFAULT_INIT_SPACE elements\&.
 .PP
 \fBReturns:\fP
 .RS 4
-a pointer to the new cvector 
+a pointer to the new cvector
 .RE
 .PP
 
 .PP
 Definition at line 221 of file cvector\&.h\&.
 .SS "\fBcvector\fP* cvector_new_copy (\fBcvector\fP * p_original)"
-Creates a new cvector which is a copy of the specified one\&. 
+Creates a new cvector which is a copy of the specified one\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_original\fP a pointer to the cvector to copy 
+\fIp_original\fP a pointer to the cvector to copy
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-a pointer to the new (clone) cvector 
+a pointer to the new (clone) cvector
 .RE
 .PP
 
 .PP
 Definition at line 256 of file cvector\&.h\&.
 .SS "\fBcvector\fP* cvector_new_copy_space (\fBcvector\fP * p_original, \fBindex_t\fP space)"
-Creates a new cvector which is a copy of the specified one and which can hold at least space elements\&. 
+Creates a new cvector which is a copy of the specified one and which can hold at least space elements\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_original\fP a pointer to the cvector to copy 
+\fIp_original\fP a pointer to the cvector to copy
 .br
-\fIspace\fP desired space for the new (clone) cvector\&. space must be greater or equal than the size of the original cvector 
+\fIspace\fP desired space for the new (clone) cvector\&. space must be greater or equal than the size of the original cvector
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-a pointer to the new (clone) cvector 
+a pointer to the new (clone) cvector
 .RE
 .PP
 
 .PP
 Definition at line 276 of file cvector\&.h\&.
 .SS "\fBcvector\fP* cvector_new_space (\fBindex_t\fP space)"
-Creates a new cvector which can hold at the beginning at least space elements\&. 
+Creates a new cvector which can hold at the beginning at least space elements\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIspace\fP desired space for the new cvector 
+\fIspace\fP desired space for the new cvector
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-a pointer to the new cvector 
+a pointer to the new cvector
 .RE
 .PP
 
 .PP
 Definition at line 236 of file cvector\&.h\&.
 .SS "void cvector_readjust (\fBcvector\fP * p_cvector)"
-Readjusts space of the specified cvector if needed, according to SHRINK_THRESHOLD and EXTEND_THRESHOLD\&. 
+Readjusts space of the specified cvector if needed, according to CVECTOR_SHRINK_THRESHOLD and CVECTOR_EXTEND_THRESHOLD\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .RE
 .PP
 
 .PP
 Definition at line 951 of file cvector\&.h\&.
 .SS "\fBvalue_t\fP cvector_remove (\fBcvector\fP * p_cvector)"
-Removes the last element of the cvector and returns it\&. If the cvector is empty, prints an error and returns DEFAULT_VALUE\&. 
+Removes the last element of the cvector and returns it\&. If the cvector is empty, prints an error and returns CVECTOR_DEFAULT_VALUE\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-The last value of the cvector if it is not empty, DEFAULT_VALUE otherwise 
+The last value of the cvector if it is not empty, CVECTOR_DEFAULT_VALUE otherwise
 .RE
 .PP
 
 .PP
 Definition at line 401 of file cvector\&.h\&.
 .SS "\fBvalue_t\fP cvector_removei (\fBcvector\fP * p_cvector, \fBindex_t\fP index)"
-Removes the element located at the specified index, and returns it\&. If the cvector is empty or if the index is incorrect, prints an error and returns DEFAULT_VALUE\&. 
+Removes the element located at the specified index, and returns it\&. If the cvector is empty or if the index is incorrect, prints an error and returns CVECTOR_DEFAULT_VALUE\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .br
-\fIindex\fP the index where the element will be removed 
+\fIindex\fP the index where the element will be removed
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-the removed element or DEFAULT_VALUE if an error occurs 
+the removed element or CVECTOR_DEFAULT_VALUE if an error occurs
 .RE
 .PP
 
 .PP
 Definition at line 422 of file cvector\&.h\&.
 .SS "bool cvector_replace (\fBcvector\fP * p_cvector, \fBvalue_t\fP original, \fBvalue_t\fP replacement)"
-Replace specified elements in the cvector and returns true if at least one change was made\&. 
+Replace specified elements in the cvector and returns true if at least one change was made\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .br
-\fIoriginal\fP original value to replace 
+\fIoriginal\fP original value to replace
 .br
-\fIreplacement\fP replacement value for original 
+\fIreplacement\fP replacement value for original
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-true if at least one replacement was made, false otherwise 
+true if at least one replacement was made, false otherwise
 .RE
 .PP
 
 .PP
 Definition at line 727 of file cvector\&.h\&.
 .SS "bool cvector_replace_func (\fBcvector\fP * p_cvector, \fBvalue_t\fP original, \fBvalue_t\fP replacement, bool(*)(\fBvalue_t\fP, \fBvalue_t\fP) equal_value)"
-Replace specified elements in the cvector and returns true if at least one change was made\&. Test between elements of the cvector and original are made with the specified function\&. 
+Replace specified elements in the cvector and returns true if at least one change was made\&. Test between elements of the cvector and original are made with the specified function\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .br
-\fIoriginal\fP original value to replace 
+\fIoriginal\fP original value to replace
 .br
-\fIreplacement\fP replacement value for original 
+\fIreplacement\fP replacement value for original
 .br
-\fIequal_value\fP test function used to compare cvector elements and original\&. Its signature must be bool equal_value(value_t value_1, value_t value_2) 
+\fIequal_value\fP test function used to compare cvector elements and original\&. Its signature must be bool equal_value(value_t value_1, value_t value_2)
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-true if at least one replacement was made, false otherwise 
+true if at least one replacement was made, false otherwise
 .RE
 .PP
 
 .PP
 Definition at line 751 of file cvector\&.h\&.
 .SS "\fBcvector\fP* cvector_reversed (\fBcvector\fP * p_cvector)"
-Returns a cvector which contains the same elements as the specified one, but in a reversed order\&. 
+Returns a cvector which contains the same elements as the specified one, but in a reversed order\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the original cvector 
+\fIp_cvector\fP a pointer to the original cvector
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-the resulting cvector, containing elements of the specified cvector in a reverse order 
+the resulting cvector, containing elements of the specified cvector in a reverse order
 .RE
 .PP
 
 .PP
 Definition at line 627 of file cvector\&.h\&.
 .SS "\fBvalue_t\fP cvector_safeget (\fBcvector\fP * p_cvector, \fBindex_t\fP index)"
-Returns the value at the specified index in the cvector\&. Only prints a warning and returns DEFAULT_VALUE if the specified index is invalid\&. 
+Returns the value at the specified index in the cvector\&. Only prints a warning and returns CVECTOR_DEFAULT_VALUE if the specified index is invalid\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .br
-\fIindex\fP the index of the value to get 
+\fIindex\fP the index of the value to get
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-the desired value if the index is correct, DEFAULT_VALUE otherwise 
+the desired value if the index is correct, CVECTOR_DEFAULT_VALUE otherwise
 .RE
 .PP
 
 .PP
 Definition at line 506 of file cvector\&.h\&.
 .SS "void cvector_safeset (\fBcvector\fP * p_cvector, \fBvalue_t\fP value, \fBindex_t\fP index)"
-Sets the value of the element located at the specified position\&. Only raises warning if the index is invalid, or extends the cvector to be able to set the value at the specified index\&. 
+Sets the value of the element located at the specified position\&. Only raises warning if the index is invalid, or extends the cvector to be able to set the value at the specified index\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .br
-\fIvalue\fP the value which will be inserted at the index position 
+\fIvalue\fP the value which will be inserted at the index position
 .br
-\fIindex\fP the index where the value will be set 
+\fIindex\fP the index where the value will be set
 .RE
 .PP
 
 .PP
 Definition at line 554 of file cvector\&.h\&.
 .SS "void cvector_set (\fBcvector\fP * p_cvector, \fBvalue_t\fP value, \fBindex_t\fP index)"
-Sets the value of the element located at the specified index\&. Raises error if the specified index is invalid\&. 
+Sets the value of the element located at the specified index\&. Raises error if the specified index is invalid\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .br
-\fIvalue\fP the value which will be placed at the index position 
+\fIvalue\fP the value which will be placed at the index position
 .br
-\fIindex\fP the index where the value will be set 
+\fIindex\fP the index where the value will be set
 .RE
 .PP
 
 .PP
 Definition at line 530 of file cvector\&.h\&.
 .SS "\fBcvector\fP* cvector_slice (\fBcvector\fP * p_cvector, \fBindex_t\fP from, \fBindex_t\fP to, \fBindex_t\fP step)"
-Returns the slice [|from:to[| of the specified cvector\&. Prints an error and return NULL if indexes are incorrect\&. 
+Returns the slice [|from:to[| of the specified cvector\&. Prints an error and return NULL if indexes are incorrect\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .br
-\fIfrom\fP index of the begin of the slice, included 
+\fIfrom\fP index of the begin of the slice, included
 .br
-\fIto\fP index of the end of the slice, excluded 
+\fIto\fP index of the end of the slice, excluded
 .br
-\fIstep\fP step of the slice 
+\fIstep\fP step of the slice
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-the corresponding (cvector) slice 
+the corresponding (cvector) slice
 .RE
 .PP
 
 .PP
 Definition at line 861 of file cvector\&.h\&.
 .SS "\fBvalue_t\fP* cvector_slicetoarray (\fBcvector\fP * p_cvector, \fBindex_t\fP from, \fBindex_t\fP to, \fBindex_t\fP step)"
-Returns the slice [|from:to[| of the specified cvector as a c-style array\&. Prints an error and return NULL if indexes are incorrect\&. 
+Returns the slice [|from:to[| of the specified cvector as a c-style array\&. Prints an error and return NULL if indexes are incorrect\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .br
-\fIfrom\fP index of the begin of the slice, included 
+\fIfrom\fP index of the begin of the slice, included
 .br
-\fIto\fP index of the end of the slice, excluded 
+\fIto\fP index of the end of the slice, excluded
 .br
-\fIstep\fP step of the slice 
+\fIstep\fP step of the slice
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-the corresponding (c-style array) slice 
+the corresponding (c-style array) slice
 .RE
 .PP
 
 .PP
 Definition at line 909 of file cvector\&.h\&.
 .SS "void cvector_sort (\fBcvector\fP * p_cvector, int(*)(const void *, const void *) comp_value)"
-Sorts the elements in the cvector according to the specified comparison function\&. 
+Sorts the elements in the cvector according to the specified comparison function\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .br
 \fIcomp_value\fP a comparison function which must have the signature int comp_value(const void *p_a, const void *p_b) and which must
 .IP "\(bu" 2
@@ -1107,7 +1107,7 @@ return -1 if element a should be placed before element b
 .IP "\(bu" 2
 return 0 if element a and b could be placed at the same position
 .IP "\(bu" 2
-return 1 if element a should be placed after element b 
+return 1 if element a should be placed after element b
 .PP
 .RE
 .PP
@@ -1115,34 +1115,34 @@ return 1 if element a should be placed after element b
 .PP
 Definition at line 776 of file cvector\&.h\&.
 .SS "\fBvalue_t\fP* cvector_toarray (\fBcvector\fP * p_cvector)"
-Returns a pointer to a c-style array holding the same elements as the specified cvector\&. 
+Returns a pointer to a c-style array holding the same elements as the specified cvector\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp_cvector\fP a pointer to the cvector 
+\fIp_cvector\fP a pointer to the cvector
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-a c-style malloc-ed array holding the same elements as the specified cvector, which must be freed after use 
+a c-style malloc-ed array holding the same elements as the specified cvector, which must be freed after use
 .RE
 .PP
 
 .PP
 Definition at line 709 of file cvector\&.h\&.
 .SS "void default_print_debug (int level, const char * message)"
-Default print_debug function\&. Prints the specified message iif DEBUG_LEVEL is smaller than the specified level for the message\&. 
+Default print_debug function\&. Prints the specified message iif CVECTOR_DEBUG_LEVEL is smaller than the specified level for the message\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIlevel\fP the level for the specified debug message 
+\fIlevel\fP the level for the specified debug message
 .br
-\fImessage\fP the debug message to print 
+\fImessage\fP the debug message to print
 .RE
 .PP
 
 .PP
 Definition at line 210 of file cvector\&.h\&.
 .SH "Author"
-.PP 
+.PP
 Generated automatically by Doxygen for CVector from the source code\&.

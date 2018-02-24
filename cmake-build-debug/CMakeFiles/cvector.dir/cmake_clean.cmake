@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cvector.dir/main.c.o"
-  "libcvector.pdb"
-  "libcvector.a"
+  "cvector.pdb"
+  "cvector"
 )
 
 # Per-language clean rules from dependency scanning.

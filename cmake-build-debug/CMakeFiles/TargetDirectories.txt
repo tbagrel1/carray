@@ -1,3 +1,4 @@
 /home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/CMakeFiles/cvector_tests.dir
 /home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/thomas/Drive/tbagrel/dev/c/cvector/cmake-build-debug/CMakeFiles/cvector.dir

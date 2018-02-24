@@ -6,26 +6,41 @@
 #include <string.h>
 #include <stdbool.h>
 
-// Peut etre un probleme au niveau de la fonction de print, qui devrait avoir
-// un nom different en fonction du type, pour ne pas redefinir la meme fonction
-// plusieurs fois
+#ifndef DEF_CVECTOR
+#define DEF_CVECTOR
 
+static int CVECTOR_ERRORNO = 0;
 #define _CONCAT(a, b) a ## b
 #define CONCAT(a, b) _CONCAT(a, b)
 #define DEFAULT_CVECTOR_T int
-#define DEFAULT_DEFAULT_VALUE 0
-#define DEFAULT_HASH_T size_t
-#define DEFAULT_PRINT_DEBUG_FUNC default_print_debug
-#define PRINT_DEBUG(level, message) \
-    if (PRINT_DEBUG_FUNC != NULL) { \
-        PRINT_DEBUG_FUNC(level, message); \
-    } \
-    int EXPECT_A_SEMICOLON = 1
-#define DEFAULT_DEBUG_LEVEL 2
-static char DEBUG_LEVELS[] = {'E', 'W', 'I', 'L'};
+#define DEFAULT_CVECTOR_DEFAULT_VALUE 0
+#define DEFAULT_CVECTOR_HASH_T size_t
+static int EXPECT_A_SEMICOLON = 0;
+
+#define NO_ERROR_FUNC NULL
+#define DEFAULT_CVECTOR_DEBUG_LEVEL 2
+static char CVECTOR_DEBUG_LEVELS[] = {'E', 'W', 'I', 'L'};
+
+/**
+ * Default print_debug function. Prints the specified message iif
+ * DEBUG_LEVEL is smaller than the specified level for the message.
+ * @param level the level for the specified debug message
+ * @param message the debug message to print
+ */
+void default_error_func(int level, const char *message) {
+    if (level <= DEFAULT_CVECTOR_DEBUG_LEVEL) {
+        printf("[%c] %s\n", CVECTOR_DEBUG_LEVELS[level], message);
+    }
+}
+
+#define DEFAULT_CVECTOR_ERROR_FUNC default_error_func
+
+
 typedef size_t index_t;
 #define NOT_FOUND_INDEX ((index_t) (-1))
 #define ROUND_INDEX(x) ((index_t) (lrint(x)))
+
+#endif
 
 /*
  * Be careful, as this library can work for different types,
@@ -36,23 +51,11 @@ typedef size_t index_t;
  */
 
 /**
- * Debug level used in debug print. Higher means more messages.
- * Available levels:
- *     Error [E]:       0
- *     Warning [W]:     1
- *     Information [I]: 2
- *     Log [L]:         3
- */
-#ifndef DEBUG_LEVEL
-#define DEBUG_LEVEL DEFAULT_DEBUG_LEVEL
-#endif
-
-/**
  * Space in element units of a fresh created cvector, if no space was
  * specified.
  */
-#ifndef INIT_SPACE
-#define INIT_SPACE 8
+#ifndef CVECTOR_INIT_SPACE
+#define CVECTOR_INIT_SPACE 8
 #endif
 
 /**
@@ -60,8 +63,8 @@ typedef size_t index_t;
  * two cvectors. It means that the resulting array will have a space for
  * INIT_FACTOR * actual size items.
  */
-#ifndef INIT_FACTOR
-#define INIT_FACTOR 1.25
+#ifndef CVECTOR_INIT_FACTOR
+#define CVECTOR_INIT_FACTOR 1.25
 #endif
 
 /**
@@ -69,8 +72,8 @@ typedef size_t index_t;
  * values. It means that the new cvector will have a space for ADDSPACE_FACTOR
  * * the old space.
  */
-#ifndef ADDSPACE_FACTOR
-#define ADDSPACE_FACTOR 2.0
+#ifndef CVECTOR_ADDSPACE_FACTOR
+#define CVECTOR_ADDSPACE_FACTOR 2.0
 #endif
 
 /**
@@ -79,16 +82,16 @@ typedef size_t index_t;
  * its space, it will be shrank. Set to under 0 to prevent shrink during
  * readjust operations.
  */
-#ifndef SHRINK_THRESHOLD
-#define SHRINK_THRESHOLD 0.5
+#ifndef CVECTOR_SHRINK_THRESHOLD
+#define CVECTOR_SHRINK_THRESHOLD 0.5
 #endif
 
 /**
  * Space factor used when a shrink operation is triggered. It means that the
  * new space of the cvector will be SHRINK_FACTOR * the current space.
  */
-#ifndef SHRINK_FACTOR
-#define SHRINK_FACTOR 0.5
+#ifndef CVECTOR_SHRINK_FACTOR
+#define CVECTOR_SHRINK_FACTOR 0.5
 #endif
 
 /**
@@ -97,16 +100,28 @@ typedef size_t index_t;
  * * its space, it will be extended. Set to above 1 to prevent extend during
  * readjust operations.
  */
-#ifndef EXTEND_THRESHOLD
-#define EXTEND_THRESHOLD 0.90
+#ifndef CVECTOR_EXTEND_THRESHOLD
+#define CVECTOR_EXTEND_THRESHOLD 0.90
 #endif
 
 /**
  * Space factor used when a extend operation is triggered. It means that the
  * new space of the cvector will be EXTEND_FACTOR * the current space.
  */
-#ifndef EXTEND_FACTOR
-#define EXTEND_FACTOR 2.0
+#ifndef CVECTOR_EXTEND_FACTOR
+#define CVECTOR_EXTEND_FACTOR 2.0
+#endif
+
+/**
+ * Debug level used in debug print. Higher means more messages.
+ * Available levels:
+ *     Error [E]:       0
+ *     Warning [W]:     1
+ *     Information [I]: 2
+ *     Log [L]:         3
+ */
+#ifndef CVECTOR_DEBUG_LEVEL
+#define CVECTOR_DEBUG_LEVEL DEFAULT_CVECTOR_DEBUG_LEVEL
 #endif
 
 /**
@@ -114,8 +129,8 @@ typedef size_t index_t;
  * printed on the screen or the log. The function signature must be
  *     void print_debug(int level, const char *message)
  */
-#ifndef PRINT_DEBUG_FUNC
-#define PRINT_DEBUG_FUNC DEFAULT_PRINT_DEBUG_FUNC
+#ifndef CVECTOR_ERROR_FUNC
+#define CVECTOR_ERROR_FUNC DEFAULT_CVECTOR_ERROR_FUNC
 #endif
 
 /**
@@ -136,58 +151,62 @@ typedef size_t index_t;
  * Default value for the type of this instance of cvector, used when an error
  * occurs and when a function needs to return a value.
  */
-#ifndef DEFAULT_VALUE
-#define DEFAULT_VALUE DEFAULT_DEFAULT_VALUE
+#ifndef CVECTOR_DEFAULT_VALUE
+#define CVECTOR_DEFAULT_VALUE DEFAULT_CVECTOR_DEFAULT_VALUE
 #endif
 
-#ifndef HASH_T
-#define HASH_T DEFAULT_HASH_T
+#ifndef CVECTOR_HASH_T
+#define CVECTOR_HASH_T DEFAULT_CVECTOR_HASH_T
 #endif
-
-typedef CVECTOR_T value_t;
-typedef HASH_T hash_t;
 
 // structs and functions name overwrite
-#define cvector CONCAT(CVECTOR_T, _cvector)
-#define cvector_new CONCAT(CVECTOR_T, _cvector__new)
-#define cvector_new_space CONCAT(CVECTOR_T, _cvector__new_space)
-#define cvector_new_copy CONCAT(CVECTOR_T, _cvector__new_copy)
-#define cvector_new_copy_space CONCAT(CVECTOR_T, _cvector__new_copy_space)
-#define cvector_free CONCAT(CVECTOR_T, _cvector__free)
-#define cvector_getsize CONCAT(CVECTOR_T, _cvector__getsize)
-#define cvector_free_func CONCAT(CVECTOR_T, _cvector__free_value)
-#define cvector_add CONCAT(CVECTOR_T, _cvector__add)
-#define cvector_addi CONCAT(CVECTOR_T, _cvector__addi)
-#define cvector_insert CONCAT(CVECTOR_T, _cvector__insert)
-#define cvector_remove CONCAT(CVECTOR_T, _cvector__remove)
-#define cvector_removei CONCAT(CVECTOR_T, _cvector__removei)
-#define cvector_drop CONCAT(CVECTOR_T, _cvector__drop)
-#define cvector_clear CONCAT(CVECTOR_T, _cvector__clear)
-#define cvector_get CONCAT(CVECTOR_T, _cvector__get)
-#define cvector_safeget CONCAT(CVECTOR_T, _cvector__safeget)
-#define cvector_set CONCAT(CVECTOR_T, _cvector__set)
-#define cvector_safeset CONCAT(CVECTOR_T, _cvector__safeset)
-#define cvector_appendto CONCAT(CVECTOR_T, _cvector__appendto)
-#define cvector_concat CONCAT(CVECTOR_T, _cvector__concat)
-#define cvector_reversed CONCAT(CVECTOR_T, _cvector__reversed)
-#define cvector_hash CONCAT(CVECTOR_T, _cvector__hash)
-#define cvector_equal CONCAT(CVECTOR_T, _cvector__equal)
-#define cvector_equal_func CONCAT(CVECTOR_T, _cvector__equal_func)
-#define cvector_toarray CONCAT(CVECTOR_T, _cvector__toarray)
-#define cvector_replace CONCAT(CVECTOR_T, _cvector__replace)
-#define cvector_replace_func CONCAT(CVECTOR_T, _cvector__replace_func)
-#define cvector_sort CONCAT(CVECTOR_T, _cvector__sort)
-#define cvector_indexof CONCAT(CVECTOR_T, _cvector__indexof)
-#define cvector_indexof_func CONCAT(CVECTOR_T, _cvector__indexof_func)
-#define cvector_in CONCAT(CVECTOR_T, _cvector__in)
-#define cvector_in_func CONCAT(CVECTOR_T, _cvector__in_func)
-#define cvector_slice CONCAT(CVECTOR_T, _cvector__slice)
-#define cvector_slicetoarray CONCAT(CVECTOR_T, _cvector__slicetoarray)
-#define cvector_readjust CONCAT(CVECTOR_T, _cvector__readjust)
-#define cvector_addspace CONCAT(CVECTOR_T, _cvector__addspace)
-#define __cvector_setspace __##CONCAT(CVECTOR_T, _cvector__setspace)
-#define __cvector_shrink __##CONCAT(CVECTOR_T, _cvector__shrink)
-#define __cvector_extend __##CONCAT(CVECTOR_T, _cvector__extend)
+#define value_t CVECTOR_T
+#define hash_t CVECTOR_HASH_T
+#define cvector CONCAT(CVECTOR_T, _vect)
+#define __cvector_setspace CONCAT(CVECTOR_T, _vect__setspace)
+#define __cvector_shrink CONCAT(CVECTOR_T, _vect__shrink)
+#define __cvector_extend CONCAT(CVECTOR_T, _vect__extend)
+#define cvector_readjust CONCAT(CVECTOR_T, _vect__readjust)
+#define cvector_addspace CONCAT(CVECTOR_T, _vect__addspace)
+#define cvector_new CONCAT(CVECTOR_T, _vect__new)
+#define cvector_new_space CONCAT(CVECTOR_T, _vect__new_space)
+#define cvector_new_copy CONCAT(CVECTOR_T, _vect__new_copy)
+#define cvector_new_copy_space CONCAT(CVECTOR_T, _vect__new_copy_space)
+#define cvector_free CONCAT(CVECTOR_T, _vect__free)
+#define cvector_getsize CONCAT(CVECTOR_T, _vect__getsize)
+#define cvector_free_func CONCAT(CVECTOR_T, _vect__free_value)
+#define cvector_add CONCAT(CVECTOR_T, _vect__add)
+#define cvector_addi CONCAT(CVECTOR_T, _vect__addi)
+#define cvector_insert CONCAT(CVECTOR_T, _vect__insert)
+#define cvector_remove CONCAT(CVECTOR_T, _vect__remove)
+#define cvector_removei CONCAT(CVECTOR_T, _vect__removei)
+#define cvector_drop CONCAT(CVECTOR_T, _vect__drop)
+#define cvector_clear CONCAT(CVECTOR_T, _vect__clear)
+#define cvector_get CONCAT(CVECTOR_T, _vect__get)
+#define cvector_safeget CONCAT(CVECTOR_T, _vect__safeget)
+#define cvector_set CONCAT(CVECTOR_T, _vect__set)
+#define cvector_safeset CONCAT(CVECTOR_T, _vect__safeset)
+#define cvector_appendto CONCAT(CVECTOR_T, _vect__appendto)
+#define cvector_concat CONCAT(CVECTOR_T, _vect__concat)
+#define cvector_reversed CONCAT(CVECTOR_T, _vect__reversed)
+#define cvector_hash CONCAT(CVECTOR_T, _vect__hash)
+#define cvector_equal CONCAT(CVECTOR_T, _vect__equal)
+#define cvector_equal_func CONCAT(CVECTOR_T, _vect__equal_func)
+#define cvector_toarray CONCAT(CVECTOR_T, _vect__toarray)
+#define cvector_replace CONCAT(CVECTOR_T, _vect__replace)
+#define cvector_replace_func CONCAT(CVECTOR_T, _vect__replace_func)
+#define cvector_sort CONCAT(CVECTOR_T, _vect__sort)
+#define cvector_indexof CONCAT(CVECTOR_T, _vect__indexof)
+#define cvector_indexof_func CONCAT(CVECTOR_T, _vect__indexof_func)
+#define cvector_in CONCAT(CVECTOR_T, _vect__in)
+#define cvector_in_func CONCAT(CVECTOR_T, _vect__in_func)
+#define cvector_slice CONCAT(CVECTOR_T, _vect__slice)
+#define cvector_slicetoarray CONCAT(CVECTOR_T, _vect__slicetoarray)
+#define CVECTOR_ERROR(level, message) \
+    if (CVECTOR_ERROR_FUNC != NO_ERROR_FUNC) { \
+        CVECTOR_ERROR_FUNC(level, message); \
+    } \
+    EXPECT_A_SEMICOLON = 0
 //
 
 typedef struct cvector cvector;
@@ -202,16 +221,61 @@ struct cvector {
 };
 
 /**
- * Default print_debug function. Prints the specified message iif
- * DEBUG_LEVEL is smaller than the specified level for the message.
- * @param level the level for the specified debug message
- * @param message the debug message to print
+ * Sets space of the specified cvector to new_space
+ * @param p_cvector a pointer to the cvector
+ * @param new_space the new space for the specified cvector
  */
-void default_print_debug(int level, const char *message) {
-    if (level <= DEBUG_LEVEL) {
-        printf("[%c] %s\n", DEBUG_LEVELS[level], message);
+void __cvector_setspace(cvector *p_cvector, index_t new_space) {
+    p_cvector->_space = new_space;
+    p_cvector->_vector = (value_t *) (
+        realloc(
+            p_cvector->_vector,
+            p_cvector->_space * sizeof(*p_cvector->_vector)));
+}
+
+/**
+ * Shrinks the specified cvector without any check about its size.
+ * @param p_cvector a pointer to the cvector
+ */
+static inline void __cvector_shrink(cvector *p_cvector) {
+    __cvector_setspace(
+        p_cvector, ROUND_INDEX(CVECTOR_SHRINK_FACTOR * p_cvector->_space + 1));
+}
+
+/**
+ * Extends the specified cvector without any check about its size.
+ * @param p_cvector a pointer to the cvector
+ */
+static inline void __cvector_extend(cvector *p_cvector) {
+    __cvector_setspace(
+        p_cvector, ROUND_INDEX(CVECTOR_EXTEND_FACTOR * p_cvector->_space + 1));
+}
+
+/**
+ * Readjusts space of the specified cvector if needed, according to
+ * SHRINK_THRESHOLD and EXTEND_THRESHOLD.
+ * @param p_cvector a pointer to the cvector
+ */
+void cvector_readjust(cvector *p_cvector) {
+    if (p_cvector->_size < CVECTOR_SHRINK_THRESHOLD * p_cvector->_space) {
+        __cvector_shrink(p_cvector);
+    } else if (p_cvector->_size >
+               CVECTOR_EXTEND_THRESHOLD * p_cvector->_space) {
+        __cvector_extend(p_cvector);
     }
 }
+
+/**
+ * Adds space (according to the DEFAULT_ADDSPACE_FACTOR) to the specified
+ * cvector.
+ * @param p_cvector a pointer to the cvector to extend.
+ */
+static inline void cvector_addspace(cvector *p_cvector) {
+    __cvector_setspace(
+        p_cvector,
+        ROUND_INDEX(CVECTOR_ADDSPACE_FACTOR * p_cvector->_space + 1));
+}
+
 
 /**
  * Creates a new cvector which can hold at the beginning at least
@@ -221,7 +285,7 @@ void default_print_debug(int level, const char *message) {
 cvector *cvector_new() {
     cvector *p_cvector = (cvector *) (malloc(sizeof(*p_cvector)));
     p_cvector->_size = 0;
-    p_cvector->_space = INIT_SPACE;
+    p_cvector->_space = CVECTOR_INIT_SPACE;
     p_cvector->_vector =
         (value_t *) (malloc(sizeof(*p_cvector->_vector) * p_cvector->_space));
     return p_cvector;
@@ -235,9 +299,10 @@ cvector *cvector_new() {
  */
 cvector *cvector_new_space(index_t space) {
     if (space < 0) {
-        PRINT_DEBUG_FUNC(
+        CVECTOR_ERROR_FUNC(
             0, "InvalidSize: cannot create a cvector with a "
                 "negative size");
+        CVECTOR_ERRORNO = 1;
         return NULL;
     }
     cvector *p_cvector = (cvector *) (malloc(sizeof(*p_cvector)));
@@ -245,6 +310,7 @@ cvector *cvector_new_space(index_t space) {
     p_cvector->_space = space;
     p_cvector->_vector =
         (value_t *) (malloc(sizeof(*p_cvector->_vector) * p_cvector->_space));
+    CVECTOR_ERRORNO = 0;
     return p_cvector;
 }
 
@@ -256,7 +322,8 @@ cvector *cvector_new_space(index_t space) {
 cvector *cvector_new_copy(cvector *p_original) {
     cvector *p_cvector = (cvector *) (malloc(sizeof(*p_cvector)));
     p_cvector->_size = p_original->_size;
-    p_cvector->_space = ROUND_INDEX(INIT_FACTOR * p_original->_size + 1);
+    p_cvector->_space =
+        ROUND_INDEX(CVECTOR_INIT_FACTOR * p_original->_size + 1);
     p_cvector->_vector =
         (value_t *) (malloc(sizeof(*p_cvector->_vector) * p_cvector->_space));
     memcpy(
@@ -275,25 +342,29 @@ cvector *cvector_new_copy(cvector *p_original) {
  */
 cvector *cvector_new_copy_space(cvector *p_original, index_t space) {
     if (space < 0) {
-        PRINT_DEBUG_FUNC(
+        CVECTOR_ERROR_FUNC(
             0, "InvalidSize: cannot create a cvector with a "
                 "negative size");
+        CVECTOR_ERRORNO = 2;
         return NULL;
     }
     if (space < p_original->_size) {
-        PRINT_DEBUG_FUNC(
+        CVECTOR_ERROR_FUNC(
             0, "InvalidSize: cannot clone a cvector in a "
                 "recipient with less space than the original size");
+        CVECTOR_ERRORNO = 3;
         return NULL;
     }
     cvector *p_cvector = (cvector *) (malloc(sizeof(*p_cvector)));
     p_cvector->_size = p_original->_size;
-    p_cvector->_space = ROUND_INDEX(INIT_FACTOR * p_original->_size + 1);
+    p_cvector->_space =
+        ROUND_INDEX(CVECTOR_INIT_FACTOR * p_original->_size + 1);
     p_cvector->_vector =
         (value_t *) (malloc(sizeof(*p_cvector->_vector) * p_cvector->_space));
     memcpy(
         p_cvector->_vector, p_original->_vector,
         sizeof(*p_original->_vector) * p_original->_size);
+    CVECTOR_ERRORNO = 0;
     return p_cvector;
 }
 
@@ -357,12 +428,14 @@ void cvector_addi(cvector *p_cvector, value_t value, index_t index) {
         index = p_cvector->_size - index;
     }
     if (index > p_cvector->_size) {
-        PRINT_DEBUG(0, "IndexOutOfBounds: cannot add an item after the end "
+        CVECTOR_ERROR(0, "IndexOutOfBounds: cannot add an item after the end "
             "of the array");
+        CVECTOR_ERRORNO = 4;
         return;
     }
     if (index < 0) {
-        PRINT_DEBUG(0, "IndexOutOfBounds: invalid (negative) index");
+        CVECTOR_ERROR(0, "IndexOutOfBounds: invalid (negative) index");
+        CVECTOR_ERRORNO = 5;
     }
     if (p_cvector->_size < p_cvector->_space) {
         if (index == p_cvector->_size) {
@@ -379,6 +452,7 @@ void cvector_addi(cvector *p_cvector, value_t value, index_t index) {
         cvector_addspace(p_cvector);
         cvector_addi(p_cvector, value, index);
     }
+    CVECTOR_ERRORNO = 0;
 }
 
 /**
@@ -400,14 +474,16 @@ static inline void cvector_insert(cvector *p_cvector, value_t value) {
  */
 value_t cvector_remove(cvector *p_cvector) {
     if (p_cvector->_size <= 0) {
-        PRINT_DEBUG_FUNC(
+        CVECTOR_ERROR_FUNC(
             0, "Empty: unable to remove the last item of an "
                 "empty cvector");
-        return DEFAULT_VALUE;
+        CVECTOR_ERRORNO = 6;
+        return CVECTOR_DEFAULT_VALUE;
     }
     value_t value = p_cvector->_vector[p_cvector->_size - 1];
     p_cvector->_size--;
     cvector_readjust(p_cvector);
+    CVECTOR_ERRORNO = 0;
     return value;
 }
 
@@ -421,23 +497,26 @@ value_t cvector_remove(cvector *p_cvector) {
  */
 value_t cvector_removei(cvector *p_cvector, index_t index) {
     if (p_cvector->_size <= 0) {
-        PRINT_DEBUG_FUNC(
+        CVECTOR_ERROR_FUNC(
             0, "Empty: unable to remove the last item of an "
                 "empty cvector");
-        return DEFAULT_VALUE;
+        CVECTOR_ERRORNO = 7;
+        return CVECTOR_DEFAULT_VALUE;
     }
     if (index < 0) {
         index += p_cvector->_size;
     }
     if (index < 0) {
-        PRINT_DEBUG_FUNC(0, "IndexOutOfBounds: invalid (negative) index");
-        return DEFAULT_VALUE;
+        CVECTOR_ERROR_FUNC(0, "IndexOutOfBounds: invalid (negative) index");
+        CVECTOR_ERRORNO = 8;
+        return CVECTOR_DEFAULT_VALUE;
     }
     if (index > p_cvector->_size - 1) {
-        PRINT_DEBUG_FUNC(
+        CVECTOR_ERROR_FUNC(
             0, "IndexOutOfBounds: index greater than the size "
                 "of the cvector");
-        return DEFAULT_VALUE;
+        CVECTOR_ERRORNO = 9;
+        return CVECTOR_DEFAULT_VALUE;
     }
     if (index == p_cvector->_size - 1) {
         return cvector_remove(p_cvector);
@@ -449,6 +528,7 @@ value_t cvector_removei(cvector *p_cvector, index_t index) {
         }
         p_cvector->_size--;
         cvector_readjust(p_cvector);
+        CVECTOR_ERRORNO = 0;
         return value;
     }
 }
@@ -484,15 +564,18 @@ value_t cvector_get(cvector *p_cvector, index_t index) {
         index += p_cvector->_size;
     }
     if (index < 0) {
-        PRINT_DEBUG_FUNC(0, "IndexOutOfBounds: invalid (negative) index");
-        return DEFAULT_VALUE;
+        CVECTOR_ERROR_FUNC(0, "IndexOutOfBounds: invalid (negative) index");
+        CVECTOR_ERRORNO = 10;
+        return CVECTOR_DEFAULT_VALUE;
     }
     if (index > p_cvector->_size - 1) {
-        PRINT_DEBUG_FUNC(
+        CVECTOR_ERROR_FUNC(
             0, "IndexOutOfBounds: index greater than "
                 "the size of the cvector");
-        return DEFAULT_VALUE;
+        CVECTOR_ERRORNO = 11;
+        return CVECTOR_DEFAULT_VALUE;
     }
+    CVECTOR_ERRORNO = 0;
     return p_cvector->_vector[index];
 }
 
@@ -508,14 +591,14 @@ value_t cvector_safeget(cvector *p_cvector, index_t index) {
         index += p_cvector->_size;
     }
     if (index < 0) {
-        PRINT_DEBUG_FUNC(1, "IndexOutOfBounds: invalid (negative) index");
-        return DEFAULT_VALUE;
+        CVECTOR_ERROR_FUNC(1, "IndexOutOfBounds: invalid (negative) index");
+        return CVECTOR_DEFAULT_VALUE;
     }
     if (index > p_cvector->_size - 1) {
-        PRINT_DEBUG_FUNC(
+        CVECTOR_ERROR_FUNC(
             1, "IndexOutOfBounds: index strictly greater than "
                 "the size of the array");
-        return DEFAULT_VALUE;
+        return CVECTOR_DEFAULT_VALUE;
     }
     return p_cvector->_vector[index];
 }
@@ -532,14 +615,17 @@ void cvector_set(cvector *p_cvector, value_t value, index_t index) {
         index += p_cvector->_size;
     }
     if (index < 0) {
-        PRINT_DEBUG_FUNC(0, "IndexOutOfBounds: invalid (negative) index");
+        CVECTOR_ERROR_FUNC(0, "IndexOutOfBounds: invalid (negative) index");
+        CVECTOR_ERRORNO = 12;
         return;
     }
     if (index > p_cvector->_size - 1) {
-        PRINT_DEBUG_FUNC(
+        CVECTOR_ERROR_FUNC(
             0, "IndexOutOfBounds: index is strictly greater than "
                 "the size of the array");
+        CVECTOR_ERRORNO = 13;
     }
+    CVECTOR_ERRORNO = 0;
     p_cvector->_vector[index] = value;
 }
 
@@ -556,11 +642,11 @@ void cvector_safeset(cvector *p_cvector, value_t value, index_t index) {
         index += p_cvector->_size;
     }
     if (index < 0) {
-        PRINT_DEBUG_FUNC(1, "IndexOutOfBounds: invalid (negative) index");
+        CVECTOR_ERROR_FUNC(1, "IndexOutOfBounds: invalid (negative) index");
         return;
     }
     if (index > p_cvector->_size - 1) {
-        PRINT_DEBUG_FUNC(
+        CVECTOR_ERROR_FUNC(
             2, "IndexOutOfBounds: the cvector will be extended "
                 "to be able to store an element at the specified index");
         if (index > p_cvector->_space - 1) {
@@ -568,7 +654,7 @@ void cvector_safeset(cvector *p_cvector, value_t value, index_t index) {
         }
         for (
             index_t i = p_cvector->_size; i < index; i++) {
-            p_cvector->_vector[i] = DEFAULT_VALUE;
+            p_cvector->_vector[i] = CVECTOR_DEFAULT_VALUE;
         }
         p_cvector->_vector[index] = value;
         p_cvector->_size = index + 1;
@@ -591,7 +677,7 @@ void cvector_appendto(cvector *p_cvector, cvector *p_add) {
         p_cvector->_size += p_add->_size;
     } else {
         __cvector_setspace(
-            p_cvector, ROUND_INDEX(INIT_FACTOR * (
+            p_cvector, ROUND_INDEX(CVECTOR_INIT_FACTOR * (
                 p_cvector->_size + p_add->_size)) + 1);
         cvector_appendto(p_cvector, p_add);
     }
@@ -605,7 +691,7 @@ void cvector_appendto(cvector *p_cvector, cvector *p_add) {
  * @return a pointer to the resulting cvector
  */
 cvector *cvector_concat(cvector *p_cvector_1, cvector *p_cvector_2) {
-    cvector *p_result = cvector_new_space(ROUND_INDEX(INIT_FACTOR * (
+    cvector *p_result = cvector_new_space(ROUND_INDEX(CVECTOR_INIT_FACTOR * (
         p_cvector_1->_size + p_cvector_2->_size) + 1));
     memcpy(
         p_result->_vector, p_cvector_1->_vector,
@@ -627,7 +713,8 @@ cvector *cvector_concat(cvector *p_cvector_1, cvector *p_cvector_2) {
 cvector *cvector_reversed(cvector *p_cvector) {
     cvector
         *p_result =
-        cvector_new_space(ROUND_INDEX(INIT_FACTOR * p_cvector->_size + 1));
+        cvector_new_space(
+            ROUND_INDEX(CVECTOR_INIT_FACTOR * p_cvector->_size + 1));
     for (
         index_t i = 0; i < p_cvector->_size; i++) {
         p_result->_vector[p_cvector->_size - 1 - i] = p_cvector->_vector[i];
@@ -866,19 +953,24 @@ cvector_slice(cvector *p_cvector, index_t from, index_t to, index_t step) {
         to += p_cvector->_size;
     }
     if (from < 0 || to < 0) {
-        PRINT_DEBUG_FUNC(0, "IndexOutOfBounds: invalid (negative) index");
+        CVECTOR_ERROR_FUNC(0, "IndexOutOfBounds: invalid (negative) index");
+        CVECTOR_ERRORNO = 14;
         return NULL;
     }
     if (from > p_cvector->_size - 1 || to > p_cvector->_size) {
-        PRINT_DEBUG_FUNC(0, "IndexOutOfBounds: invalid (out of bounds) index");
+        CVECTOR_ERROR_FUNC(
+            0, "IndexOutOfBounds: invalid (out of bounds) index");
+        CVECTOR_ERRORNO = 15;
         return NULL;
     }
     if (from > to) {
-        PRINT_DEBUG_FUNC(0, "IndexOutOfBounds: invalid index, from > to");
+        CVECTOR_ERROR_FUNC(0, "IndexOutOfBounds: invalid index, from > to");
+        CVECTOR_ERRORNO = 16;
         return NULL;
     }
     if (step <= 0) {
-        PRINT_DEBUG_FUNC(0, "InvalidStep: invalid (negative or null) step");
+        CVECTOR_ERROR_FUNC(0, "InvalidStep: invalid (negative or null) step");
+        CVECTOR_ERRORNO = 17;
         return NULL;
     }
     index_t size;
@@ -887,12 +979,15 @@ cvector_slice(cvector *p_cvector, index_t from, index_t to, index_t step) {
     } else {
         size = 1 + ((to - from - 1) / step);  // Integer division there
     }
-    cvector *p_result = cvector_new_space(ROUND_INDEX(INIT_FACTOR * size + 1));
+    cvector
+        *p_result =
+        cvector_new_space(ROUND_INDEX(CVECTOR_INIT_FACTOR * size + 1));
     for (
         index_t i = 0; i < size; i++) {
         p_result->_vector[i] = p_cvector->_vector[from + i * step];
     }
     p_result->_size = size;
+    CVECTOR_ERRORNO = 0;
     return p_result;
 }
 
@@ -914,19 +1009,24 @@ value_t *cvector_slicetoarray(
         to += p_cvector->_size;
     }
     if (from < 0 || to < 0) {
-        PRINT_DEBUG_FUNC(0, "IndexOutOfBounds: invalid (negative) index");
+        CVECTOR_ERROR_FUNC(0, "IndexOutOfBounds: invalid (negative) index");
+        CVECTOR_ERRORNO = 18;
         return NULL;
     }
     if (from > p_cvector->_size - 1 || to > p_cvector->_size) {
-        PRINT_DEBUG_FUNC(0, "IndexOutOfBounds: invalid (out of bounds) index");
+        CVECTOR_ERROR_FUNC(
+            0, "IndexOutOfBounds: invalid (out of bounds) index");
+        CVECTOR_ERRORNO = 19;
         return NULL;
     }
     if (from > to) {
-        PRINT_DEBUG_FUNC(0, "IndexOutOfBounds: invalid index, from > to");
+        CVECTOR_ERROR_FUNC(0, "IndexOutOfBounds: invalid index, from > to");
+        CVECTOR_ERRORNO = 20;
         return NULL;
     }
     if (step <= 0) {
-        PRINT_DEBUG_FUNC(0, "InvalidStep: invalid (negative or null) step");
+        CVECTOR_ERROR_FUNC(0, "InvalidStep: invalid (negative or null) step");
+        CVECTOR_ERRORNO = 21;
         return NULL;
     }
     index_t size;
@@ -940,71 +1040,63 @@ value_t *cvector_slicetoarray(
         index_t i = 0; i < size; i++) {
         p_result[i] = p_cvector->_vector[from + i * step];
     }
+    CVECTOR_ERRORNO = 0;
     return p_result;
 }
 
-/**
- * Readjusts space of the specified cvector if needed, according to
- * SHRINK_THRESHOLD and EXTEND_THRESHOLD.
- * @param p_cvector a pointer to the cvector
- */
-void cvector_readjust(cvector *p_cvector) {
-    if (p_cvector->_size < SHRINK_THRESHOLD * p_cvector->_space) {
-        __cvector_shrink(p_cvector);
-    } else if (p_cvector->_size > EXTEND_THRESHOLD * p_cvector->_space) {
-        __cvector_extend(p_cvector);
-    }
-}
+#undef CVECTOR_ERROR
+#undef cvector_addspace
+#undef cvector_readjust
+#undef cvector_slicetoarray
+#undef cvector_slice
+#undef cvector_in_func
+#undef cvector_in
+#undef cvector_indexof_func
+#undef cvector_indexof
+#undef cvector_sort
+#undef cvector_replace_func
+#undef cvector_replace
+#undef cvector_toarray
+#undef cvector_equal_func
+#undef cvector_equal
+#undef cvector_hash
+#undef cvector_reversed
+#undef cvector_concat
+#undef cvector_appendto
+#undef cvector_safeset
+#undef cvector_set
+#undef cvector_safeget
+#undef cvector_get
+#undef cvector_clear
+#undef cvector_drop
+#undef cvector_removei
+#undef cvector_remove
+#undef cvector_insert
+#undef cvector_addi
+#undef cvector_add
+#undef cvector_free_func
+#undef cvector_getsize
+#undef cvector_free
+#undef cvector_new_copy_space
+#undef cvector_new_copy
+#undef cvector_new_space
+#undef cvector_new
+#undef __cvector_extend
+#undef __cvector_shrink
+#undef __cvector_setspace
+#undef cvector
+#undef hash_t
+#undef value_t
 
-/**
- * Adds space (according to the DEFAULT_ADDSPACE_FACTOR) to the specified
- * cvector.
- * @param p_cvector a pointer to the cvector to extend.
- */
-static inline void cvector_addspace(cvector *p_cvector) {
-    __cvector_setspace(
-        p_cvector, ROUND_INDEX(ADDSPACE_FACTOR * p_cvector->_space + 1));
-}
-
-/**
- * Sets space of the specified cvector to new_space
- * @param p_cvector a pointer to the cvector
- * @param new_space the new space for the specified cvector
- */
-void __cvector_setspace(cvector *p_cvector, index_t new_space) {
-    p_cvector->_space = new_space;
-    p_cvector->_vector = (value_t *) (
-        realloc(
-            p_cvector->_vector,
-            p_cvector->_space * sizeof(*p_cvector->_vector)));
-}
-
-/**
- * Shrinks the specified cvector without any check about its size.
- * @param p_cvector a pointer to the cvector
- */
-static inline void __cvector_shrink(cvector *p_cvector) {
-    __cvector_setspace(
-        p_cvector, ROUND_INDEX(SHRINK_FACTOR * p_cvector->_space + 1));
-}
-
-/**
- * Extends the specified cvector without any check about its size.
- * @param p_cvector a pointer to the cvector
- */
-static inline void __cvector_extend(cvector *p_cvector) {
-    __cvector_setspace(
-        p_cvector, ROUND_INDEX(EXTEND_FACTOR * p_cvector->_space + 1));
-}
-
-#undef DEBUG_LEVEL
-#undef INIT_SPACE
-#undef INIT_FACTOR
-#undef ADDSPACE_FACTOR
-#undef SHRINK_THRESHOLD
-#undef SHRINK_FACTOR
-#undef EXTEND_THRESHOLD
-#undef EXTEND_FACTOR
-#undef PRINT_DEBUG_FUNC
+#undef CVECTOR_HASH_T
+#undef CVECTOR_DEFAULT_VALUE
 #undef CVECTOR_T
-#undef DEFAULT_VALUE
+#undef CVECTOR_ERROR_FUNC
+#undef CVECTOR_DEBUG_LEVEL
+#undef CVECTOR_EXTEND_FACTOR
+#undef CVECTOR_EXTEND_THRESHOLD
+#undef CVECTOR_SHRINK_FACTOR
+#undef CVECTOR_SHRINK_THRESHOLD
+#undef CVECTOR_ADDSPACE_FACTOR
+#undef CVECTOR_INIT_FACTOR
+#undef CVECTOR_INIT_SPACE

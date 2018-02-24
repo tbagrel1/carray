@@ -1,4 +1,9 @@
-//
-// Created by thomas on 14/02/18.
-//
+#include <stdio.h>
+#include <stdlib.h>
 
+#include "tests/cvector_import.h"
+
+int main(int argc, char **argv) {
+    printf("Hello World!\n");
+    return 0;
+}

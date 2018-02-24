@@ -58,8 +58,8 @@ $(function() {
       <div id="nav-sync" class="sync"></div>
     </div>
   </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
+    <div id="splitbar" style="-moz-user-select:none;"
+         class="ui-resizable-handle">
   </div>
 </div>
 <script type="text/javascript">
@@ -75,8 +75,8 @@ $(document).ready(function(){initNavTree('cvector_8h.html','');});
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
+    <iframe src="javascript:void(0)" frameborder="0"
+            name="MSearchResults" id="MSearchResults">
 </iframe>
 </div>
 
@@ -120,43 +120,134 @@ Macros</h2></td></tr>
 <tr class="separator:a88fa737059e67b4b17ec980e5877361e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29c765243a1c5b34627af48932ffc439"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#a29c765243a1c5b34627af48932ffc439">DEFAULT_CVECTOR_T</a>&#160;&#160;&#160;int</td></tr>
 <tr class="separator:a29c765243a1c5b34627af48932ffc439"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acea3a56dc52185459f8966fece7b9671"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#acea3a56dc52185459f8966fece7b9671">DEFAULT_DEFAULT_VALUE</a>&#160;&#160;&#160;0</td></tr>
+    <tr class="memitem:acea3a56dc52185459f8966fece7b9671">
+        <td class="memItemLeft" align="right" valign="top">#define&#160;</td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#acea3a56dc52185459f8966fece7b9671">DEFAULT_CVECTOR_DEFAULT_VALUE</a>&#160;&#160;&#160;0
+        </td>
+    </tr>
 <tr class="separator:acea3a56dc52185459f8966fece7b9671"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a816300364f1a38bd4c332a57792951f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#a816300364f1a38bd4c332a57792951f5">DEFAULT_HASH_T</a>&#160;&#160;&#160;size_t</td></tr>
+    <tr class="memitem:a816300364f1a38bd4c332a57792951f5">
+        <td class="memItemLeft" align="right" valign="top">#define&#160;</td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#a816300364f1a38bd4c332a57792951f5">DEFAULT_CVECTOR_HASH_T</a>&#160;&#160;&#160;size_t
+        </td>
+    </tr>
 <tr class="separator:a816300364f1a38bd4c332a57792951f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af96f13eaf9d39f3aeb661fb99ca74409"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#af96f13eaf9d39f3aeb661fb99ca74409">DEFAULT_PRINT_DEBUG_FUNC</a>&#160;&#160;&#160;<a class="el" href="cvector_8h.html#ac2dbfacef236ca5daa1d3afb04c02724">default_print_debug</a></td></tr>
+    <tr class="memitem:af96f13eaf9d39f3aeb661fb99ca74409">
+        <td class="memItemLeft" align="right" valign="top">#define&#160;</td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#af96f13eaf9d39f3aeb661fb99ca74409">DEFAULT_CVECTOR_ERROR_FUNC</a>&#160;&#160;&#160;<a
+                class="el"
+                href="cvector_8h.html#ac2dbfacef236ca5daa1d3afb04c02724">default_print_debug</a>
+        </td>
+    </tr>
 <tr class="separator:af96f13eaf9d39f3aeb661fb99ca74409"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada843aff91b2ecd8122ae05adaed3db6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#ada843aff91b2ecd8122ae05adaed3db6">PRINT_DEBUG</a>(level,  message)</td></tr>
+    <tr class="memitem:ada843aff91b2ecd8122ae05adaed3db6">
+        <td class="memItemLeft" align="right" valign="top">#define&#160;</td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#ada843aff91b2ecd8122ae05adaed3db6">CVECTOR_ERROR</a>(level,
+            message)
+        </td>
+    </tr>
 <tr class="separator:ada843aff91b2ecd8122ae05adaed3db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18da678808a23365d00c58cdae11e29e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#a18da678808a23365d00c58cdae11e29e">DEFAULT_DEBUG_LEVEL</a>&#160;&#160;&#160;2</td></tr>
+    <tr class="memitem:a18da678808a23365d00c58cdae11e29e">
+        <td class="memItemLeft" align="right" valign="top">#define&#160;</td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#a18da678808a23365d00c58cdae11e29e">DEFAULT_CVECTOR_DEBUG_LEVEL</a>&#160;&#160;&#160;2
+        </td>
+    </tr>
 <tr class="separator:a18da678808a23365d00c58cdae11e29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a133390f76ff87262f4813b7948623a9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#a133390f76ff87262f4813b7948623a9c">NOT_FOUND_INDEX</a>&#160;&#160;&#160;((<a class="el" href="cvector_8h.html#a05384666b24e4f096243ebf311436ee5">index_t</a>) (-1))</td></tr>
 <tr class="separator:a133390f76ff87262f4813b7948623a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad24cec92ca2f0cfda6e9b53ea3dd1fc5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#ad24cec92ca2f0cfda6e9b53ea3dd1fc5">ROUND_INDEX</a>(x)&#160;&#160;&#160;((<a class="el" href="cvector_8h.html#a05384666b24e4f096243ebf311436ee5">index_t</a>) (lrint(x)))</td></tr>
 <tr class="separator:ad24cec92ca2f0cfda6e9b53ea3dd1fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2d33ccaf63f5d5b66552b95426c0137"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#ac2d33ccaf63f5d5b66552b95426c0137">DEBUG_LEVEL</a>&#160;&#160;&#160;<a class="el" href="cvector_8h.html#a18da678808a23365d00c58cdae11e29e">DEFAULT_DEBUG_LEVEL</a></td></tr>
+    <tr class="memitem:ac2d33ccaf63f5d5b66552b95426c0137">
+        <td class="memItemLeft" align="right" valign="top">#define&#160;</td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#ac2d33ccaf63f5d5b66552b95426c0137">CVECTOR_DEBUG_LEVEL</a>&#160;&#160;&#160;<a
+                class="el"
+                href="cvector_8h.html#a18da678808a23365d00c58cdae11e29e">DEFAULT_CVECTOR_DEBUG_LEVEL</a>
+        </td>
+    </tr>
 <tr class="separator:ac2d33ccaf63f5d5b66552b95426c0137"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3db9807a2d1fc2b1d0098e7ce8f7478b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#a3db9807a2d1fc2b1d0098e7ce8f7478b">INIT_SPACE</a>&#160;&#160;&#160;8</td></tr>
+    <tr class="memitem:a3db9807a2d1fc2b1d0098e7ce8f7478b">
+        <td class="memItemLeft" align="right" valign="top">#define&#160;</td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#a3db9807a2d1fc2b1d0098e7ce8f7478b">CVECTOR_INIT_SPACE</a>&#160;&#160;&#160;8
+        </td>
+    </tr>
 <tr class="separator:a3db9807a2d1fc2b1d0098e7ce8f7478b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf7442e3237b42ceb67324acea9a1d1c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#abf7442e3237b42ceb67324acea9a1d1c">INIT_FACTOR</a>&#160;&#160;&#160;1.25</td></tr>
+    <tr class="memitem:abf7442e3237b42ceb67324acea9a1d1c">
+        <td class="memItemLeft" align="right" valign="top">#define&#160;</td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#abf7442e3237b42ceb67324acea9a1d1c">CVECTOR_INIT_FACTOR</a>&#160;&#160;&#160;1.25
+        </td>
+    </tr>
 <tr class="separator:abf7442e3237b42ceb67324acea9a1d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbdb13c8eb12c9460e8d0f39adfb88c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#abbdb13c8eb12c9460e8d0f39adfb88c8">ADDSPACE_FACTOR</a>&#160;&#160;&#160;2.0</td></tr>
+    <tr class="memitem:abbdb13c8eb12c9460e8d0f39adfb88c8">
+        <td class="memItemLeft" align="right" valign="top">#define&#160;</td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#abbdb13c8eb12c9460e8d0f39adfb88c8">CVECTOR_ADDSPACE_FACTOR</a>&#160;&#160;&#160;2.0
+        </td>
+    </tr>
 <tr class="separator:abbdb13c8eb12c9460e8d0f39adfb88c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e1a57dc5134ab73526871d11a622b68"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#a8e1a57dc5134ab73526871d11a622b68">SHRINK_THRESHOLD</a>&#160;&#160;&#160;0.5</td></tr>
+    <tr class="memitem:a8e1a57dc5134ab73526871d11a622b68">
+        <td class="memItemLeft" align="right" valign="top">#define&#160;</td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#a8e1a57dc5134ab73526871d11a622b68">CVECTOR_SHRINK_THRESHOLD</a>&#160;&#160;&#160;0.5
+        </td>
+    </tr>
 <tr class="separator:a8e1a57dc5134ab73526871d11a622b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31299318ba2f5406d7f7e2b299174e43"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#a31299318ba2f5406d7f7e2b299174e43">SHRINK_FACTOR</a>&#160;&#160;&#160;0.5</td></tr>
+    <tr class="memitem:a31299318ba2f5406d7f7e2b299174e43">
+        <td class="memItemLeft" align="right" valign="top">#define&#160;</td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#a31299318ba2f5406d7f7e2b299174e43">CVECTOR_SHRINK_FACTOR</a>&#160;&#160;&#160;0.5
+        </td>
+    </tr>
 <tr class="separator:a31299318ba2f5406d7f7e2b299174e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77762dfca0730b89231a424d780ffa0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#a77762dfca0730b89231a424d780ffa0a">EXTEND_THRESHOLD</a>&#160;&#160;&#160;0.90</td></tr>
+    <tr class="memitem:a77762dfca0730b89231a424d780ffa0a">
+        <td class="memItemLeft" align="right" valign="top">#define&#160;</td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#a77762dfca0730b89231a424d780ffa0a">CVECTOR_EXTEND_THRESHOLD</a>&#160;&#160;&#160;0.90
+        </td>
+    </tr>
 <tr class="separator:a77762dfca0730b89231a424d780ffa0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1443361a13d387b40da94941f0078dd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#ac1443361a13d387b40da94941f0078dd">EXTEND_FACTOR</a>&#160;&#160;&#160;2.0</td></tr>
+    <tr class="memitem:ac1443361a13d387b40da94941f0078dd">
+        <td class="memItemLeft" align="right" valign="top">#define&#160;</td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#ac1443361a13d387b40da94941f0078dd">CVECTOR_EXTEND_FACTOR</a>&#160;&#160;&#160;2.0
+        </td>
+    </tr>
 <tr class="separator:ac1443361a13d387b40da94941f0078dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae02a89ac32cbee34e2ef29f1e40ef58c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#ae02a89ac32cbee34e2ef29f1e40ef58c">PRINT_DEBUG_FUNC</a>&#160;&#160;&#160;<a class="el" href="cvector_8h.html#af96f13eaf9d39f3aeb661fb99ca74409">DEFAULT_PRINT_DEBUG_FUNC</a></td></tr>
+    <tr class="memitem:ae02a89ac32cbee34e2ef29f1e40ef58c">
+        <td class="memItemLeft" align="right" valign="top">#define&#160;</td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#ae02a89ac32cbee34e2ef29f1e40ef58c">CVECTOR_ERROR_FUNC</a>&#160;&#160;&#160;<a
+                class="el"
+                href="cvector_8h.html#af96f13eaf9d39f3aeb661fb99ca74409">DEFAULT_CVECTOR_ERROR_FUNC</a>
+        </td>
+    </tr>
 <tr class="separator:ae02a89ac32cbee34e2ef29f1e40ef58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e15da722d5963a5f7bcef8bbbfa1638"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#a5e15da722d5963a5f7bcef8bbbfa1638">CVECTOR_T</a>&#160;&#160;&#160;<a class="el" href="cvector_8h.html#a29c765243a1c5b34627af48932ffc439">DEFAULT_CVECTOR_T</a></td></tr>
 <tr class="separator:a5e15da722d5963a5f7bcef8bbbfa1638"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1683cf20cb6e91b381579ff93b309714"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#a1683cf20cb6e91b381579ff93b309714">DEFAULT_VALUE</a>&#160;&#160;&#160;<a class="el" href="cvector_8h.html#acea3a56dc52185459f8966fece7b9671">DEFAULT_DEFAULT_VALUE</a></td></tr>
+    <tr class="memitem:a1683cf20cb6e91b381579ff93b309714">
+        <td class="memItemLeft" align="right" valign="top">#define&#160;</td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#a1683cf20cb6e91b381579ff93b309714">CVECTOR_DEFAULT_VALUE</a>&#160;&#160;&#160;<a
+                class="el"
+                href="cvector_8h.html#acea3a56dc52185459f8966fece7b9671">DEFAULT_CVECTOR_DEFAULT_VALUE</a>
+        </td>
+    </tr>
 <tr class="separator:a1683cf20cb6e91b381579ff93b309714"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe9a045b69b6db8ce1e1209cb3f23c80"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#afe9a045b69b6db8ce1e1209cb3f23c80">HASH_T</a>&#160;&#160;&#160;<a class="el" href="cvector_8h.html#a816300364f1a38bd4c332a57792951f5">DEFAULT_HASH_T</a></td></tr>
+    <tr class="memitem:afe9a045b69b6db8ce1e1209cb3f23c80">
+        <td class="memItemLeft" align="right" valign="top">#define&#160;</td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#afe9a045b69b6db8ce1e1209cb3f23c80">CVECTOR_HASH_T</a>&#160;&#160;&#160;<a
+                class="el"
+                href="cvector_8h.html#a816300364f1a38bd4c332a57792951f5">DEFAULT_CVECTOR_HASH_T</a>
+        </td>
+    </tr>
 <tr class="separator:afe9a045b69b6db8ce1e1209cb3f23c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d03a0c8fc8c754ba9895af080296662"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#a2d03a0c8fc8c754ba9895af080296662">cvector</a>&#160;&#160;&#160;<a class="el" href="cvector_8h.html#a88fa737059e67b4b17ec980e5877361e">CONCAT</a>(<a class="el" href="cvector_8h.html#a5e15da722d5963a5f7bcef8bbbfa1638">CVECTOR_T</a>, _cvector)</td></tr>
 <tr class="separator:a2d03a0c8fc8c754ba9895af080296662"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,7 +336,15 @@ Typedefs</h2></td></tr>
 <tr class="separator:a05384666b24e4f096243ebf311436ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02cdeb70a219711c52cec8d6d682048b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="cvector_8h.html#a5e15da722d5963a5f7bcef8bbbfa1638">CVECTOR_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#a02cdeb70a219711c52cec8d6d682048b">value_t</a></td></tr>
 <tr class="separator:a02cdeb70a219711c52cec8d6d682048b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a814087d407b60e4d8b569f38370d30c9"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="cvector_8h.html#afe9a045b69b6db8ce1e1209cb3f23c80">HASH_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#a814087d407b60e4d8b569f38370d30c9">hash_t</a></td></tr>
+    <tr class="memitem:a814087d407b60e4d8b569f38370d30c9">
+        <td class="memItemLeft" align="right" valign="top">typedef <a
+                class="el"
+                href="cvector_8h.html#afe9a045b69b6db8ce1e1209cb3f23c80">CVECTOR_HASH_T</a>&#160;
+        </td>
+        <td class="memItemRight" valign="bottom"><a class="el"
+                                                    href="cvector_8h.html#a814087d407b60e4d8b569f38370d30c9">hash_t</a>
+        </td>
+    </tr>
 <tr class="separator:a814087d407b60e4d8b569f38370d30c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8a3b37df7cac75e42faff09d0552627"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structcvector.html">cvector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvector_8h.html#ae8a3b37df7cac75e42faff09d0552627">cvector</a></td></tr>
 <tr class="separator:ae8a3b37df7cac75e42faff09d0552627"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -397,17 +496,22 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="abbdb13c8eb12c9460e8d0f39adfb88c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbdb13c8eb12c9460e8d0f39adfb88c8">&#9670;&nbsp;</a></span>ADDSPACE_FACTOR</h2>
+    <h2 class="memtitle"><span class="permalink"><a
+            href="#abbdb13c8eb12c9460e8d0f39adfb88c8">&#9670;&nbsp;</a></span>CVECTOR_ADDSPACE_FACTOR
+    </h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ADDSPACE_FACTOR&#160;&#160;&#160;2.0</td>
+            <td class="memname">#define CVECTOR_ADDSPACE_FACTOR&#160;&#160;&#160;2.0</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Space factor used when a cvector becomes too short to hold additional values. It means that the new cvector will have a space for ADDSPACE_FACTOR</p><ul>
+    <p>Space factor used when a cvector becomes too short to hold additional
+        values. It means that the new cvector will have a space for
+        CVECTOR_ADDSPACE_FACTOR</p>
+    <ul>
 <li>the old space. </li>
 </ul>
 
@@ -1055,13 +1159,18 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="ac2d33ccaf63f5d5b66552b95426c0137"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2d33ccaf63f5d5b66552b95426c0137">&#9670;&nbsp;</a></span>DEBUG_LEVEL</h2>
+    <h2 class="memtitle"><span class="permalink"><a
+            href="#ac2d33ccaf63f5d5b66552b95426c0137">&#9670;&nbsp;</a></span>CVECTOR_DEBUG_LEVEL
+    </h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DEBUG_LEVEL&#160;&#160;&#160;<a class="el" href="cvector_8h.html#a18da678808a23365d00c58cdae11e29e">DEFAULT_DEBUG_LEVEL</a></td>
+            <td class="memname">#define CVECTOR_DEBUG_LEVEL&#160;&#160;&#160;<a
+                    class="el"
+                    href="cvector_8h.html#a18da678808a23365d00c58cdae11e29e">DEFAULT_CVECTOR_DEBUG_LEVEL</a>
+            </td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1088,13 +1197,15 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a18da678808a23365d00c58cdae11e29e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18da678808a23365d00c58cdae11e29e">&#9670;&nbsp;</a></span>DEFAULT_DEBUG_LEVEL</h2>
+    <h2 class="memtitle"><span class="permalink"><a
+            href="#a18da678808a23365d00c58cdae11e29e">&#9670;&nbsp;</a></span>DEFAULT_CVECTOR_DEBUG_LEVEL
+    </h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DEFAULT_DEBUG_LEVEL&#160;&#160;&#160;2</td>
+            <td class="memname">#define DEFAULT_CVECTOR_DEBUG_LEVEL&#160;&#160;&#160;2</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1104,13 +1215,15 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="acea3a56dc52185459f8966fece7b9671"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acea3a56dc52185459f8966fece7b9671">&#9670;&nbsp;</a></span>DEFAULT_DEFAULT_VALUE</h2>
+    <h2 class="memtitle"><span class="permalink"><a
+            href="#acea3a56dc52185459f8966fece7b9671">&#9670;&nbsp;</a></span>DEFAULT_CVECTOR_DEFAULT_VALUE
+    </h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DEFAULT_DEFAULT_VALUE&#160;&#160;&#160;0</td>
+            <td class="memname">#define DEFAULT_CVECTOR_DEFAULT_VALUE&#160;&#160;&#160;0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1120,13 +1233,15 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a816300364f1a38bd4c332a57792951f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a816300364f1a38bd4c332a57792951f5">&#9670;&nbsp;</a></span>DEFAULT_HASH_T</h2>
+    <h2 class="memtitle"><span class="permalink"><a
+            href="#a816300364f1a38bd4c332a57792951f5">&#9670;&nbsp;</a></span>DEFAULT_CVECTOR_HASH_T
+    </h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DEFAULT_HASH_T&#160;&#160;&#160;size_t</td>
+            <td class="memname">#define DEFAULT_CVECTOR_HASH_T&#160;&#160;&#160;size_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1136,13 +1251,18 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="af96f13eaf9d39f3aeb661fb99ca74409"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af96f13eaf9d39f3aeb661fb99ca74409">&#9670;&nbsp;</a></span>DEFAULT_PRINT_DEBUG_FUNC</h2>
+    <h2 class="memtitle"><span class="permalink"><a
+            href="#af96f13eaf9d39f3aeb661fb99ca74409">&#9670;&nbsp;</a></span>DEFAULT_CVECTOR_ERROR_FUNC
+    </h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DEFAULT_PRINT_DEBUG_FUNC&#160;&#160;&#160;<a class="el" href="cvector_8h.html#ac2dbfacef236ca5daa1d3afb04c02724">default_print_debug</a></td>
+            <td class="memname">#define DEFAULT_CVECTOR_ERROR_FUNC&#160;&#160;&#160;<a
+                    class="el"
+                    href="cvector_8h.html#ac2dbfacef236ca5daa1d3afb04c02724">default_print_debug</a>
+            </td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1152,13 +1272,18 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a1683cf20cb6e91b381579ff93b309714"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1683cf20cb6e91b381579ff93b309714">&#9670;&nbsp;</a></span>DEFAULT_VALUE</h2>
+    <h2 class="memtitle"><span class="permalink"><a
+            href="#a1683cf20cb6e91b381579ff93b309714">&#9670;&nbsp;</a></span>CVECTOR_DEFAULT_VALUE
+    </h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DEFAULT_VALUE&#160;&#160;&#160;<a class="el" href="cvector_8h.html#acea3a56dc52185459f8966fece7b9671">DEFAULT_DEFAULT_VALUE</a></td>
+            <td class="memname">#define CVECTOR_DEFAULT_VALUE&#160;&#160;&#160;<a
+                    class="el"
+                    href="cvector_8h.html#acea3a56dc52185459f8966fece7b9671">DEFAULT_CVECTOR_DEFAULT_VALUE</a>
+            </td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1169,34 +1294,43 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="ac1443361a13d387b40da94941f0078dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1443361a13d387b40da94941f0078dd">&#9670;&nbsp;</a></span>EXTEND_FACTOR</h2>
+    <h2 class="memtitle"><span class="permalink"><a
+            href="#ac1443361a13d387b40da94941f0078dd">&#9670;&nbsp;</a></span>CVECTOR_EXTEND_FACTOR
+    </h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EXTEND_FACTOR&#160;&#160;&#160;2.0</td>
+            <td class="memname">#define CVECTOR_EXTEND_FACTOR&#160;&#160;&#160;2.0</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Space factor used when a extend operation is triggered. It means that the new space of the cvector will be EXTEND_FACTOR * the current space. </p>
+    <p>Space factor used when a extend operation is triggered. It means that
+        the new space of the cvector will be CVECTOR_EXTEND_FACTOR * the
+        current space. </p>
 
 <p class="definition">Definition at line <a class="el" href="cvector_8h_source.html#l00109">109</a> of file <a class="el" href="cvector_8h_source.html">cvector.h</a>.</p>
 
 </div>
 </div>
 <a id="a77762dfca0730b89231a424d780ffa0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77762dfca0730b89231a424d780ffa0a">&#9670;&nbsp;</a></span>EXTEND_THRESHOLD</h2>
+    <h2 class="memtitle"><span class="permalink"><a
+            href="#a77762dfca0730b89231a424d780ffa0a">&#9670;&nbsp;</a></span>CVECTOR_EXTEND_THRESHOLD
+    </h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EXTEND_THRESHOLD&#160;&#160;&#160;0.90</td>
+            <td class="memname">#define CVECTOR_EXTEND_THRESHOLD&#160;&#160;&#160;0.90</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Threshold from which the cvector will be extended in a readjust operation. It means that if the current size of the cvector is above EXTEND_THRESHOLD</p><ul>
+    <p>Threshold from which the cvector will be extended in a readjust
+        operation. It means that if the current size of the cvector is above
+        CVECTOR_EXTEND_THRESHOLD</p>
+    <ul>
 <li>its space, it will be extended. Set to above 1 to prevent extend during readjust operations. </li>
 </ul>
 
@@ -1205,13 +1339,18 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="afe9a045b69b6db8ce1e1209cb3f23c80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe9a045b69b6db8ce1e1209cb3f23c80">&#9670;&nbsp;</a></span>HASH_T</h2>
+    <h2 class="memtitle"><span class="permalink"><a
+            href="#afe9a045b69b6db8ce1e1209cb3f23c80">&#9670;&nbsp;</a></span>CVECTOR_HASH_T
+    </h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define HASH_T&#160;&#160;&#160;<a class="el" href="cvector_8h.html#a816300364f1a38bd4c332a57792951f5">DEFAULT_HASH_T</a></td>
+            <td class="memname">#define CVECTOR_HASH_T&#160;&#160;&#160;<a
+                    class="el"
+                    href="cvector_8h.html#a816300364f1a38bd4c332a57792951f5">DEFAULT_CVECTOR_HASH_T</a>
+            </td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1221,30 +1360,37 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="abf7442e3237b42ceb67324acea9a1d1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf7442e3237b42ceb67324acea9a1d1c">&#9670;&nbsp;</a></span>INIT_FACTOR</h2>
+    <h2 class="memtitle"><span class="permalink"><a
+            href="#abf7442e3237b42ceb67324acea9a1d1c">&#9670;&nbsp;</a></span>CVECTOR_INIT_FACTOR
+    </h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define INIT_FACTOR&#160;&#160;&#160;1.25</td>
+            <td class="memname">#define CVECTOR_INIT_FACTOR&#160;&#160;&#160;1.25</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Space factor used when a copy of cvector is created, or a concatenation of two cvectors. It means that the resulting array will have a space for INIT_FACTOR * actual size items. </p>
+    <p>Space factor used when a copy of cvector is created, or a concatenation
+        of two cvectors. It means that the resulting array will have a space
+        for CVECTOR_INIT_FACTOR * actual size items. </p>
 
 <p class="definition">Definition at line <a class="el" href="cvector_8h_source.html#l00064">64</a> of file <a class="el" href="cvector_8h_source.html">cvector.h</a>.</p>
 
 </div>
 </div>
 <a id="a3db9807a2d1fc2b1d0098e7ce8f7478b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3db9807a2d1fc2b1d0098e7ce8f7478b">&#9670;&nbsp;</a></span>INIT_SPACE</h2>
+    <h2 class="memtitle"><span class="permalink"><a
+            href="#a3db9807a2d1fc2b1d0098e7ce8f7478b">&#9670;&nbsp;</a></span>CVECTOR_INIT_SPACE
+    </h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define INIT_SPACE&#160;&#160;&#160;8</td>
+            <td class="memname">#define CVECTOR_INIT_SPACE&#160;&#160;&#160;8
+            </td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1271,13 +1417,15 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="ada843aff91b2ecd8122ae05adaed3db6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada843aff91b2ecd8122ae05adaed3db6">&#9670;&nbsp;</a></span>PRINT_DEBUG</h2>
+    <h2 class="memtitle"><span class="permalink"><a
+            href="#ada843aff91b2ecd8122ae05adaed3db6">&#9670;&nbsp;</a></span>CVECTOR_ERROR
+    </h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PRINT_DEBUG</td>
+            <td class="memname">#define CVECTOR_ERROR</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">level, </td>
@@ -1295,20 +1443,43 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code" href="cvector_8h.html#ae02a89ac32cbee34e2ef29f1e40ef58c">PRINT_DEBUG_FUNC</a> != NULL) { \</div><div class="line">        PRINT_DEBUG_FUNC(level, message); \</div><div class="line">    } \</div><div class="line">    int EXPECT_A_SEMICOLON = 1</div><div class="ttc" id="cvector_8h_html_ae02a89ac32cbee34e2ef29f1e40ef58c"><div class="ttname"><a href="cvector_8h.html#ae02a89ac32cbee34e2ef29f1e40ef58c">PRINT_DEBUG_FUNC</a></div><div class="ttdeci">#define PRINT_DEBUG_FUNC</div><div class="ttdef"><b>Definition:</b> <a href="cvector_8h_source.html#l00118">cvector.h:118</a></div></div>
+    <b>Value:</b>
+    <div class="fragment">
+        <div class="line"><span class="keywordflow">if</span> (<a class="code"
+                                                                  href="cvector_8h.html#ae02a89ac32cbee34e2ef29f1e40ef58c">CVECTOR_ERROR_FUNC</a>
+            != NULL) { \
+        </div>
+        <div class="line"> CVECTOR_ERROR_FUNC(level, message); \</div>
+        <div class="line"> } \</div>
+        <div class="line"> int EXPECT_A_SEMICOLON = 1</div>
+        <div class="ttc"
+             id="cvector_8h_html_ae02a89ac32cbee34e2ef29f1e40ef58c">
+            <div class="ttname"><a
+                    href="cvector_8h.html#ae02a89ac32cbee34e2ef29f1e40ef58c">CVECTOR_ERROR_FUNC</a>
+            </div>
+            <div class="ttdeci">#define CVECTOR_ERROR_FUNC</div>
+            <div class="ttdef"><b>Definition:</b> <a
+                    href="cvector_8h_source.html#l00118">cvector.h:118</a>
+            </div>
+        </div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="cvector_8h_source.html#l00019">19</a> of file <a class="el" href="cvector_8h_source.html">cvector.h</a>.</p>
 
 </div>
 </div>
 <a id="ae02a89ac32cbee34e2ef29f1e40ef58c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae02a89ac32cbee34e2ef29f1e40ef58c">&#9670;&nbsp;</a></span>PRINT_DEBUG_FUNC</h2>
+    <h2 class="memtitle"><span class="permalink"><a
+            href="#ae02a89ac32cbee34e2ef29f1e40ef58c">&#9670;&nbsp;</a></span>CVECTOR_ERROR_FUNC
+    </h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PRINT_DEBUG_FUNC&#160;&#160;&#160;<a class="el" href="cvector_8h.html#af96f13eaf9d39f3aeb661fb99ca74409">DEFAULT_PRINT_DEBUG_FUNC</a></td>
+            <td class="memname">#define CVECTOR_ERROR_FUNC&#160;&#160;&#160;<a
+                    class="el"
+                    href="cvector_8h.html#af96f13eaf9d39f3aeb661fb99ca74409">DEFAULT_CVECTOR_ERROR_FUNC</a>
+            </td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1339,34 +1510,43 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a31299318ba2f5406d7f7e2b299174e43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31299318ba2f5406d7f7e2b299174e43">&#9670;&nbsp;</a></span>SHRINK_FACTOR</h2>
+    <h2 class="memtitle"><span class="permalink"><a
+            href="#a31299318ba2f5406d7f7e2b299174e43">&#9670;&nbsp;</a></span>CVECTOR_SHRINK_FACTOR
+    </h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SHRINK_FACTOR&#160;&#160;&#160;0.5</td>
+            <td class="memname">#define CVECTOR_SHRINK_FACTOR&#160;&#160;&#160;0.5</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Space factor used when a shrink operation is triggered. It means that the new space of the cvector will be SHRINK_FACTOR * the current space. </p>
+    <p>Space factor used when a shrink operation is triggered. It means that
+        the new space of the cvector will be CVECTOR_SHRINK_FACTOR * the
+        current space. </p>
 
 <p class="definition">Definition at line <a class="el" href="cvector_8h_source.html#l00091">91</a> of file <a class="el" href="cvector_8h_source.html">cvector.h</a>.</p>
 
 </div>
 </div>
 <a id="a8e1a57dc5134ab73526871d11a622b68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e1a57dc5134ab73526871d11a622b68">&#9670;&nbsp;</a></span>SHRINK_THRESHOLD</h2>
+    <h2 class="memtitle"><span class="permalink"><a
+            href="#a8e1a57dc5134ab73526871d11a622b68">&#9670;&nbsp;</a></span>CVECTOR_SHRINK_THRESHOLD
+    </h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SHRINK_THRESHOLD&#160;&#160;&#160;0.5</td>
+            <td class="memname">#define CVECTOR_SHRINK_THRESHOLD&#160;&#160;&#160;0.5</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Threshold from which the cvector will be shrank in a readjust operation. It means that if the current size of the cvector is under SHRINK_THRESHOLD * its space, it will be shrank. Set to under 0 to prevent shrink during readjust operations. </p>
+    <p>Threshold from which the cvector will be shrank in a readjust operation.
+        It means that if the current size of the cvector is under
+        CVECTOR_SHRINK_THRESHOLD * its space, it will be shrank. Set to under 0
+        to prevent shrink during readjust operations. </p>
 
 <p class="definition">Definition at line <a class="el" href="cvector_8h_source.html#l00083">83</a> of file <a class="el" href="cvector_8h_source.html">cvector.h</a>.</p>
 
@@ -1396,7 +1576,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="cvector_8h.html#afe9a045b69b6db8ce1e1209cb3f23c80">HASH_T</a> <a class="el" href="cvector_8h.html#a814087d407b60e4d8b569f38370d30c9">hash_t</a></td>
+            <td class="memname">typedef <a class="el"
+                                           href="cvector_8h.html#afe9a045b69b6db8ce1e1209cb3f23c80">CVECTOR_HASH_T</a>
+                <a class="el"
+                   href="cvector_8h.html#a814087d407b60e4d8b569f38370d30c9">hash_t</a>
+            </td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1828,14 +2012,24 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the value at the specified index in the cvector. Prints an error message and returns DEFAULT_VALUE if the specified index is invalid. </p><dl class="params"><dt>Parameters</dt><dd>
+    <p>Returns the value at the specified index in the cvector. Prints an error
+        message and returns CVECTOR_DEFAULT_VALUE if the specified index is
+        invalid. </p>
+    <dl class="params">
+        <dt>Parameters</dt>
+        <dd>
   <table class="params">
     <tr><td class="paramname">p_cvector</td><td>a pointer to the cvector </td></tr>
     <tr><td class="paramname">index</td><td>the index of the value to get </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the desired value if the index is correct, DEFAULT_VALUE otherwise </dd></dl>
+    <dl class="section return">
+        <dt>Returns</dt>
+        <dd>the desired value if the index is correct, CVECTOR_DEFAULT_VALUE
+            otherwise
+        </dd>
+    </dl>
 
 <p class="definition">Definition at line <a class="el" href="cvector_8h_source.html#l00482">482</a> of file <a class="el" href="cvector_8h_source.html">cvector.h</a>.</p>
 
@@ -2089,7 +2283,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Readjusts space of the specified cvector if needed, according to SHRINK_THRESHOLD and EXTEND_THRESHOLD. </p><dl class="params"><dt>Parameters</dt><dd>
+    <p>Readjusts space of the specified cvector if needed, according to
+        CVECTOR_SHRINK_THRESHOLD and CVECTOR_EXTEND_THRESHOLD. </p>
+    <dl class="params">
+        <dt>Parameters</dt>
+        <dd>
   <table class="params">
     <tr><td class="paramname">p_cvector</td><td>a pointer to the cvector </td></tr>
   </table>
@@ -2115,13 +2313,22 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Removes the last element of the cvector and returns it. If the cvector is empty, prints an error and returns DEFAULT_VALUE. </p><dl class="params"><dt>Parameters</dt><dd>
+    <p>Removes the last element of the cvector and returns it. If the cvector
+        is empty, prints an error and returns CVECTOR_DEFAULT_VALUE. </p>
+    <dl class="params">
+        <dt>Parameters</dt>
+        <dd>
   <table class="params">
     <tr><td class="paramname">p_cvector</td><td>a pointer to the cvector </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The last value of the cvector if it is not empty, DEFAULT_VALUE otherwise </dd></dl>
+    <dl class="section return">
+        <dt>Returns</dt>
+        <dd>The last value of the cvector if it is not empty,
+            CVECTOR_DEFAULT_VALUE otherwise
+        </dd>
+    </dl>
 
 <p class="definition">Definition at line <a class="el" href="cvector_8h_source.html#l00401">401</a> of file <a class="el" href="cvector_8h_source.html">cvector.h</a>.</p>
 
@@ -2152,14 +2359,23 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Removes the element located at the specified index, and returns it. If the cvector is empty or if the index is incorrect, prints an error and returns DEFAULT_VALUE. </p><dl class="params"><dt>Parameters</dt><dd>
+    <p>Removes the element located at the specified index, and returns it. If
+        the cvector is empty or if the index is incorrect, prints an error and
+        returns CVECTOR_DEFAULT_VALUE. </p>
+    <dl class="params">
+        <dt>Parameters</dt>
+        <dd>
   <table class="params">
     <tr><td class="paramname">p_cvector</td><td>a pointer to the cvector </td></tr>
     <tr><td class="paramname">index</td><td>the index where the element will be removed </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the removed element or DEFAULT_VALUE if an error occurs </dd></dl>
+    <dl class="section return">
+        <dt>Returns</dt>
+        <dd>the removed element or CVECTOR_DEFAULT_VALUE if an error occurs
+        </dd>
+    </dl>
 
 <p class="definition">Definition at line <a class="el" href="cvector_8h_source.html#l00422">422</a> of file <a class="el" href="cvector_8h_source.html">cvector.h</a>.</p>
 
@@ -2314,14 +2530,24 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the value at the specified index in the cvector. Only prints a warning and returns DEFAULT_VALUE if the specified index is invalid. </p><dl class="params"><dt>Parameters</dt><dd>
+    <p>Returns the value at the specified index in the cvector. Only prints a
+        warning and returns CVECTOR_DEFAULT_VALUE if the specified index is
+        invalid. </p>
+    <dl class="params">
+        <dt>Parameters</dt>
+        <dd>
   <table class="params">
     <tr><td class="paramname">p_cvector</td><td>a pointer to the cvector </td></tr>
     <tr><td class="paramname">index</td><td>the index of the value to get </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the desired value if the index is correct, DEFAULT_VALUE otherwise </dd></dl>
+    <dl class="section return">
+        <dt>Returns</dt>
+        <dd>the desired value if the index is correct, CVECTOR_DEFAULT_VALUE
+            otherwise
+        </dd>
+    </dl>
 
 <p class="definition">Definition at line <a class="el" href="cvector_8h_source.html#l00506">506</a> of file <a class="el" href="cvector_8h_source.html">cvector.h</a>.</p>
 
@@ -2613,7 +2839,12 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Default print_debug function. Prints the specified message iif DEBUG_LEVEL is smaller than the specified level for the message. </p><dl class="params"><dt>Parameters</dt><dd>
+    <p>Default print_debug function. Prints the specified message iif
+        CVECTOR_DEBUG_LEVEL is smaller than the specified level for the
+        message. </p>
+    <dl class="params">
+        <dt>Parameters</dt>
+        <dd>
   <table class="params">
     <tr><td class="paramname">level</td><td>the level for the specified debug message </td></tr>
     <tr><td class="paramname">message</td><td>the debug message to print </td></tr>
