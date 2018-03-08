@@ -15,12 +15,12 @@ static int CVECTOR_ERRORNO = 0;
 #define DEFAULT_CVECTOR_T int
 #define DEFAULT_CVECTOR_DEFAULT_VALUE 0
 #define DEFAULT_CVECTOR_HASH_T size_t
-static int EXPECT_A_SEMICOLON = 0;
 
-#define NO_ERROR_FUNC NULL
 #define DEFAULT_CVECTOR_DEBUG_LEVEL 2
 static char CVECTOR_DEBUG_LEVELS[] = {'E', 'W', 'I', 'L'};
 
+// Can be eventually replaced with a function that does nothing
+// TODO: need to add time and call object?
 /**
  * Default print_debug function. Prints the specified message iif
  * DEBUG_LEVEL is smaller than the specified level for the message.
@@ -35,8 +35,7 @@ void default_error_func(int level, const char *message) {
 
 #define DEFAULT_CVECTOR_ERROR_FUNC default_error_func
 
-
-typedef size_t index_t;
+typedef long index_t;
 #define NOT_FOUND_INDEX ((index_t) (-1))
 #define ROUND_INDEX(x) ((index_t) (lrint(x)))
 
@@ -202,11 +201,7 @@ typedef size_t index_t;
 #define cvector_in_func CONCAT(CVECTOR_T, _vect__in_func)
 #define cvector_slice CONCAT(CVECTOR_T, _vect__slice)
 #define cvector_slicetoarray CONCAT(CVECTOR_T, _vect__slicetoarray)
-#define CVECTOR_ERROR(level, message) \
-    if (CVECTOR_ERROR_FUNC != NO_ERROR_FUNC) { \
-        CVECTOR_ERROR_FUNC(level, message); \
-    } \
-    EXPECT_A_SEMICOLON = 0
+#define CVECTOR_ERROR CVECTOR_ERROR_FUNC
 //
 
 typedef struct cvector cvector;

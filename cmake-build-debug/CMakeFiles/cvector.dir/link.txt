@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/cvector.dir/main.c.o  -o cvector -lm 
