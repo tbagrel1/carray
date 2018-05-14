@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.11.29)  14 MAY 2018 17:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.11.29)  14 MAY 2018 17:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1194,15 +1194,19 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 1.
-)
+ [1
+
+]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 67.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 67.
+ [2] [3] [4])
 \tf@toc=\write5
 \openout5 = `refman.toc'.
 
- [1
-
-] [2
-
-]
+ [5]
+[6]
 Package hyperref Info: Option `pageanchor' set `true' on input line 138.
 
 Chapter 1.
@@ -1223,15 +1227,15 @@ LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
 ) [1
 
-]
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 143.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 143.
- [2
+
+] [2
 
 ]
 Chapter 2.
+(./files.tex) [3] [4
+
+]
+Chapter 3.
 (./structcvector.tex
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 5.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
@@ -1250,42 +1254,342 @@ File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 10.
-) [3] [4
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 8.99994pt on input line 29.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 6.29996pt on input line 29.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 30.
+ [5]) [6]
+Chapter 4.
+(./cvector__core_8h.tex
+<cvector__core_8h__incl.pdf, id=873, pagebox=cropbox, 546.04pt x 156.585pt>
+File: cvector__core_8h__incl.pdf Graphic file (type pdf)
+<use cvector__core_8h__incl.pdf>
+Package pdftex.def Info: cvector__core_8h__incl.pdf  used on input line 15. on 
+input line 15.
+Package pdftex.def Info: Requested size: 350.0pt x 100.36696pt on input line 15
+.
+ [7
 
-]
-(./refman.ind [5
+ <./cvector__core_8h__incl.pdf>]
+Underfull \hbox (badness 986) in paragraph at lines 83--85
+[]\T1/phv/m/n/10 bool [][]cvector[]_[]replace[]_[]func[][] ([][]cvec-tor[][] $\
+OMS/cmsy/m/n/10 ^^C$\T1/phv/m/n/10 p[]_[]cvector, [][]value[]_[]t[][] orig-i-na
+l, [][]value[]_[]t[][] re-place-ment, bool($\OMS/cmsy/m/n/10 ^^C$\T1/phv/m/n/10
+ equal[]_[]
+ []
+
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 106.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 106.
+[8] [9] [10] [11]
+Underfull \hbox (badness 10000) detected at line 245
+[][][]
+ []
 
 
+Underfull \hbox (badness 10000) detected at line 263
+[][][]
+ []
+
+[12]
+Underfull \hbox (badness 10000) detected at line 283
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 305
+[][][]
+ []
+
+[13]
+Underfull \hbox (badness 10000) detected at line 357
+[][][]
+ []
+
+[14]
+Underfull \hbox (badness 10000) detected at line 375
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 395
+[][][]
+ []
+
+[15] [16]
+Underfull \hbox (badness 10000) detected at line 415
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 437
+[][][]
+ []
+
+
+Overfull \vbox (6.90897pt too high) has occurred while \output is active []
+
+
+[17]
+Underfull \hbox (badness 10000) detected at line 457
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 479
+[][][]
+ []
+
+[18]
+Underfull \hbox (badness 10000) detected at line 509
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 527
+[][][]
+ []
+
+[19]
+Underfull \hbox (badness 10000) detected at line 547
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 565
+[][][]
+ []
+
+[20]
+Underfull \hbox (badness 10000) detected at line 598
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 618
+[][][]
+ []
+
+[21]
+Underfull \hbox (badness 10000) detected at line 640
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 664
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 682
+[][][]
+ []
+
+[22]
+Underfull \hbox (badness 10000) detected at line 702
+[][][]
+ []
+
+[23]
+Underfull \hbox (badness 10000) detected at line 764
+[][][]
+ []
+
+[24]
+Underfull \hbox (badness 10000) detected at line 788
+[][][]
+ []
+
+[25]
+Underfull \hbox (badness 10000) detected at line 828
+[][][]
+ []
+
+) (./cvector__interface_8h.tex
+<cvector__interface_8h__incl.pdf, id=1284, pagebox=cropbox, 546.04pt x 156.585p
+t>
+File: cvector__interface_8h__incl.pdf Graphic file (type pdf)
+<use cvector__interface_8h__incl.pdf>
+Package pdftex.def Info: cvector__interface_8h__incl.pdf  used on input line 15
+. on input line 15.
+Package pdftex.def Info: Requested size: 350.0pt x 100.36696pt on input line 15
+.
+ [26 <./cvector__interface_8h__incl.pdf>]
+[27]
+Underfull \hbox (badness 986) in paragraph at lines 212--214
+[]\T1/phv/m/n/10 bool [][]cvector[]_[]replace[]_[]func[][] ([][]cvec-tor[][] $\
+OMS/cmsy/m/n/10 ^^C$\T1/phv/m/n/10 p[]_[]cvector, [][]value[]_[]t[][] orig-i-na
+l, [][]value[]_[]t[][] re-place-ment, bool($\OMS/cmsy/m/n/10 ^^C$\T1/phv/m/n/10
+ equal[]_[]
+ []
+
+[28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41]
+Underfull \hbox (badness 10000) detected at line 976
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 994
+[][][]
+ []
+
+[42]
+Underfull \hbox (badness 10000) detected at line 1014
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1036
+[][][]
+ []
+
+[43]
+Underfull \hbox (badness 10000) detected at line 1088
+[][][]
+ []
+
+[44]
+Underfull \hbox (badness 10000) detected at line 1106
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1126
+[][][]
+ []
+
+[45]
+Underfull \hbox (badness 10000) detected at line 1146
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1168
+[][][]
+ []
+
+
+Overfull \vbox (6.90897pt too high) has occurred while \output is active []
+
+
+[46]
+Underfull \hbox (badness 10000) detected at line 1188
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1210
+[][][]
+ []
+
+[47]
+Underfull \hbox (badness 10000) detected at line 1240
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1258
+[][][]
+ []
+
+[48]
+Underfull \hbox (badness 10000) detected at line 1278
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1296
+[][][]
+ []
+
+[49]
+Underfull \hbox (badness 10000) detected at line 1329
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1349
+[][][]
+ []
+
+[50]
+Underfull \hbox (badness 10000) detected at line 1371
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1395
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1413
+[][][]
+ []
+
+[51]
+Underfull \hbox (badness 10000) detected at line 1433
+[][][]
+ []
+
+[52]
+Underfull \hbox (badness 10000) detected at line 1495
+[][][]
+ []
+
+[53]
+Underfull \hbox (badness 10000) detected at line 1519
+[][][]
+ []
+
+[54]
+Underfull \hbox (badness 10000) detected at line 1559
+[][][]
+ []
+
+) [55] [56
+
+] (./refman.ind [57
+
+
+] [58] [59
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 160.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 160.
  (./refman.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 160.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: B217004819FF12A6E3D3B5276923F4DA;988.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
+(rerunfilecheck)             Checksum: A393514833AC1EBC7A5E327CD89BFB74;31774.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
- 14741 strings out of 492990
- 208496 string characters out of 6135004
- 295291 words of memory out of 5000000
- 18050 multiletter control sequences out of 15000+600000
- 44793 words of font info for 55 fonts, out of 8000000 for 9000
+ 15613 strings out of 492990
+ 233039 string characters out of 6135004
+ 354748 words of memory out of 5000000
+ 18472 multiletter control sequences out of 15000+600000
+ 60970 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,11n,92p,292b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,16n,92p,2868b,630s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
-/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
->
-Output written on refman.pdf (9 pages, 53568 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/cour
+ier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (67 pages, 273110 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2468 PDF objects out of 2487 (max. 8388607)
+ 2360 compressed objects within 24 object streams
+ 444 named destinations out of 1000 (max. 500000)
+ 1259 words of extra memory for PDF output out of 10000 (max. 10000000)
 

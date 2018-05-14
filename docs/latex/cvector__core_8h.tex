@@ -1,0 +1,834 @@
+\hypertarget{cvector__core_8h}{}\section{lib/cvector\+\_\+core.h File Reference}
+\label{cvector__core_8h}\index{lib/cvector\+\_\+core.\+h@{lib/cvector\+\_\+core.\+h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for cvector\+\_\+core.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cvector__core_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{cvector__core_8h_a2b3fb7098225f258606f6e87d51a293f}{\+\_\+\+\_\+cvector\+\_\+setspace} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} new\+\_\+space)
+\item 
+void \hyperlink{cvector__core_8h_a2ec9a92ee1097fb5aa38c4d30c2bd06d}{\+\_\+\+\_\+cvector\+\_\+shrink} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector)
+\item 
+void \hyperlink{cvector__core_8h_afa75ec5b8e81cc3d4e18298f8792f5a2}{\+\_\+\+\_\+cvector\+\_\+extend} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector)
+\item 
+void \hyperlink{cvector__core_8h_a9461750aa0be3a7104fca3ea80ea26e2}{cvector\+\_\+readjust} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector)
+\item 
+void \hyperlink{cvector__core_8h_a6e677aaaa755f53fe337eed349e610c2}{cvector\+\_\+addspace} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector)
+\item 
+\hyperlink{structcvector}{cvector} $\ast$ \hyperlink{cvector__core_8h_a6442c91a2a3b14d4d1d865ba148c34e4}{cvector\+\_\+new} ()
+\item 
+\hyperlink{structcvector}{cvector} $\ast$ \hyperlink{cvector__core_8h_abc0d094d5cdbd31fc74f3902fd74a690}{cvector\+\_\+new\+\_\+space} (\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} space)
+\item 
+\hyperlink{structcvector}{cvector} $\ast$ \hyperlink{cvector__core_8h_a5106edfcb490caa0a6eb53e4be088fa7}{cvector\+\_\+new\+\_\+copy} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+original)
+\item 
+\hyperlink{structcvector}{cvector} $\ast$ \hyperlink{cvector__core_8h_a8ae393983ad33cb1bc2df73f7d1db615}{cvector\+\_\+new\+\_\+copy\+\_\+space} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+original, \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} space)
+\item 
+void \hyperlink{cvector__core_8h_a91b4f946caa0193dceb9afec7f54e7ff}{cvector\+\_\+free} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector)
+\item 
+void \hyperlink{cvector__core_8h_a7ce27dde556f0de76df7c34a48e517a9}{cvector\+\_\+free\+\_\+func} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+vector, void($\ast$free\+\_\+value)(\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}))
+\item 
+\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} \hyperlink{cvector__core_8h_a069c279e9bce4acc6a357862b100ead7}{cvector\+\_\+getsize} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector)
+\item 
+void \hyperlink{cvector__core_8h_ad504959e360214da1255d28534b1d3a4}{cvector\+\_\+add} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} value)
+\item 
+void \hyperlink{cvector__core_8h_aded13abbf232cf0d65c889cb806cee0b}{cvector\+\_\+addi} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} value, \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} index)
+\item 
+void \hyperlink{cvector__core_8h_aa5e2993e942e56159ab9321eb7b90a6f}{cvector\+\_\+insert} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} value)
+\item 
+\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} \hyperlink{cvector__core_8h_a7af2a3f3b2e1fd3f2081536a4d73ac2e}{cvector\+\_\+remove} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector)
+\item 
+\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} \hyperlink{cvector__core_8h_aa10fda3704501241f975de8789dc5d9c}{cvector\+\_\+removei} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} index)
+\item 
+\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} \hyperlink{cvector__core_8h_aa1f74a774799a6190e0f63e46fd034ad}{cvector\+\_\+drop} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector)
+\item 
+void \hyperlink{cvector__core_8h_aed9a4c7a1286857f5aa427938428b9f7}{cvector\+\_\+clear} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector)
+\item 
+\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} \hyperlink{cvector__core_8h_af9a92765b9a85699a7acba0c51ac8620}{cvector\+\_\+get} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} index)
+\item 
+\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} \hyperlink{cvector__core_8h_a41b0ee17ac9cdc9967afb1dca8f9236a}{cvector\+\_\+safeget} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} index)
+\item 
+void \hyperlink{cvector__core_8h_a786ae2dbda0ab64599516679991eb93f}{cvector\+\_\+set} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} value, \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} index)
+\item 
+void \hyperlink{cvector__core_8h_a2304a9cec856cf184ecaa057472fe2cf}{cvector\+\_\+safeset} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} value, \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} index)
+\item 
+void \hyperlink{cvector__core_8h_ae23d89e171be11d31835926949af3de2}{cvector\+\_\+appendto} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{structcvector}{cvector} $\ast$p\+\_\+add)
+\item 
+\hyperlink{structcvector}{cvector} $\ast$ \hyperlink{cvector__core_8h_a4a0181818d231d636c9de16a95efe931}{cvector\+\_\+concat} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector\+\_\+1, \hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector\+\_\+2)
+\item 
+\hyperlink{structcvector}{cvector} $\ast$ \hyperlink{cvector__core_8h_af9185ec558ef030b082daee234f9312a}{cvector\+\_\+reversed} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector)
+\item 
+\hyperlink{cvector__interface_8h_ab1b394a82c540c8a85b27083cfb98948}{hash\+\_\+t} \hyperlink{cvector__core_8h_ae5ad5e4e2a0c41c165d3ad1f933916e7}{cvector\+\_\+hash} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_ab1b394a82c540c8a85b27083cfb98948}{hash\+\_\+t}($\ast$hash\+\_\+value)(\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}))
+\item 
+bool \hyperlink{cvector__core_8h_aa0027f2467c3f04fb382dbec8cb6e33b}{cvector\+\_\+equal} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector\+\_\+1, \hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector\+\_\+2)
+\item 
+bool \hyperlink{cvector__core_8h_aaf18bd41c613e955390bb26e6bf84ebb}{cvector\+\_\+equal\+\_\+func} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector\+\_\+1, \hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector\+\_\+2, bool($\ast$equal\+\_\+value)(\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}))
+\item 
+\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} $\ast$ \hyperlink{cvector__core_8h_acee2f57054d93a57da2b95f95df8fda8}{cvector\+\_\+toarray} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector)
+\item 
+bool \hyperlink{cvector__core_8h_a3d72487e7685f7ab93fda40cabb60958}{cvector\+\_\+replace} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} original, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} replacement)
+\item 
+bool \hyperlink{cvector__core_8h_a8248626d0f31ebb5838c82d0a71f2b05}{cvector\+\_\+replace\+\_\+func} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} original, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} replacement, bool($\ast$equal\+\_\+value)(\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}))
+\item 
+void \hyperlink{cvector__core_8h_acf990e9a552f22bf18abfec4d2c14563}{cvector\+\_\+sort} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, int($\ast$comp\+\_\+value)(const void $\ast$, const void $\ast$))
+\item 
+\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} \hyperlink{cvector__core_8h_aa11c7cb1423cfd6d9d41404188659f42}{cvector\+\_\+indexof} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} value)
+\item 
+\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} \hyperlink{cvector__core_8h_a4d82b0c6d906d0b979ecabd6073ca242}{cvector\+\_\+indexof\+\_\+func} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} value, bool($\ast$equal\+\_\+value)(\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}))
+\item 
+bool \hyperlink{cvector__core_8h_a8729382aeac08507d1e6450a23060aa6}{cvector\+\_\+in} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} value)
+\item 
+bool \hyperlink{cvector__core_8h_a0777cdfab1a78dde101ad1352f4ebb99}{cvector\+\_\+in\+\_\+func} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} value, bool($\ast$equal\+\_\+value)(\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}))
+\item 
+\hyperlink{structcvector}{cvector} $\ast$ \hyperlink{cvector__core_8h_a58fc66f52658fce930c3fdd7116bf541}{cvector\+\_\+slice} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} from, \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} to, \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} step)
+\item 
+\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} $\ast$ \hyperlink{cvector__core_8h_a06479149fcc3b358ac086aba792b19a7}{cvector\+\_\+slicetoarray} (\hyperlink{structcvector}{cvector} $\ast$p\+\_\+cvector, \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} from, \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} to, \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} step)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{cvector__core_8h_afa75ec5b8e81cc3d4e18298f8792f5a2}\label{cvector__core_8h_afa75ec5b8e81cc3d4e18298f8792f5a2}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!\+\_\+\+\_\+cvector\+\_\+extend@{\+\_\+\+\_\+cvector\+\_\+extend}}
+\index{\+\_\+\+\_\+cvector\+\_\+extend@{\+\_\+\+\_\+cvector\+\_\+extend}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+cvector\+\_\+extend()}{\_\_cvector\_extend()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+cvector\+\_\+extend (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Extends the specified cvector without any check about its size. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a2b3fb7098225f258606f6e87d51a293f}\label{cvector__core_8h_a2b3fb7098225f258606f6e87d51a293f}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!\+\_\+\+\_\+cvector\+\_\+setspace@{\+\_\+\+\_\+cvector\+\_\+setspace}}
+\index{\+\_\+\+\_\+cvector\+\_\+setspace@{\+\_\+\+\_\+cvector\+\_\+setspace}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+cvector\+\_\+setspace()}{\_\_cvector\_setspace()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+cvector\+\_\+setspace (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t}}]{new\+\_\+space }\end{DoxyParamCaption})}
+
+Sets space of the specified cvector to new\+\_\+space 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em new\+\_\+space} & the new space for the specified cvector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a2ec9a92ee1097fb5aa38c4d30c2bd06d}\label{cvector__core_8h_a2ec9a92ee1097fb5aa38c4d30c2bd06d}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!\+\_\+\+\_\+cvector\+\_\+shrink@{\+\_\+\+\_\+cvector\+\_\+shrink}}
+\index{\+\_\+\+\_\+cvector\+\_\+shrink@{\+\_\+\+\_\+cvector\+\_\+shrink}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+cvector\+\_\+shrink()}{\_\_cvector\_shrink()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+cvector\+\_\+shrink (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Shrinks the specified cvector without any check about its size. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_ad504959e360214da1255d28534b1d3a4}\label{cvector__core_8h_ad504959e360214da1255d28534b1d3a4}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+add@{cvector\+\_\+add}}
+\index{cvector\+\_\+add@{cvector\+\_\+add}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+add()}{cvector\_add()}}
+{\footnotesize\ttfamily void cvector\+\_\+add (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}}]{value }\end{DoxyParamCaption})}
+
+Adds the specified element at the end of the cvector. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value to push at the end of the cvector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 202 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_aded13abbf232cf0d65c889cb806cee0b}\label{cvector__core_8h_aded13abbf232cf0d65c889cb806cee0b}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+addi@{cvector\+\_\+addi}}
+\index{cvector\+\_\+addi@{cvector\+\_\+addi}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+addi()}{cvector\_addi()}}
+{\footnotesize\ttfamily void cvector\+\_\+addi (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}}]{value,  }\item[{\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t}}]{index }\end{DoxyParamCaption})}
+
+Adds the specified element a the position index in the cvector, and shift following elements to the right. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value to push a the position index in the cvector \\
+\hline
+{\em index} & the index where the specified value will be inserted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 219 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a6e677aaaa755f53fe337eed349e610c2}\label{cvector__core_8h_a6e677aaaa755f53fe337eed349e610c2}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+addspace@{cvector\+\_\+addspace}}
+\index{cvector\+\_\+addspace@{cvector\+\_\+addspace}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+addspace()}{cvector\_addspace()}}
+{\footnotesize\ttfamily void cvector\+\_\+addspace (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Adds space (according to the D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+D\+D\+S\+P\+A\+C\+E\+\_\+\+F\+A\+C\+T\+OR) to the specified cvector. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector to extend. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 75 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_ae23d89e171be11d31835926949af3de2}\label{cvector__core_8h_ae23d89e171be11d31835926949af3de2}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+appendto@{cvector\+\_\+appendto}}
+\index{cvector\+\_\+appendto@{cvector\+\_\+appendto}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+appendto()}{cvector\_appendto()}}
+{\footnotesize\ttfamily void cvector\+\_\+appendto (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+add }\end{DoxyParamCaption})}
+
+Appends element of the cvector pointed by p\+\_\+add at the end of the cvector pointed by p\+\_\+cvector. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector where elements will be appended \\
+\hline
+{\em p\+\_\+add} & a pointer to the cvector containing elements to copy \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 440 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_aed9a4c7a1286857f5aa427938428b9f7}\label{cvector__core_8h_aed9a4c7a1286857f5aa427938428b9f7}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+clear@{cvector\+\_\+clear}}
+\index{cvector\+\_\+clear@{cvector\+\_\+clear}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+clear()}{cvector\_clear()}}
+{\footnotesize\ttfamily void cvector\+\_\+clear (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Removes all elements of the cvector without changing its space (that is to say without calling cvector\+\_\+readjust). 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 330 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a4a0181818d231d636c9de16a95efe931}\label{cvector__core_8h_a4a0181818d231d636c9de16a95efe931}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+concat@{cvector\+\_\+concat}}
+\index{cvector\+\_\+concat@{cvector\+\_\+concat}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+concat()}{cvector\_concat()}}
+{\footnotesize\ttfamily \hyperlink{structcvector}{cvector}$\ast$ cvector\+\_\+concat (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector\+\_\+1,  }\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector\+\_\+2 }\end{DoxyParamCaption})}
+
+Returns a new cvector which is the concatenation of the two specified cvectors 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector\+\_\+1} & a pointer to the first cvector to concatenate \\
+\hline
+{\em p\+\_\+cvector\+\_\+2} & a pointer to the first cvector to concatenate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the resulting cvector 
+\end{DoxyReturn}
+
+
+Definition at line 461 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_aa1f74a774799a6190e0f63e46fd034ad}\label{cvector__core_8h_aa1f74a774799a6190e0f63e46fd034ad}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+drop@{cvector\+\_\+drop}}
+\index{cvector\+\_\+drop@{cvector\+\_\+drop}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+drop()}{cvector\_drop()}}
+{\footnotesize\ttfamily \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} cvector\+\_\+drop (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Removes the first element of the cvector. If the cvector is empty, prints an error anrd returns D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the remove (first) element, or D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE if an error occurs 
+\end{DoxyReturn}
+
+
+Definition at line 321 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_aa0027f2467c3f04fb382dbec8cb6e33b}\label{cvector__core_8h_aa0027f2467c3f04fb382dbec8cb6e33b}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+equal@{cvector\+\_\+equal}}
+\index{cvector\+\_\+equal@{cvector\+\_\+equal}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+equal()}{cvector\_equal()}}
+{\footnotesize\ttfamily bool cvector\+\_\+equal (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector\+\_\+1,  }\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector\+\_\+2 }\end{DoxyParamCaption})}
+
+Returns true iif both specified cvectors are equal. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector\+\_\+1} & a pointer to the first cvector to test \\
+\hline
+{\em p\+\_\+cvector\+\_\+2} & a pointer to the second cvector to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both specified cvectors are equal, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 517 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_aaf18bd41c613e955390bb26e6bf84ebb}\label{cvector__core_8h_aaf18bd41c613e955390bb26e6bf84ebb}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+equal\+\_\+func@{cvector\+\_\+equal\+\_\+func}}
+\index{cvector\+\_\+equal\+\_\+func@{cvector\+\_\+equal\+\_\+func}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+equal\+\_\+func()}{cvector\_equal\_func()}}
+{\footnotesize\ttfamily bool cvector\+\_\+equal\+\_\+func (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector\+\_\+1,  }\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector\+\_\+2,  }\item[{bool($\ast$)(\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t})}]{equal\+\_\+value }\end{DoxyParamCaption})}
+
+Returns true iif both specified cvectors are equal according to the specified test function for values. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector\+\_\+1} & a pointer to the first cvector to test \\
+\hline
+{\em p\+\_\+cvector\+\_\+2} & a pointer to the second cvector to test \\
+\hline
+{\em equal\+\_\+value} & the test function for values. Its signature must be bool equal\+\_\+value(value\+\_\+t value\+\_\+1, value\+\_\+t value\+\_\+2) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both specified cvectors are equal according to the test function, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 539 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a91b4f946caa0193dceb9afec7f54e7ff}\label{cvector__core_8h_a91b4f946caa0193dceb9afec7f54e7ff}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+free@{cvector\+\_\+free}}
+\index{cvector\+\_\+free@{cvector\+\_\+free}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+free()}{cvector\_free()}}
+{\footnotesize\ttfamily void cvector\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Frees the specified cvector. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector to free \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 169 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a7ce27dde556f0de76df7c34a48e517a9}\label{cvector__core_8h_a7ce27dde556f0de76df7c34a48e517a9}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+free\+\_\+func@{cvector\+\_\+free\+\_\+func}}
+\index{cvector\+\_\+free\+\_\+func@{cvector\+\_\+free\+\_\+func}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+free\+\_\+func()}{cvector\_free\_func()}}
+{\footnotesize\ttfamily void cvector\+\_\+free\+\_\+func (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+vector,  }\item[{void($\ast$)(\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t})}]{free\+\_\+value }\end{DoxyParamCaption})}
+
+Applies the specified free function of each value of the cvector, and then frees it too. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector} & a pointer to the cvector to free \\
+\hline
+{\em free\+\_\+value} & the function to free each value of the cvector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 180 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_af9a92765b9a85699a7acba0c51ac8620}\label{cvector__core_8h_af9a92765b9a85699a7acba0c51ac8620}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+get@{cvector\+\_\+get}}
+\index{cvector\+\_\+get@{cvector\+\_\+get}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+get()}{cvector\_get()}}
+{\footnotesize\ttfamily \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} cvector\+\_\+get (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t}}]{index }\end{DoxyParamCaption})}
+
+Returns the value at the specified index in the cvector. Prints an error message and returns D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE if the specified index is invalid. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em index} & the index of the value to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the desired value if the index is correct, D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 341 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a069c279e9bce4acc6a357862b100ead7}\label{cvector__core_8h_a069c279e9bce4acc6a357862b100ead7}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+getsize@{cvector\+\_\+getsize}}
+\index{cvector\+\_\+getsize@{cvector\+\_\+getsize}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+getsize()}{cvector\_getsize()}}
+{\footnotesize\ttfamily \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} cvector\+\_\+getsize (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Size getter. Returns the size of the cvector. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the size of the cvector 
+\end{DoxyReturn}
+
+
+Definition at line 193 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_ae5ad5e4e2a0c41c165d3ad1f933916e7}\label{cvector__core_8h_ae5ad5e4e2a0c41c165d3ad1f933916e7}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+hash@{cvector\+\_\+hash}}
+\index{cvector\+\_\+hash@{cvector\+\_\+hash}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+hash()}{cvector\_hash()}}
+{\footnotesize\ttfamily \hyperlink{cvector__interface_8h_ab1b394a82c540c8a85b27083cfb98948}{hash\+\_\+t} cvector\+\_\+hash (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_ab1b394a82c540c8a85b27083cfb98948}{hash\+\_\+t}($\ast$)(\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t})}]{hash\+\_\+value }\end{DoxyParamCaption})}
+
+Returns the hash of the specified cvector, using djb2 algorithm by Dan Bernstein, according to the specified hash function for values of the cvector. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector to hash \\
+\hline
+{\em hash\+\_\+value} & hash function for values of the cvector. Signature of the hash value function must be hash\+\_\+t hash\+\_\+value(value\+\_\+t value) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the computed hash of the specified cvector 
+\end{DoxyReturn}
+
+
+Definition at line 503 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a8729382aeac08507d1e6450a23060aa6}\label{cvector__core_8h_a8729382aeac08507d1e6450a23060aa6}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+in@{cvector\+\_\+in}}
+\index{cvector\+\_\+in@{cvector\+\_\+in}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+in()}{cvector\_in()}}
+{\footnotesize\ttfamily bool cvector\+\_\+in (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}}]{value }\end{DoxyParamCaption})}
+
+Returns true iif the specified value was found in the cvector. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value to found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the value was found, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 676 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a0777cdfab1a78dde101ad1352f4ebb99}\label{cvector__core_8h_a0777cdfab1a78dde101ad1352f4ebb99}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+in\+\_\+func@{cvector\+\_\+in\+\_\+func}}
+\index{cvector\+\_\+in\+\_\+func@{cvector\+\_\+in\+\_\+func}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+in\+\_\+func()}{cvector\_in\_func()}}
+{\footnotesize\ttfamily bool cvector\+\_\+in\+\_\+func (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}}]{value,  }\item[{bool($\ast$)(\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t})}]{equal\+\_\+value }\end{DoxyParamCaption})}
+
+Returns true iif the specified value was found in the cvector according to the specified test function. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value to found \\
+\hline
+{\em equal\+\_\+value} & the test function to check equality between values. Its signature must be bool equal\+\_\+value(value\+\_\+t value\+\_\+1, value\+\_\+t value\+\_\+2) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the value was found, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 690 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_aa11c7cb1423cfd6d9d41404188659f42}\label{cvector__core_8h_aa11c7cb1423cfd6d9d41404188659f42}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+indexof@{cvector\+\_\+indexof}}
+\index{cvector\+\_\+indexof@{cvector\+\_\+indexof}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+indexof()}{cvector\_indexof()}}
+{\footnotesize\ttfamily \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} cvector\+\_\+indexof (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}}]{value }\end{DoxyParamCaption})}
+
+Returns the first index where the specified value is found in the cvector. If the value is not found, returns N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX value. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value to found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the first index where the specified value was found, or N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX if it was not found 
+\end{DoxyReturn}
+
+
+Definition at line 639 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a4d82b0c6d906d0b979ecabd6073ca242}\label{cvector__core_8h_a4d82b0c6d906d0b979ecabd6073ca242}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+indexof\+\_\+func@{cvector\+\_\+indexof\+\_\+func}}
+\index{cvector\+\_\+indexof\+\_\+func@{cvector\+\_\+indexof\+\_\+func}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+indexof\+\_\+func()}{cvector\_indexof\_func()}}
+{\footnotesize\ttfamily \hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t} cvector\+\_\+indexof\+\_\+func (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}}]{value,  }\item[{bool($\ast$)(\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t})}]{equal\+\_\+value }\end{DoxyParamCaption})}
+
+Returns the first index where the specified value is found, according to the specified test function. Il the value is not found, returns N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX value. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value to found \\
+\hline
+{\em equal\+\_\+value} & the test function to check equality between values. Its signature must be bool equal\+\_\+value(value\+\_\+t value\+\_\+1, value\+\_\+t value\+\_\+2) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the first index where the specified value was found, or N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX if it was not found 
+\end{DoxyReturn}
+
+
+Definition at line 660 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_aa5e2993e942e56159ab9321eb7b90a6f}\label{cvector__core_8h_aa5e2993e942e56159ab9321eb7b90a6f}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+insert@{cvector\+\_\+insert}}
+\index{cvector\+\_\+insert@{cvector\+\_\+insert}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+insert()}{cvector\_insert()}}
+{\footnotesize\ttfamily void cvector\+\_\+insert (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}}]{value }\end{DoxyParamCaption})}
+
+Adds the specified value at the beginning of the cvector, and shift following elements to the right. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value to add at the beginning of the cvector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 253 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a6442c91a2a3b14d4d1d865ba148c34e4}\label{cvector__core_8h_a6442c91a2a3b14d4d1d865ba148c34e4}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+new@{cvector\+\_\+new}}
+\index{cvector\+\_\+new@{cvector\+\_\+new}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+new()}{cvector\_new()}}
+{\footnotesize\ttfamily \hyperlink{structcvector}{cvector}$\ast$ cvector\+\_\+new (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a new cvector which can hold at the beginning at least D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+I\+T\+\_\+\+S\+P\+A\+CE elements. \begin{DoxyReturn}{Returns}
+a pointer to the new cvector 
+\end{DoxyReturn}
+
+
+Definition at line 87 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a5106edfcb490caa0a6eb53e4be088fa7}\label{cvector__core_8h_a5106edfcb490caa0a6eb53e4be088fa7}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+new\+\_\+copy@{cvector\+\_\+new\+\_\+copy}}
+\index{cvector\+\_\+new\+\_\+copy@{cvector\+\_\+new\+\_\+copy}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+new\+\_\+copy()}{cvector\_new\_copy()}}
+{\footnotesize\ttfamily \hyperlink{structcvector}{cvector}$\ast$ cvector\+\_\+new\+\_\+copy (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+original }\end{DoxyParamCaption})}
+
+Creates a new cvector which is a copy of the specified one. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+original} & a pointer to the cvector to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the new (clone) cvector 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a8ae393983ad33cb1bc2df73f7d1db615}\label{cvector__core_8h_a8ae393983ad33cb1bc2df73f7d1db615}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+new\+\_\+copy\+\_\+space@{cvector\+\_\+new\+\_\+copy\+\_\+space}}
+\index{cvector\+\_\+new\+\_\+copy\+\_\+space@{cvector\+\_\+new\+\_\+copy\+\_\+space}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+new\+\_\+copy\+\_\+space()}{cvector\_new\_copy\_space()}}
+{\footnotesize\ttfamily \hyperlink{structcvector}{cvector}$\ast$ cvector\+\_\+new\+\_\+copy\+\_\+space (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+original,  }\item[{\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t}}]{space }\end{DoxyParamCaption})}
+
+Creates a new cvector which is a copy of the specified one and which can hold at least space elements. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+original} & a pointer to the cvector to copy \\
+\hline
+{\em space} & desired space for the new (clone) cvector. space must be greater or equal than the size of the original cvector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the new (clone) cvector 
+\end{DoxyReturn}
+
+
+Definition at line 142 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_abc0d094d5cdbd31fc74f3902fd74a690}\label{cvector__core_8h_abc0d094d5cdbd31fc74f3902fd74a690}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+new\+\_\+space@{cvector\+\_\+new\+\_\+space}}
+\index{cvector\+\_\+new\+\_\+space@{cvector\+\_\+new\+\_\+space}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+new\+\_\+space()}{cvector\_new\_space()}}
+{\footnotesize\ttfamily \hyperlink{structcvector}{cvector}$\ast$ cvector\+\_\+new\+\_\+space (\begin{DoxyParamCaption}\item[{\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t}}]{space }\end{DoxyParamCaption})}
+
+Creates a new cvector which can hold at the beginning at least space elements. 
+\begin{DoxyParams}{Parameters}
+{\em space} & desired space for the new cvector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the new cvector 
+\end{DoxyReturn}
+
+
+Definition at line 102 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a9461750aa0be3a7104fca3ea80ea26e2}\label{cvector__core_8h_a9461750aa0be3a7104fca3ea80ea26e2}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+readjust@{cvector\+\_\+readjust}}
+\index{cvector\+\_\+readjust@{cvector\+\_\+readjust}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+readjust()}{cvector\_readjust()}}
+{\footnotesize\ttfamily void cvector\+\_\+readjust (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Readjusts space of the specified cvector if needed, according to S\+H\+R\+I\+N\+K\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD and E\+X\+T\+E\+N\+D\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 61 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a7af2a3f3b2e1fd3f2081536a4d73ac2e}\label{cvector__core_8h_a7af2a3f3b2e1fd3f2081536a4d73ac2e}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+remove@{cvector\+\_\+remove}}
+\index{cvector\+\_\+remove@{cvector\+\_\+remove}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+remove()}{cvector\_remove()}}
+{\footnotesize\ttfamily \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} cvector\+\_\+remove (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Removes the last element of the cvector and returns it. If the cvector is empty, prints an error and returns D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The last value of the cvector if it is not empty, D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 264 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_aa10fda3704501241f975de8789dc5d9c}\label{cvector__core_8h_aa10fda3704501241f975de8789dc5d9c}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+removei@{cvector\+\_\+removei}}
+\index{cvector\+\_\+removei@{cvector\+\_\+removei}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+removei()}{cvector\_removei()}}
+{\footnotesize\ttfamily \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} cvector\+\_\+removei (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t}}]{index }\end{DoxyParamCaption})}
+
+Removes the element located at the specified index, and returns it. If the cvector is empty or if the index is incorrect, prints an error and returns D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em index} & the index where the element will be removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the removed element or D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE if an error occurs 
+\end{DoxyReturn}
+
+
+Definition at line 284 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a3d72487e7685f7ab93fda40cabb60958}\label{cvector__core_8h_a3d72487e7685f7ab93fda40cabb60958}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+replace@{cvector\+\_\+replace}}
+\index{cvector\+\_\+replace@{cvector\+\_\+replace}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+replace()}{cvector\_replace()}}
+{\footnotesize\ttfamily bool cvector\+\_\+replace (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}}]{original,  }\item[{\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}}]{replacement }\end{DoxyParamCaption})}
+
+Replace specified elements in the cvector and returns true if at least one change was made. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em original} & original value to replace \\
+\hline
+{\em replacement} & replacement value for original \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if at least one replacement was made, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 577 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a8248626d0f31ebb5838c82d0a71f2b05}\label{cvector__core_8h_a8248626d0f31ebb5838c82d0a71f2b05}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+replace\+\_\+func@{cvector\+\_\+replace\+\_\+func}}
+\index{cvector\+\_\+replace\+\_\+func@{cvector\+\_\+replace\+\_\+func}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+replace\+\_\+func()}{cvector\_replace\_func()}}
+{\footnotesize\ttfamily bool cvector\+\_\+replace\+\_\+func (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}}]{original,  }\item[{\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}}]{replacement,  }\item[{bool($\ast$)(\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}, \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t})}]{equal\+\_\+value }\end{DoxyParamCaption})}
+
+Replace specified elements in the cvector and returns true if at least one change was made. Test between elements of the cvector and original are made with the specified function. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em original} & original value to replace \\
+\hline
+{\em replacement} & replacement value for original \\
+\hline
+{\em equal\+\_\+value} & test function used to compare cvector elements and original. Its signature must be bool equal\+\_\+value(value\+\_\+t value\+\_\+1, value\+\_\+t value\+\_\+2) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if at least one replacement was made, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 600 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_af9185ec558ef030b082daee234f9312a}\label{cvector__core_8h_af9185ec558ef030b082daee234f9312a}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+reversed@{cvector\+\_\+reversed}}
+\index{cvector\+\_\+reversed@{cvector\+\_\+reversed}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+reversed()}{cvector\_reversed()}}
+{\footnotesize\ttfamily \hyperlink{structcvector}{cvector}$\ast$ cvector\+\_\+reversed (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Returns a cvector which contains the same elements as the specified one, but in a reversed order. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the original cvector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the resulting cvector, containing elements of the specified cvector in a reverse order 
+\end{DoxyReturn}
+
+
+Definition at line 481 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a41b0ee17ac9cdc9967afb1dca8f9236a}\label{cvector__core_8h_a41b0ee17ac9cdc9967afb1dca8f9236a}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+safeget@{cvector\+\_\+safeget}}
+\index{cvector\+\_\+safeget@{cvector\+\_\+safeget}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+safeget()}{cvector\_safeget()}}
+{\footnotesize\ttfamily \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t} cvector\+\_\+safeget (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t}}]{index }\end{DoxyParamCaption})}
+
+Returns the value at the specified index in the cvector. Only prints a warning and returns D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE if the specified index is invalid. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em index} & the index of the value to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the desired value if the index is correct, D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 364 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a2304a9cec856cf184ecaa057472fe2cf}\label{cvector__core_8h_a2304a9cec856cf184ecaa057472fe2cf}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+safeset@{cvector\+\_\+safeset}}
+\index{cvector\+\_\+safeset@{cvector\+\_\+safeset}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+safeset()}{cvector\_safeset()}}
+{\footnotesize\ttfamily void cvector\+\_\+safeset (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}}]{value,  }\item[{\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t}}]{index }\end{DoxyParamCaption})}
+
+Sets the value of the element located at the specified position. Only raises warning if the index is invalid, or extends the cvector to be able to set the value at the specified index. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value which will be inserted at the index position \\
+\hline
+{\em index} & the index where the value will be set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 410 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a786ae2dbda0ab64599516679991eb93f}\label{cvector__core_8h_a786ae2dbda0ab64599516679991eb93f}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+set@{cvector\+\_\+set}}
+\index{cvector\+\_\+set@{cvector\+\_\+set}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+set()}{cvector\_set()}}
+{\footnotesize\ttfamily void cvector\+\_\+set (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}}]{value,  }\item[{\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t}}]{index }\end{DoxyParamCaption})}
+
+Sets the value of the element located at the specified index. Raises error if the specified index is invalid. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value which will be placed at the index position \\
+\hline
+{\em index} & the index where the value will be set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 387 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a58fc66f52658fce930c3fdd7116bf541}\label{cvector__core_8h_a58fc66f52658fce930c3fdd7116bf541}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+slice@{cvector\+\_\+slice}}
+\index{cvector\+\_\+slice@{cvector\+\_\+slice}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+slice()}{cvector\_slice()}}
+{\footnotesize\ttfamily \hyperlink{structcvector}{cvector}$\ast$ cvector\+\_\+slice (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t}}]{from,  }\item[{\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t}}]{to,  }\item[{\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t}}]{step }\end{DoxyParamCaption})}
+
+Returns the slice \mbox{[}$\vert$from\+:to\mbox{[}$\vert$ of the specified cvector. Prints an error and return N\+U\+LL if indexes are incorrect. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em from} & index of the begin of the slice, included \\
+\hline
+{\em to} & index of the end of the slice, excluded \\
+\hline
+{\em step} & step of the slice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the corresponding (cvector) slice 
+\end{DoxyReturn}
+
+
+Definition at line 707 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_a06479149fcc3b358ac086aba792b19a7}\label{cvector__core_8h_a06479149fcc3b358ac086aba792b19a7}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+slicetoarray@{cvector\+\_\+slicetoarray}}
+\index{cvector\+\_\+slicetoarray@{cvector\+\_\+slicetoarray}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+slicetoarray()}{cvector\_slicetoarray()}}
+{\footnotesize\ttfamily \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}$\ast$ cvector\+\_\+slicetoarray (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t}}]{from,  }\item[{\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t}}]{to,  }\item[{\hyperlink{cvector__interface_8h_ad722078677c063a09661059674fb996c}{index\+\_\+t}}]{step }\end{DoxyParamCaption})}
+
+Returns the slice \mbox{[}$\vert$from\+:to\mbox{[}$\vert$ of the specified cvector as a c-\/style array. Prints an error and return N\+U\+LL if indexes are incorrect. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em from} & index of the begin of the slice, included \\
+\hline
+{\em to} & index of the end of the slice, excluded \\
+\hline
+{\em step} & step of the slice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the corresponding (c-\/style array) slice 
+\end{DoxyReturn}
+
+
+Definition at line 755 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_acf990e9a552f22bf18abfec4d2c14563}\label{cvector__core_8h_acf990e9a552f22bf18abfec4d2c14563}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+sort@{cvector\+\_\+sort}}
+\index{cvector\+\_\+sort@{cvector\+\_\+sort}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+sort()}{cvector\_sort()}}
+{\footnotesize\ttfamily void cvector\+\_\+sort (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector,  }\item[{int($\ast$)(const void $\ast$, const void $\ast$)}]{comp\+\_\+value }\end{DoxyParamCaption})}
+
+Sorts the elements in the cvector according to the specified comparison function. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em comp\+\_\+value} & a comparison function which must have the signature int comp\+\_\+value(const void $\ast$p\+\_\+a, const void $\ast$p\+\_\+b) and which must
+\begin{DoxyItemize}
+\item return -\/1 if element a should be placed before element b
+\item return 0 if element a and b could be placed at the same position
+\item return 1 if element a should be placed after element b 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 624 of file cvector\+\_\+core.\+h.
+
+\mbox{\Hypertarget{cvector__core_8h_acee2f57054d93a57da2b95f95df8fda8}\label{cvector__core_8h_acee2f57054d93a57da2b95f95df8fda8}} 
+\index{cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}!cvector\+\_\+toarray@{cvector\+\_\+toarray}}
+\index{cvector\+\_\+toarray@{cvector\+\_\+toarray}!cvector\+\_\+core.\+h@{cvector\+\_\+core.\+h}}
+\subsubsection{\texorpdfstring{cvector\+\_\+toarray()}{cvector\_toarray()}}
+{\footnotesize\ttfamily \hyperlink{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}{value\+\_\+t}$\ast$ cvector\+\_\+toarray (\begin{DoxyParamCaption}\item[{\hyperlink{structcvector}{cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Returns a pointer to a c-\/style array holding the same elements as the specified cvector. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a c-\/style malloc-\/ed array holding the same elements as the specified cvector, which must be freed after use 
+\end{DoxyReturn}
+
+
+Definition at line 560 of file cvector\+\_\+core.\+h.
+

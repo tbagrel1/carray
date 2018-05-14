@@ -1,5 +1,352 @@
 \begin{theindex}
 
-  \item {cvector}, \hyperpage{3}
+  \item {\+\_\+\+C\+O\+N\+C\+AT}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{29}
+  \item {\+\_\+\+\_\+cvector\+\_\+extend}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{8}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{28}, 
+		\hyperpage{39}
+  \item {\+\_\+\+\_\+cvector\+\_\+setspace}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{8}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{28}, 
+		\hyperpage{39}
+  \item {\+\_\+\+\_\+cvector\+\_\+shrink}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{9}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{29}, 
+		\hyperpage{39}
+  \item {\+\_\+size}
+    \subitem {cvector}, \hyperpage{5}
+  \item {\+\_\+space}
+    \subitem {cvector}, \hyperpage{5}
+  \item {\+\_\+vector}
+    \subitem {cvector}, \hyperpage{6}
+
+  \indexspace
+
+  \item {C\+O\+N\+C\+AT}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{29}
+  \item {C\+V\+E\+C\+T\+O\+R\+\_\+\+A\+D\+D\+S\+P\+A\+C\+E\+\_\+\+F\+A\+C\+T\+OR}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{30}
+  \item {C\+V\+E\+C\+T\+O\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{31}
+  \item {C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+R\+R\+OR}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{31}
+  \item {C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+F\+A\+C\+T\+OR}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{31}
+  \item {C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{32}
+  \item {C\+V\+E\+C\+T\+O\+R\+\_\+\+H\+A\+S\+H\+\_\+T}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{33}
+  \item {C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+C\+T\+OR}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{34}
+  \item {C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+S\+P\+A\+CE}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{34}
+  \item {C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+F\+A\+C\+T\+OR}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{36}
+  \item {C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{36}
+  \item {C\+V\+E\+C\+T\+O\+R\+\_\+T}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{37}
+  \item {cvector}, \hyperpage{5}
+    \subitem {\+\_\+size}, \hyperpage{5}
+    \subitem {\+\_\+space}, \hyperpage{5}
+    \subitem {\+\_\+vector}, \hyperpage{6}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{29}, 
+		\hyperpage{39}
+  \item {cvector\+\_\+add}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{9}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{29}, 
+		\hyperpage{40}
+  \item {cvector\+\_\+addi}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{9}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{29}, 
+		\hyperpage{40}
+  \item {cvector\+\_\+addspace}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{11}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{30}, 
+		\hyperpage{40}
+  \item {cvector\+\_\+appendto}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{11}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{30}, 
+		\hyperpage{41}
+  \item {cvector\+\_\+clear}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{11}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{30}, 
+		\hyperpage{41}
+  \item {cvector\+\_\+concat}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{12}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{30}, 
+		\hyperpage{41}
+  \item {cvector\+\_\+core.\+h}
+    \subitem {\+\_\+\+\_\+cvector\+\_\+extend}, \hyperpage{8}
+    \subitem {\+\_\+\+\_\+cvector\+\_\+setspace}, \hyperpage{8}
+    \subitem {\+\_\+\+\_\+cvector\+\_\+shrink}, \hyperpage{9}
+    \subitem {cvector\+\_\+add}, \hyperpage{9}
+    \subitem {cvector\+\_\+addi}, \hyperpage{9}
+    \subitem {cvector\+\_\+addspace}, \hyperpage{11}
+    \subitem {cvector\+\_\+appendto}, \hyperpage{11}
+    \subitem {cvector\+\_\+clear}, \hyperpage{11}
+    \subitem {cvector\+\_\+concat}, \hyperpage{12}
+    \subitem {cvector\+\_\+drop}, \hyperpage{12}
+    \subitem {cvector\+\_\+equal}, \hyperpage{12}
+    \subitem {cvector\+\_\+equal\+\_\+func}, \hyperpage{13}
+    \subitem {cvector\+\_\+free}, \hyperpage{13}
+    \subitem {cvector\+\_\+free\+\_\+func}, \hyperpage{14}
+    \subitem {cvector\+\_\+get}, \hyperpage{14}
+    \subitem {cvector\+\_\+getsize}, \hyperpage{15}
+    \subitem {cvector\+\_\+hash}, \hyperpage{15}
+    \subitem {cvector\+\_\+in}, \hyperpage{15}
+    \subitem {cvector\+\_\+in\+\_\+func}, \hyperpage{17}
+    \subitem {cvector\+\_\+indexof}, \hyperpage{17}
+    \subitem {cvector\+\_\+indexof\+\_\+func}, \hyperpage{18}
+    \subitem {cvector\+\_\+insert}, \hyperpage{18}
+    \subitem {cvector\+\_\+new}, \hyperpage{18}
+    \subitem {cvector\+\_\+new\+\_\+copy}, \hyperpage{19}
+    \subitem {cvector\+\_\+new\+\_\+copy\+\_\+space}, \hyperpage{19}
+    \subitem {cvector\+\_\+new\+\_\+space}, \hyperpage{20}
+    \subitem {cvector\+\_\+readjust}, \hyperpage{20}
+    \subitem {cvector\+\_\+remove}, \hyperpage{20}
+    \subitem {cvector\+\_\+removei}, \hyperpage{21}
+    \subitem {cvector\+\_\+replace}, \hyperpage{21}
+    \subitem {cvector\+\_\+replace\+\_\+func}, \hyperpage{22}
+    \subitem {cvector\+\_\+reversed}, \hyperpage{22}
+    \subitem {cvector\+\_\+safeget}, \hyperpage{23}
+    \subitem {cvector\+\_\+safeset}, \hyperpage{23}
+    \subitem {cvector\+\_\+set}, \hyperpage{23}
+    \subitem {cvector\+\_\+slice}, \hyperpage{24}
+    \subitem {cvector\+\_\+slicetoarray}, \hyperpage{24}
+    \subitem {cvector\+\_\+sort}, \hyperpage{25}
+    \subitem {cvector\+\_\+toarray}, \hyperpage{25}
+  \item {cvector\+\_\+drop}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{12}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{31}, 
+		\hyperpage{42}
+  \item {cvector\+\_\+equal}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{12}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{31}, 
+		\hyperpage{42}
+  \item {cvector\+\_\+equal\+\_\+func}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{13}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{31}, 
+		\hyperpage{43}
+  \item {cvector\+\_\+free}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{13}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{32}, 
+		\hyperpage{43}
+  \item {cvector\+\_\+free\+\_\+func}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{14}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{32}, 
+		\hyperpage{44}
+  \item {cvector\+\_\+get}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{14}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{32}, 
+		\hyperpage{44}
+  \item {cvector\+\_\+getsize}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{15}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{32}, 
+		\hyperpage{44}
+  \item {cvector\+\_\+hash}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{15}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{33}, 
+		\hyperpage{45}
+  \item {cvector\+\_\+in}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{15}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{33}, 
+		\hyperpage{45}
+  \item {cvector\+\_\+in\+\_\+func}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{17}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{33}, 
+		\hyperpage{46}
+  \item {cvector\+\_\+indexof}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{17}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{33}, 
+		\hyperpage{46}
+  \item {cvector\+\_\+indexof\+\_\+func}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{18}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{33}, 
+		\hyperpage{47}
+  \item {cvector\+\_\+insert}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{18}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{34}, 
+		\hyperpage{47}
+  \item {cvector\+\_\+interface.\+h}
+    \subitem {\+\_\+\+C\+O\+N\+C\+AT}, \hyperpage{29}
+    \subitem {\+\_\+\+\_\+cvector\+\_\+extend}, \hyperpage{28}, 
+		\hyperpage{39}
+    \subitem {\+\_\+\+\_\+cvector\+\_\+setspace}, \hyperpage{28}, 
+		\hyperpage{39}
+    \subitem {\+\_\+\+\_\+cvector\+\_\+shrink}, \hyperpage{29}, 
+		\hyperpage{39}
+    \subitem {C\+O\+N\+C\+AT}, \hyperpage{29}
+    \subitem {C\+V\+E\+C\+T\+O\+R\+\_\+\+A\+D\+D\+S\+P\+A\+C\+E\+\_\+\+F\+A\+C\+T\+OR}, 
+		\hyperpage{30}
+    \subitem {C\+V\+E\+C\+T\+O\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE}, 
+		\hyperpage{31}
+    \subitem {C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+R\+R\+OR}, \hyperpage{31}
+    \subitem {C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+F\+A\+C\+T\+OR}, 
+		\hyperpage{31}
+    \subitem {C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}, 
+		\hyperpage{32}
+    \subitem {C\+V\+E\+C\+T\+O\+R\+\_\+\+H\+A\+S\+H\+\_\+T}, 
+		\hyperpage{33}
+    \subitem {C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+C\+T\+OR}, 
+		\hyperpage{34}
+    \subitem {C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+S\+P\+A\+CE}, 
+		\hyperpage{34}
+    \subitem {C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+F\+A\+C\+T\+OR}, 
+		\hyperpage{36}
+    \subitem {C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}, 
+		\hyperpage{36}
+    \subitem {C\+V\+E\+C\+T\+O\+R\+\_\+T}, \hyperpage{37}
+    \subitem {cvector}, \hyperpage{29}, \hyperpage{39}
+    \subitem {cvector\+\_\+add}, \hyperpage{29}, \hyperpage{40}
+    \subitem {cvector\+\_\+addi}, \hyperpage{29}, \hyperpage{40}
+    \subitem {cvector\+\_\+addspace}, \hyperpage{30}, \hyperpage{40}
+    \subitem {cvector\+\_\+appendto}, \hyperpage{30}, \hyperpage{41}
+    \subitem {cvector\+\_\+clear}, \hyperpage{30}, \hyperpage{41}
+    \subitem {cvector\+\_\+concat}, \hyperpage{30}, \hyperpage{41}
+    \subitem {cvector\+\_\+drop}, \hyperpage{31}, \hyperpage{42}
+    \subitem {cvector\+\_\+equal}, \hyperpage{31}, \hyperpage{42}
+    \subitem {cvector\+\_\+equal\+\_\+func}, \hyperpage{31}, 
+		\hyperpage{43}
+    \subitem {cvector\+\_\+free}, \hyperpage{32}, \hyperpage{43}
+    \subitem {cvector\+\_\+free\+\_\+func}, \hyperpage{32}, 
+		\hyperpage{44}
+    \subitem {cvector\+\_\+get}, \hyperpage{32}, \hyperpage{44}
+    \subitem {cvector\+\_\+getsize}, \hyperpage{32}, \hyperpage{44}
+    \subitem {cvector\+\_\+hash}, \hyperpage{33}, \hyperpage{45}
+    \subitem {cvector\+\_\+in}, \hyperpage{33}, \hyperpage{45}
+    \subitem {cvector\+\_\+in\+\_\+func}, \hyperpage{33}, 
+		\hyperpage{46}
+    \subitem {cvector\+\_\+indexof}, \hyperpage{33}, \hyperpage{46}
+    \subitem {cvector\+\_\+indexof\+\_\+func}, \hyperpage{33}, 
+		\hyperpage{47}
+    \subitem {cvector\+\_\+insert}, \hyperpage{34}, \hyperpage{47}
+    \subitem {cvector\+\_\+new}, \hyperpage{34}, \hyperpage{47}
+    \subitem {cvector\+\_\+new\+\_\+copy}, \hyperpage{34}, 
+		\hyperpage{48}
+    \subitem {cvector\+\_\+new\+\_\+copy\+\_\+space}, \hyperpage{34}, 
+		\hyperpage{48}
+    \subitem {cvector\+\_\+new\+\_\+space}, \hyperpage{35}, 
+		\hyperpage{49}
+    \subitem {cvector\+\_\+readjust}, \hyperpage{35}, \hyperpage{49}
+    \subitem {cvector\+\_\+remove}, \hyperpage{35}, \hyperpage{49}
+    \subitem {cvector\+\_\+removei}, \hyperpage{35}, \hyperpage{50}
+    \subitem {cvector\+\_\+replace}, \hyperpage{35}, \hyperpage{50}
+    \subitem {cvector\+\_\+replace\+\_\+func}, \hyperpage{35}, 
+		\hyperpage{51}
+    \subitem {cvector\+\_\+reversed}, \hyperpage{36}, \hyperpage{51}
+    \subitem {cvector\+\_\+safeget}, \hyperpage{36}, \hyperpage{52}
+    \subitem {cvector\+\_\+safeset}, \hyperpage{36}, \hyperpage{52}
+    \subitem {cvector\+\_\+set}, \hyperpage{36}, \hyperpage{52}
+    \subitem {cvector\+\_\+slice}, \hyperpage{37}, \hyperpage{53}
+    \subitem {cvector\+\_\+slicetoarray}, \hyperpage{37}, 
+		\hyperpage{53}
+    \subitem {cvector\+\_\+sort}, \hyperpage{37}, \hyperpage{54}
+    \subitem {cvector\+\_\+toarray}, \hyperpage{37}, \hyperpage{54}
+    \subitem {hash\+\_\+t}, \hyperpage{38}
+    \subitem {index\+\_\+t}, \hyperpage{38}
+    \subitem {N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX}, 
+		\hyperpage{38}
+    \subitem {R\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX}, \hyperpage{38}
+    \subitem {value\+\_\+t}, \hyperpage{38}
+  \item {cvector\+\_\+new}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{18}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{34}, 
+		\hyperpage{47}
+  \item {cvector\+\_\+new\+\_\+copy}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{19}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{34}, 
+		\hyperpage{48}
+  \item {cvector\+\_\+new\+\_\+copy\+\_\+space}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{19}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{34}, 
+		\hyperpage{48}
+  \item {cvector\+\_\+new\+\_\+space}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{20}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{35}, 
+		\hyperpage{49}
+  \item {cvector\+\_\+readjust}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{20}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{35}, 
+		\hyperpage{49}
+  \item {cvector\+\_\+remove}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{20}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{35}, 
+		\hyperpage{49}
+  \item {cvector\+\_\+removei}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{21}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{35}, 
+		\hyperpage{50}
+  \item {cvector\+\_\+replace}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{21}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{35}, 
+		\hyperpage{50}
+  \item {cvector\+\_\+replace\+\_\+func}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{22}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{35}, 
+		\hyperpage{51}
+  \item {cvector\+\_\+reversed}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{22}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{36}, 
+		\hyperpage{51}
+  \item {cvector\+\_\+safeget}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{23}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{36}, 
+		\hyperpage{52}
+  \item {cvector\+\_\+safeset}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{23}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{36}, 
+		\hyperpage{52}
+  \item {cvector\+\_\+set}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{23}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{36}, 
+		\hyperpage{52}
+  \item {cvector\+\_\+slice}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{24}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{37}, 
+		\hyperpage{53}
+  \item {cvector\+\_\+slicetoarray}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{24}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{37}, 
+		\hyperpage{53}
+  \item {cvector\+\_\+sort}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{25}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{37}, 
+		\hyperpage{54}
+  \item {cvector\+\_\+toarray}
+    \subitem {cvector\+\_\+core.\+h}, \hyperpage{25}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{37}, 
+		\hyperpage{54}
+
+  \indexspace
+
+  \item {hash\+\_\+t}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{38}
+
+  \indexspace
+
+  \item {index\+\_\+t}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{38}
+
+  \indexspace
+
+  \item {lib/cvector\+\_\+core.\+h}, \hyperpage{7}
+  \item {lib/cvector\+\_\+interface.\+h}, \hyperpage{26}
+
+  \indexspace
+
+  \item {N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{38}
+
+  \indexspace
+
+  \item {R\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{38}
+
+  \indexspace
+
+  \item {value\+\_\+t}
+    \subitem {cvector\+\_\+interface.\+h}, \hyperpage{38}
 
 \end{theindex}
