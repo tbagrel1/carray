@@ -27,6 +27,8 @@ You can also download the offline documentation there: [PDF documentation](http:
 
 ## How to use it
 
+**DON'T FORGET TO LINK THE MATH LIBRARY**
+
 What you should put in your project is the two `.h` files of `lib`: 
 `cvector_interface.h` and `cvector_core.h`
 
