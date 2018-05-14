@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.11.29)  22 FEB 2018 17:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.11.29)  14 MAY 2018 17:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1194,18 +1194,15 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 1.
- [1
-
-]
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 67.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 67.
- [2] [3])
+)
 \tf@toc=\write5
 \openout5 = `refman.toc'.
 
- [4]
+ [1
+
+] [2
+
+]
 Package hyperref Info: Option `pageanchor' set `true' on input line 138.
 
 Chapter 1.
@@ -1226,15 +1223,15 @@ LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
 ) [1
 
-
-] [2
+]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 143.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 143.
+ [2
 
 ]
 Chapter 2.
-(./files.tex) [3] [4
-
-]
-Chapter 3.
 (./structcvector.tex
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 5.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
@@ -1253,181 +1250,42 @@ File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 10.
-LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 29.
-LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 6.29996pt on input line 29.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 30.
- [5]) [6]
-Chapter 4.
-(./cvector_8h.tex
-<cvector_8h__incl.pdf, id=665, pagebox=cropbox, 546.04pt x 178.6675pt>
-File: cvector_8h__incl.pdf Graphic file (type pdf)
-<use cvector_8h__incl.pdf>
-Package pdftex.def Info: cvector_8h__incl.pdf  used on input line 15. on input 
-line 15.
-Package pdftex.def Info: Requested size: 350.0pt x 114.52127pt on input line 15
-.
- [7
+) [3] [4
 
- <./cvector_8h__incl.pdf>] [8]
-Underfull \hbox (badness 986) in paragraph at lines 212--214
-[]\T1/phv/m/n/10 bool [][]cvector[]_[]replace[]_[]func[][] ([][]cvec-tor[][] $\
-OMS/cmsy/m/n/10 ^^C$\T1/phv/m/n/10 p[]_[]cvector, [][]value[]_[]t[][] orig-i-na
-l, [][]value[]_[]t[][] re-place-ment, bool($\OMS/cmsy/m/n/10 ^^C$\T1/phv/m/n/10
- equal[]_[]
- []
-
-[9]
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 265.
- [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20]
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 914.
- [21] [22]
-Underfull \hbox (badness 10000) detected at line 1008
-[][][]
- []
-
-[23]
-Underfull \hbox (badness 10000) detected at line 1028
-[][][]
- []
+]
+(./refman.ind [5
 
 
-Underfull \hbox (badness 10000) detected at line 1050
-[][][]
- []
-
-[24]
-Underfull \hbox (badness 10000) detected at line 1102
-[][][]
- []
-
-[25]
-Underfull \hbox (badness 10000) detected at line 1122
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 1142
-[][][]
- []
-
-[26]
-Underfull \hbox (badness 10000) detected at line 1164
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 1177
-[][][]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [27]
-Underfull \hbox (badness 10000) detected at line 1195
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 1215
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 1233
-[][][]
- []
-
-[28]
-Underfull \hbox (badness 10000) detected at line 1266
-[][][]
- []
-
-[29]
-Underfull \hbox (badness 10000) detected at line 1286
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 1308
-[][][]
- []
-
-[30]
-Underfull \hbox (badness 10000) detected at line 1332
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 1350
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 1370
-[][][]
- []
-
-[31] [32]
-Underfull \hbox (badness 10000) detected at line 1432
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 1456
-[][][]
- []
-
-[33]
-Underfull \hbox (badness 10000) detected at line 1496
-[][][]
- []
-
-) (./main_8c.tex [34]) [35] [36
-
-] (./refman.ind [37
-
-
-] [38] [39
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 160.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 160.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
  (./refman.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 160.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 29EC75B61AA103FB35C89AF7D6FAD538;23070.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
+(rerunfilecheck)             Checksum: B217004819FF12A6E3D3B5276923F4DA;988.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
  ) 
 Here is how much of TeX's memory you used:
- 15339 strings out of 492990
- 223849 string characters out of 6135004
- 358321 words of memory out of 5000000
- 18344 multiletter control sequences out of 15000+600000
- 61269 words of font info for 82 fonts, out of 8000000 for 9000
+ 14741 strings out of 492990
+ 208496 string characters out of 6135004
+ 295291 words of memory out of 5000000
+ 18050 multiletter control sequences out of 15000+600000
+ 44793 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,16n,92p,2982b,630s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,11n,92p,292b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/cour
-ier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (45 pages, 225653 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
+/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
+>
+Output written on refman.pdf (9 pages, 53568 bytes).
 PDF statistics:
- 1722 PDF objects out of 1728 (max. 8388607)
- 1645 compressed objects within 17 object streams
- 298 named destinations out of 1000 (max. 500000)
- 934 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
+ 18 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 
