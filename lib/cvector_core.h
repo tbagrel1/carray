@@ -1,3 +1,19 @@
+/*
+ * Copyright (C) 2018 Thomas BAGREL
+
+ * This program is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, version 3.0.
+
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License
+ * for more details.
+
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
 #include <stdlib.h>
 #include <stdint.h>
 #include <inttypes.h>
@@ -85,9 +101,8 @@ cvector *cvector_new() {
  */
 cvector *cvector_new_space(index_t space) {
     if (space < 0) {
-        CVECTOR_ERROR(
-            0, "InvalidSize: cannot create a cvector with a "
-               "negative size");
+        CVECTOR_ERROR(0, "InvalidSize: cannot create a cvector with a "
+                         "negative size");
         return NULL;
     }
     cvector *p_cvector = (cvector *) (malloc(sizeof(*p_cvector)));
@@ -126,15 +141,13 @@ cvector *cvector_new_copy(cvector *p_original) {
  */
 cvector *cvector_new_copy_space(cvector *p_original, index_t space) {
     if (space < 0) {
-        CVECTOR_ERROR(
-            0, "InvalidSize: cannot create a cvector with a "
-               "negative size");
+        CVECTOR_ERROR(0, "InvalidSize: cannot create a cvector with a "
+                         "negative size");
         return NULL;
     }
     if (space < p_original->_size) {
-        CVECTOR_ERROR(
-            0, "InvalidSize: cannot clone a cvector in a "
-               "recipient with less space than the original size");
+        CVECTOR_ERROR(0, "InvalidSize: cannot clone a cvector in a "
+                         "recipient with less space than the original size");
         return NULL;
     }
     cvector *p_cvector = (cvector *) (malloc(sizeof(*p_cvector)));
@@ -165,8 +178,7 @@ void cvector_free(cvector *p_cvector) {
  * @param free_value the function to free each value of the cvector
  */
 void cvector_free_func(cvector *p_vector, void (*free_value)(value_t)) {
-    for (
-        index_t i = 0; i < p_vector->_size; i++) {
+    for (index_t i = 0; i < p_vector->_size; i++) {
         free_value(p_vector->_vector[i]);
     }
     free(p_vector->_vector);
@@ -220,8 +232,7 @@ void cvector_addi(cvector *p_cvector, value_t value, index_t index) {
         if (index == p_cvector->_size) {
             cvector_add(p_cvector, value);
         } else {
-            for (
-                index_t i = p_cvector->_size - 1; i >= index; i--) {
+            for (index_t i = p_cvector->_size - 1; i >= index; i--) {
                 p_cvector->_vector[i + 1] = p_cvector->_vector[i];
             }
             p_cvector->_size++;
@@ -252,9 +263,8 @@ void cvector_insert(cvector *p_cvector, value_t value) {
  */
 value_t cvector_remove(cvector *p_cvector) {
     if (p_cvector->_size <= 0) {
-        CVECTOR_ERROR(
-            0, "Empty: unable to remove the last item of an "
-               "empty cvector");
+        CVECTOR_ERROR(0, "Empty: unable to remove the last item of an "
+                         "empty cvector");
         return CVECTOR_DEFAULT_VALUE;
     }
     value_t value = p_cvector->_vector[p_cvector->_size - 1];
@@ -273,9 +283,8 @@ value_t cvector_remove(cvector *p_cvector) {
  */
 value_t cvector_removei(cvector *p_cvector, index_t index) {
     if (p_cvector->_size <= 0) {
-        CVECTOR_ERROR(
-            0, "Empty: unable to remove the last item of an "
-               "empty cvector");
+        CVECTOR_ERROR(0, "Empty: unable to remove the last item of an "
+                         "empty cvector");
         return CVECTOR_DEFAULT_VALUE;
     }
     if (index < 0) {
@@ -286,17 +295,15 @@ value_t cvector_removei(cvector *p_cvector, index_t index) {
         return CVECTOR_DEFAULT_VALUE;
     }
     if (index > p_cvector->_size - 1) {
-        CVECTOR_ERROR(
-            0, "IndexOutOfBounds: index greater than the size "
-               "of the cvector");
+        CVECTOR_ERROR(0, "IndexOutOfBounds: index greater than the size "
+                         "of the cvector");
         return CVECTOR_DEFAULT_VALUE;
     }
     if (index == p_cvector->_size - 1) {
         return cvector_remove(p_cvector);
     } else {
         value_t value = p_cvector->_vector[index];
-        for (
-            index_t i = index; i < p_cvector->_size - 1; i++) {
+        for (index_t i = index; i < p_cvector->_size - 1; i++) {
             p_cvector->_vector[i] = p_cvector->_vector[i + 1];
         }
         p_cvector->_size--;
@@ -340,9 +347,8 @@ value_t cvector_get(cvector *p_cvector, index_t index) {
         return CVECTOR_DEFAULT_VALUE;
     }
     if (index > p_cvector->_size - 1) {
-        CVECTOR_ERROR(
-            0, "IndexOutOfBounds: index greater than "
-               "the size of the cvector");
+        CVECTOR_ERROR(0, "IndexOutOfBounds: index greater than "
+                         "the size of the cvector");
         return CVECTOR_DEFAULT_VALUE;
     }
     return p_cvector->_vector[index];
@@ -364,9 +370,8 @@ value_t cvector_safeget(cvector *p_cvector, index_t index) {
         return CVECTOR_DEFAULT_VALUE;
     }
     if (index > p_cvector->_size - 1) {
-        CVECTOR_ERROR(
-            1, "IndexOutOfBounds: index strictly greater than "
-               "the size of the array");
+        CVECTOR_ERROR(1, "IndexOutOfBounds: index strictly greater than "
+                         "the size of the array");
         return CVECTOR_DEFAULT_VALUE;
     }
     return p_cvector->_vector[index];
@@ -388,9 +393,8 @@ void cvector_set(cvector *p_cvector, value_t value, index_t index) {
         return;
     }
     if (index > p_cvector->_size - 1) {
-        CVECTOR_ERROR(
-            0, "IndexOutOfBounds: index is strictly greater than "
-               "the size of the array");
+        CVECTOR_ERROR(0, "IndexOutOfBounds: index is strictly greater than "
+                         "the size of the array");
     }
     p_cvector->_vector[index] = value;
 }
@@ -412,14 +416,12 @@ void cvector_safeset(cvector *p_cvector, value_t value, index_t index) {
         return;
     }
     if (index > p_cvector->_size - 1) {
-        CVECTOR_ERROR(
-            2, "IndexOutOfBounds: the cvector will be extended "
-               "to be able to store an element at the specified index");
+        CVECTOR_ERROR(2, "IndexOutOfBounds: the cvector will be extended "
+                         "to be able to store an element at the specified index");
         if (index > p_cvector->_space - 1) {
             __cvector_setspace(p_cvector, index + 1);
         }
-        for (
-            index_t i = p_cvector->_size; i < index; i++) {
+        for (index_t i = p_cvector->_size; i < index; i++) {
             p_cvector->_vector[i] = CVECTOR_DEFAULT_VALUE;
         }
         p_cvector->_vector[index] = value;
@@ -481,8 +483,7 @@ cvector *cvector_reversed(cvector *p_cvector) {
         *p_result =
         cvector_new_space(
             ROUND_INDEX(CVECTOR_INIT_FACTOR * p_cvector->_size + 1));
-    for (
-        index_t i = 0; i < p_cvector->_size; i++) {
+    for (index_t i = 0; i < p_cvector->_size; i++) {
         p_result->_vector[p_cvector->_size - 1 - i] = p_cvector->_vector[i];
     }
     p_result->_size = p_cvector->_size;
@@ -501,8 +502,7 @@ cvector *cvector_reversed(cvector *p_cvector) {
  */
 hash_t cvector_hash(cvector *p_cvector, hash_t (*hash_value)(value_t)) {
     hash_t hash = 5381;
-    for (
-        index_t i = 0; i < p_cvector->_size; i++) {
+    for (index_t i = 0; i < p_cvector->_size; i++) {
         hash = ((hash << 5) + hash) + hash_value(p_cvector->_vector[i]);
     }
     return hash;
@@ -518,8 +518,7 @@ bool cvector_equal(cvector *p_cvector_1, cvector *p_cvector_2) {
     if (p_cvector_1->_size != p_cvector_2->_size) {
         return false;
     }
-    for (
-        index_t i = 0; i < p_cvector_1->_size; i++) {
+    for (index_t i = 0; i < p_cvector_1->_size; i++) {
         if (p_cvector_1->_vector[i] != p_cvector_2->_vector[i]) {
             return false;
         }
@@ -543,8 +542,7 @@ bool cvector_equal_func(
     if (p_cvector_1->_size != p_cvector_2->_size) {
         return false;
     }
-    for (
-        index_t i = 0; i < p_cvector_1->_size; i++) {
+    for (index_t i = 0; i < p_cvector_1->_size; i++) {
         if (!equal_value(p_cvector_1->_vector[i], p_cvector_2->_vector[i])) {
             return false;
         }
@@ -560,8 +558,7 @@ bool cvector_equal_func(
  * cvector, which must be freed after use
  */
 value_t *cvector_toarray(cvector *p_cvector) {
-    value_t
-        *p_array = (value_t *) (malloc(sizeof(*p_array) * p_cvector->_size));
+    value_t *p_array = (value_t *) (malloc(sizeof(*p_array) * p_cvector->_size));
     memcpy(
         p_array, p_cvector->_vector,
         sizeof(*p_cvector->_vector) * p_cvector->_size);
@@ -579,8 +576,7 @@ value_t *cvector_toarray(cvector *p_cvector) {
 bool
 cvector_replace(cvector *p_cvector, value_t original, value_t replacement) {
     bool replaced = false;
-    for (
-        index_t i = 0; i < p_cvector->_size; i++) {
+    for (index_t i = 0; i < p_cvector->_size; i++) {
         if (p_cvector->_vector[i] == original) {
             p_cvector->_vector[i] = replacement;
             replaced = true;
@@ -605,8 +601,7 @@ bool cvector_replace_func(
     cvector *p_cvector, value_t original, value_t replacement,
     bool (*equal_value)(value_t, value_t)) {
     bool replaced = false;
-    for (
-        index_t i = 0; i < p_cvector->_size; i++) {
+    for (index_t i = 0; i < p_cvector->_size; i++) {
         if (equal_value(p_cvector->_vector[i], original)) {
             p_cvector->_vector[i] = replacement;
             replaced = true;
@@ -642,8 +637,7 @@ void cvector_sort(
  * NOT_FOUND_INDEX if it was not found
  */
 index_t cvector_indexof(cvector *p_cvector, value_t value) {
-    for (
-        index_t i = 0; i < p_cvector->_size; i++) {
+    for (index_t i = 0; i < p_cvector->_size; i++) {
         if (p_cvector->_vector[i] == value) {
             return i;
         }
@@ -665,8 +659,7 @@ index_t cvector_indexof(cvector *p_cvector, value_t value) {
  */
 index_t cvector_indexof_func(
     cvector *p_cvector, value_t value, bool (*equal_value)(value_t, value_t)) {
-    for (
-        index_t i = 0; i < p_cvector->_size; i++) {
+    for (index_t i = 0; i < p_cvector->_size; i++) {
         if (equal_value(p_cvector->_vector[i], value)) {
             return i;
         }
@@ -723,8 +716,7 @@ cvector_slice(cvector *p_cvector, index_t from, index_t to, index_t step) {
         return NULL;
     }
     if (from > p_cvector->_size - 1 || to > p_cvector->_size) {
-        CVECTOR_ERROR(
-            0, "IndexOutOfBounds: invalid (out of bounds) index");
+        CVECTOR_ERROR(0, "IndexOutOfBounds: invalid (out of bounds) index");
         return NULL;
     }
     if (from > to) {
@@ -744,8 +736,7 @@ cvector_slice(cvector *p_cvector, index_t from, index_t to, index_t step) {
     cvector
         *p_result =
         cvector_new_space(ROUND_INDEX(CVECTOR_INIT_FACTOR * size + 1));
-    for (
-        index_t i = 0; i < size; i++) {
+    for (index_t i = 0; i < size; i++) {
         p_result->_vector[i] = p_cvector->_vector[from + i * step];
     }
     p_result->_size = size;
@@ -774,8 +765,7 @@ value_t *cvector_slicetoarray(
         return NULL;
     }
     if (from > p_cvector->_size - 1 || to > p_cvector->_size) {
-        CVECTOR_ERROR(
-            0, "IndexOutOfBounds: invalid (out of bounds) index");
+        CVECTOR_ERROR(0, "IndexOutOfBounds: invalid (out of bounds) index");
         return NULL;
     }
     if (from > to) {
@@ -793,8 +783,7 @@ value_t *cvector_slicetoarray(
         size = 1 + ((to - from - 1) / step);  // Integer division there
     }
     value_t *p_result = (value_t *) (malloc(sizeof(*p_result) * size));
-    for (
-        index_t i = 0; i < size; i++) {
+    for (index_t i = 0; i < size; i++) {
         p_result[i] = p_cvector->_vector[from + i * step];
     }
     return p_result;
