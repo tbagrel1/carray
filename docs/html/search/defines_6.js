@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['init_5ffactor',['INIT_FACTOR',['../cvector_8h.html#abf7442e3237b42ceb67324acea9a1d1c',1,'cvector.h']]],
-  ['init_5fspace',['INIT_SPACE',['../cvector_8h.html#a3db9807a2d1fc2b1d0098e7ce8f7478b',1,'cvector.h']]]
+  ['value_5ft',['value_t',['../cvector__interface_8h.html#a693b7d81758e9116dfebbbff0daa099b',1,'cvector_interface.h']]]
 ];

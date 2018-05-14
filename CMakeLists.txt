@@ -5,8 +5,5 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(cvector cvector.h main.c tests/cvector_import.h)
-add_executable(cvector_tests cvector.h tests/tests.cpp tests/cvector_import.h)
-
+add_executable(cvector main.c lib/cvector_core.h lib/cvector_interface.h includes/int_vect.c includes/int_vect.h includes/str_vect.c includes/str_vect.h includes/virtual_lib.c includes/virtual_lib.h)
 target_link_libraries(cvector m)
-target_link_libraries(cvector_tests gtest gtest_main pthread m)

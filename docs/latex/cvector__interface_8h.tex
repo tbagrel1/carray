@@ -1,0 +1,1565 @@
+\section{lib/cvector\+\_\+interface.h File Reference}
+\label{cvector__interface_8h}\index{lib/cvector\+\_\+interface.\+h@{lib/cvector\+\_\+interface.\+h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for cvector\+\_\+interface.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cvector__interface_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ cvector}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+C\+O\+N\+C\+AT}(a,  b)~a \#\# b
+\item 
+\#define \textbf{ C\+O\+N\+C\+AT}(a,  b)~\textbf{ \+\_\+\+C\+O\+N\+C\+AT}(a, b)
+\item 
+\#define \textbf{ index\+\_\+t}~long
+\item 
+\#define \textbf{ N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX}~((\textbf{ index\+\_\+t}) (-\/1))
+\item 
+\#define \textbf{ R\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX}(x)~((\textbf{ index\+\_\+t}) (lrint(x)))
+\item 
+\#define \textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+S\+P\+A\+CE}~8
+\item 
+\#define \textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+C\+T\+OR}~1.\+25
+\item 
+\#define \textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+\+A\+D\+D\+S\+P\+A\+C\+E\+\_\+\+F\+A\+C\+T\+OR}~2.\+0
+\item 
+\#define \textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}~0.\+5
+\item 
+\#define \textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+F\+A\+C\+T\+OR}~0.\+5
+\item 
+\#define \textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}~0.\+90
+\item 
+\#define \textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+F\+A\+C\+T\+OR}~2.\+0
+\item 
+\#define \textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+R\+R\+OR}(lvl,  msg)~N\+U\+LL
+\item 
+\#define \textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}~int
+\item 
+\#define \textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE}~0
+\item 
+\#define \textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+\+H\+A\+S\+H\+\_\+T}~size\+\_\+t
+\item 
+\#define \textbf{ value\+\_\+t}~\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}
+\item 
+\#define \textbf{ hash\+\_\+t}~\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+\+H\+A\+S\+H\+\_\+T}
+\item 
+\#define \textbf{ cvector}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect)
+\item 
+\#define \textbf{ \+\_\+\+\_\+cvector\+\_\+setspace}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+setspace)
+\item 
+\#define \textbf{ \+\_\+\+\_\+cvector\+\_\+shrink}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+shrink)
+\item 
+\#define \textbf{ \+\_\+\+\_\+cvector\+\_\+extend}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+extend)
+\item 
+\#define \textbf{ cvector\+\_\+readjust}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+readjust)
+\item 
+\#define \textbf{ cvector\+\_\+addspace}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+addspace)
+\item 
+\#define \textbf{ cvector\+\_\+new}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+new)
+\item 
+\#define \textbf{ cvector\+\_\+new\+\_\+space}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+new\+\_\+space)
+\item 
+\#define \textbf{ cvector\+\_\+new\+\_\+copy}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+new\+\_\+copy)
+\item 
+\#define \textbf{ cvector\+\_\+new\+\_\+copy\+\_\+space}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+new\+\_\+copy\+\_\+space)
+\item 
+\#define \textbf{ cvector\+\_\+free}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+free)
+\item 
+\#define \textbf{ cvector\+\_\+getsize}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+getsize)
+\item 
+\#define \textbf{ cvector\+\_\+free\+\_\+func}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+free\+\_\+value)
+\item 
+\#define \textbf{ cvector\+\_\+add}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+add)
+\item 
+\#define \textbf{ cvector\+\_\+addi}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+addi)
+\item 
+\#define \textbf{ cvector\+\_\+insert}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+insert)
+\item 
+\#define \textbf{ cvector\+\_\+remove}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+remove)
+\item 
+\#define \textbf{ cvector\+\_\+removei}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+removei)
+\item 
+\#define \textbf{ cvector\+\_\+drop}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+drop)
+\item 
+\#define \textbf{ cvector\+\_\+clear}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+clear)
+\item 
+\#define \textbf{ cvector\+\_\+get}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+get)
+\item 
+\#define \textbf{ cvector\+\_\+safeget}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+safeget)
+\item 
+\#define \textbf{ cvector\+\_\+set}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+set)
+\item 
+\#define \textbf{ cvector\+\_\+safeset}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+safeset)
+\item 
+\#define \textbf{ cvector\+\_\+appendto}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+appendto)
+\item 
+\#define \textbf{ cvector\+\_\+concat}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+concat)
+\item 
+\#define \textbf{ cvector\+\_\+reversed}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+reversed)
+\item 
+\#define \textbf{ cvector\+\_\+hash}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+hash)
+\item 
+\#define \textbf{ cvector\+\_\+equal}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+equal)
+\item 
+\#define \textbf{ cvector\+\_\+equal\+\_\+func}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+equal\+\_\+func)
+\item 
+\#define \textbf{ cvector\+\_\+toarray}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+toarray)
+\item 
+\#define \textbf{ cvector\+\_\+replace}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+replace)
+\item 
+\#define \textbf{ cvector\+\_\+replace\+\_\+func}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+replace\+\_\+func)
+\item 
+\#define \textbf{ cvector\+\_\+sort}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+sort)
+\item 
+\#define \textbf{ cvector\+\_\+indexof}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+indexof)
+\item 
+\#define \textbf{ cvector\+\_\+indexof\+\_\+func}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+indexof\+\_\+func)
+\item 
+\#define \textbf{ cvector\+\_\+in}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+in)
+\item 
+\#define \textbf{ cvector\+\_\+in\+\_\+func}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+in\+\_\+func)
+\item 
+\#define \textbf{ cvector\+\_\+slice}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+slice)
+\item 
+\#define \textbf{ cvector\+\_\+slicetoarray}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+slicetoarray)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \textbf{ cvector} \textbf{ cvector}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ \+\_\+\+\_\+cvector\+\_\+setspace} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ index\+\_\+t} new\+\_\+space)
+\item 
+void \textbf{ \+\_\+\+\_\+cvector\+\_\+shrink} (\textbf{ cvector} $\ast$p\+\_\+cvector)
+\item 
+void \textbf{ \+\_\+\+\_\+cvector\+\_\+extend} (\textbf{ cvector} $\ast$p\+\_\+cvector)
+\item 
+void \textbf{ cvector\+\_\+readjust} (\textbf{ cvector} $\ast$p\+\_\+cvector)
+\item 
+void \textbf{ cvector\+\_\+addspace} (\textbf{ cvector} $\ast$p\+\_\+cvector)
+\item 
+\textbf{ cvector} $\ast$ \textbf{ cvector\+\_\+new} ()
+\item 
+\textbf{ cvector} $\ast$ \textbf{ cvector\+\_\+new\+\_\+space} (\textbf{ index\+\_\+t} space)
+\item 
+\textbf{ cvector} $\ast$ \textbf{ cvector\+\_\+new\+\_\+copy} (\textbf{ cvector} $\ast$p\+\_\+original)
+\item 
+\textbf{ cvector} $\ast$ \textbf{ cvector\+\_\+new\+\_\+copy\+\_\+space} (\textbf{ cvector} $\ast$p\+\_\+original, \textbf{ index\+\_\+t} space)
+\item 
+void \textbf{ cvector\+\_\+free} (\textbf{ cvector} $\ast$p\+\_\+cvector)
+\item 
+void \textbf{ cvector\+\_\+free\+\_\+func} (\textbf{ cvector} $\ast$p\+\_\+vector, void($\ast$free\+\_\+value)(\textbf{ value\+\_\+t}))
+\item 
+\textbf{ index\+\_\+t} \textbf{ cvector\+\_\+getsize} (\textbf{ cvector} $\ast$p\+\_\+cvector)
+\item 
+void \textbf{ cvector\+\_\+add} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ value\+\_\+t} value)
+\item 
+void \textbf{ cvector\+\_\+addi} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ value\+\_\+t} value, \textbf{ index\+\_\+t} index)
+\item 
+void \textbf{ cvector\+\_\+insert} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ value\+\_\+t} value)
+\item 
+\textbf{ value\+\_\+t} \textbf{ cvector\+\_\+remove} (\textbf{ cvector} $\ast$p\+\_\+cvector)
+\item 
+\textbf{ value\+\_\+t} \textbf{ cvector\+\_\+removei} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ index\+\_\+t} index)
+\item 
+\textbf{ value\+\_\+t} \textbf{ cvector\+\_\+drop} (\textbf{ cvector} $\ast$p\+\_\+cvector)
+\item 
+void \textbf{ cvector\+\_\+clear} (\textbf{ cvector} $\ast$p\+\_\+cvector)
+\item 
+\textbf{ value\+\_\+t} \textbf{ cvector\+\_\+get} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ index\+\_\+t} index)
+\item 
+\textbf{ value\+\_\+t} \textbf{ cvector\+\_\+safeget} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ index\+\_\+t} index)
+\item 
+void \textbf{ cvector\+\_\+set} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ value\+\_\+t} value, \textbf{ index\+\_\+t} index)
+\item 
+void \textbf{ cvector\+\_\+safeset} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ value\+\_\+t} value, \textbf{ index\+\_\+t} index)
+\item 
+void \textbf{ cvector\+\_\+appendto} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ cvector} $\ast$p\+\_\+add)
+\item 
+\textbf{ cvector} $\ast$ \textbf{ cvector\+\_\+concat} (\textbf{ cvector} $\ast$p\+\_\+cvector\+\_\+1, \textbf{ cvector} $\ast$p\+\_\+cvector\+\_\+2)
+\item 
+\textbf{ cvector} $\ast$ \textbf{ cvector\+\_\+reversed} (\textbf{ cvector} $\ast$p\+\_\+cvector)
+\item 
+\textbf{ hash\+\_\+t} \textbf{ cvector\+\_\+hash} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ hash\+\_\+t}($\ast$hash\+\_\+value)(\textbf{ value\+\_\+t}))
+\item 
+bool \textbf{ cvector\+\_\+equal} (\textbf{ cvector} $\ast$p\+\_\+cvector\+\_\+1, \textbf{ cvector} $\ast$p\+\_\+cvector\+\_\+2)
+\item 
+bool \textbf{ cvector\+\_\+equal\+\_\+func} (\textbf{ cvector} $\ast$p\+\_\+cvector\+\_\+1, \textbf{ cvector} $\ast$p\+\_\+cvector\+\_\+2, bool($\ast$equal\+\_\+value)(\textbf{ value\+\_\+t}, \textbf{ value\+\_\+t}))
+\item 
+\textbf{ value\+\_\+t} $\ast$ \textbf{ cvector\+\_\+toarray} (\textbf{ cvector} $\ast$p\+\_\+cvector)
+\item 
+bool \textbf{ cvector\+\_\+replace} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ value\+\_\+t} original, \textbf{ value\+\_\+t} replacement)
+\item 
+bool \textbf{ cvector\+\_\+replace\+\_\+func} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ value\+\_\+t} original, \textbf{ value\+\_\+t} replacement, bool($\ast$equal\+\_\+value)(\textbf{ value\+\_\+t}, \textbf{ value\+\_\+t}))
+\item 
+void \textbf{ cvector\+\_\+sort} (\textbf{ cvector} $\ast$p\+\_\+cvector, int($\ast$comp\+\_\+value)(const void $\ast$, const void $\ast$))
+\item 
+\textbf{ index\+\_\+t} \textbf{ cvector\+\_\+indexof} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ value\+\_\+t} value)
+\item 
+\textbf{ index\+\_\+t} \textbf{ cvector\+\_\+indexof\+\_\+func} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ value\+\_\+t} value, bool($\ast$equal\+\_\+value)(\textbf{ value\+\_\+t}, \textbf{ value\+\_\+t}))
+\item 
+bool \textbf{ cvector\+\_\+in} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ value\+\_\+t} value)
+\item 
+bool \textbf{ cvector\+\_\+in\+\_\+func} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ value\+\_\+t} value, bool($\ast$equal\+\_\+value)(\textbf{ value\+\_\+t}, \textbf{ value\+\_\+t}))
+\item 
+\textbf{ cvector} $\ast$ \textbf{ cvector\+\_\+slice} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ index\+\_\+t} from, \textbf{ index\+\_\+t} to, \textbf{ index\+\_\+t} step)
+\item 
+\textbf{ value\+\_\+t} $\ast$ \textbf{ cvector\+\_\+slicetoarray} (\textbf{ cvector} $\ast$p\+\_\+cvector, \textbf{ index\+\_\+t} from, \textbf{ index\+\_\+t} to, \textbf{ index\+\_\+t} step)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\label{cvector__interface_8h_a215ba71bba887f23a6b87fa73888b65d}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!\+\_\+\+\_\+cvector\+\_\+extend@{\+\_\+\+\_\+cvector\+\_\+extend}}
+\index{\+\_\+\+\_\+cvector\+\_\+extend@{\+\_\+\+\_\+cvector\+\_\+extend}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{\+\_\+\+\_\+cvector\+\_\+extend}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+cvector\+\_\+extend~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+extend)}
+
+
+
+Definition at line 128 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_ad68f022487d0cc313c7ea50a183956c7}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!\+\_\+\+\_\+cvector\+\_\+setspace@{\+\_\+\+\_\+cvector\+\_\+setspace}}
+\index{\+\_\+\+\_\+cvector\+\_\+setspace@{\+\_\+\+\_\+cvector\+\_\+setspace}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{\+\_\+\+\_\+cvector\+\_\+setspace}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+cvector\+\_\+setspace~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+setspace)}
+
+
+
+Definition at line 126 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a14a1b75b7207d3da29cdca821c8c1545}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!\+\_\+\+\_\+cvector\+\_\+shrink@{\+\_\+\+\_\+cvector\+\_\+shrink}}
+\index{\+\_\+\+\_\+cvector\+\_\+shrink@{\+\_\+\+\_\+cvector\+\_\+shrink}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{\+\_\+\+\_\+cvector\+\_\+shrink}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+cvector\+\_\+shrink~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+shrink)}
+
+
+
+Definition at line 127 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_abd0abac859b89d3c63fd031ddf608a9e}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!\+\_\+\+C\+O\+N\+C\+AT@{\+\_\+\+C\+O\+N\+C\+AT}}
+\index{\+\_\+\+C\+O\+N\+C\+AT@{\+\_\+\+C\+O\+N\+C\+AT}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{\+\_\+\+C\+O\+N\+C\+AT}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+O\+N\+C\+AT(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~a \#\# b}
+
+
+
+Definition at line 9 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a88fa737059e67b4b17ec980e5877361e}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!C\+O\+N\+C\+AT@{C\+O\+N\+C\+AT}}
+\index{C\+O\+N\+C\+AT@{C\+O\+N\+C\+AT}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{C\+O\+N\+C\+AT}
+{\footnotesize\ttfamily \#define C\+O\+N\+C\+AT(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~\textbf{ \+\_\+\+C\+O\+N\+C\+AT}(a, b)}
+
+
+
+Definition at line 10 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a2d03a0c8fc8c754ba9895af080296662}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector@{cvector}}
+\index{cvector@{cvector}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector}
+{\footnotesize\ttfamily \#define \textbf{ cvector}~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect)}
+
+
+
+Definition at line 125 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a9ed34c19cbe296317980c68d1797d146}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+add@{cvector\+\_\+add}}
+\index{cvector\+\_\+add@{cvector\+\_\+add}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+add}
+{\footnotesize\ttfamily \#define cvector\+\_\+add~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+add)}
+
+
+
+Definition at line 138 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a453850dca99e44eb36265c3bf3f9f73e}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+addi@{cvector\+\_\+addi}}
+\index{cvector\+\_\+addi@{cvector\+\_\+addi}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+addi}
+{\footnotesize\ttfamily \#define cvector\+\_\+addi~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+addi)}
+
+
+
+Definition at line 139 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a4205916435bbfc3842cfd75a43e771ed}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+addspace@{cvector\+\_\+addspace}}
+\index{cvector\+\_\+addspace@{cvector\+\_\+addspace}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+addspace}
+{\footnotesize\ttfamily \#define cvector\+\_\+addspace~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+addspace)}
+
+
+
+Definition at line 130 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a3507de422c2c055efe1ddaa2e47c2a40}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!C\+V\+E\+C\+T\+O\+R\+\_\+\+A\+D\+D\+S\+P\+A\+C\+E\+\_\+\+F\+A\+C\+T\+OR@{C\+V\+E\+C\+T\+O\+R\+\_\+\+A\+D\+D\+S\+P\+A\+C\+E\+\_\+\+F\+A\+C\+T\+OR}}
+\index{C\+V\+E\+C\+T\+O\+R\+\_\+\+A\+D\+D\+S\+P\+A\+C\+E\+\_\+\+F\+A\+C\+T\+OR@{C\+V\+E\+C\+T\+O\+R\+\_\+\+A\+D\+D\+S\+P\+A\+C\+E\+\_\+\+F\+A\+C\+T\+OR}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{C\+V\+E\+C\+T\+O\+R\+\_\+\+A\+D\+D\+S\+P\+A\+C\+E\+\_\+\+F\+A\+C\+T\+OR}
+{\footnotesize\ttfamily \#define C\+V\+E\+C\+T\+O\+R\+\_\+\+A\+D\+D\+S\+P\+A\+C\+E\+\_\+\+F\+A\+C\+T\+OR~2.\+0}
+
+Space factor used when a cvector becomes too short to hold additional values. It means that the new cvector will have a space for A\+D\+D\+S\+P\+A\+C\+E\+\_\+\+F\+A\+C\+T\+OR
+\begin{DoxyItemize}
+\item the old space. 
+\end{DoxyItemize}
+
+Definition at line 47 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_ae6531d1589b9362489cd95e86a985e93}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+appendto@{cvector\+\_\+appendto}}
+\index{cvector\+\_\+appendto@{cvector\+\_\+appendto}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+appendto}
+{\footnotesize\ttfamily \#define cvector\+\_\+appendto~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+appendto)}
+
+
+
+Definition at line 149 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a68ba6e77b57f0c0656f3d6e35c5d12da}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+clear@{cvector\+\_\+clear}}
+\index{cvector\+\_\+clear@{cvector\+\_\+clear}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+clear}
+{\footnotesize\ttfamily \#define cvector\+\_\+clear~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+clear)}
+
+
+
+Definition at line 144 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_abd428d4740573ce6e87dddb879589751}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+concat@{cvector\+\_\+concat}}
+\index{cvector\+\_\+concat@{cvector\+\_\+concat}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+concat}
+{\footnotesize\ttfamily \#define cvector\+\_\+concat~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+concat)}
+
+
+
+Definition at line 150 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a0f5fde1964754a49caf5ae83922dcbd5}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!C\+V\+E\+C\+T\+O\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE@{C\+V\+E\+C\+T\+O\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE}}
+\index{C\+V\+E\+C\+T\+O\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE@{C\+V\+E\+C\+T\+O\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{C\+V\+E\+C\+T\+O\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE}
+{\footnotesize\ttfamily \#define C\+V\+E\+C\+T\+O\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE~0}
+
+Default value for the type of this instance of cvector, used when an error occurs and when a function needs to return a value. 
+
+Definition at line 116 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a009303f26977e797d7c143e38c4d263e}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+drop@{cvector\+\_\+drop}}
+\index{cvector\+\_\+drop@{cvector\+\_\+drop}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+drop}
+{\footnotesize\ttfamily \#define cvector\+\_\+drop~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+drop)}
+
+
+
+Definition at line 143 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_ab07788ebb25a6870bde19ba5cbb61060}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+equal@{cvector\+\_\+equal}}
+\index{cvector\+\_\+equal@{cvector\+\_\+equal}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+equal}
+{\footnotesize\ttfamily \#define cvector\+\_\+equal~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+equal)}
+
+
+
+Definition at line 153 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a17a4990f478c035ab4bef0716c7b9354}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+equal\+\_\+func@{cvector\+\_\+equal\+\_\+func}}
+\index{cvector\+\_\+equal\+\_\+func@{cvector\+\_\+equal\+\_\+func}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+equal\+\_\+func}
+{\footnotesize\ttfamily \#define cvector\+\_\+equal\+\_\+func~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+equal\+\_\+func)}
+
+
+
+Definition at line 154 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a09871dcd5ab5a0eb2fce3e6303fbd155}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+R\+R\+OR@{C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+R\+R\+OR}}
+\index{C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+R\+R\+OR@{C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+R\+R\+OR}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+R\+R\+OR}
+{\footnotesize\ttfamily \#define C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{lvl,  }\item[{}]{msg }\end{DoxyParamCaption})~N\+U\+LL}
+
+Print debug function called when some error or log message needs to be printed on the screen or the log. The function signature must be void print\+\_\+debug(int level, const char $\ast$message) 
+
+Definition at line 94 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a3cb9f52807372b684f264c003c7b57e5}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+F\+A\+C\+T\+OR@{C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+F\+A\+C\+T\+OR}}
+\index{C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+F\+A\+C\+T\+OR@{C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+F\+A\+C\+T\+OR}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+F\+A\+C\+T\+OR}
+{\footnotesize\ttfamily \#define C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+F\+A\+C\+T\+OR~2.\+0}
+
+Space factor used when a extend operation is triggered. It means that the new space of the cvector will be E\+X\+T\+E\+N\+D\+\_\+\+F\+A\+C\+T\+OR $\ast$ the current space. 
+
+Definition at line 83 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a0ca08e7949099dd4f9a577b9d9ba4f3e}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}}
+\index{C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}
+{\footnotesize\ttfamily \#define C\+V\+E\+C\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+D\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD~0.\+90}
+
+Threshold from which the cvector will be extended in a readjust operation. It means that if the current size of the cvector is above E\+X\+T\+E\+N\+D\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD
+\begin{DoxyItemize}
+\item its space, it will be extended. Set to above 1 to prevent extend during readjust operations. 
+\end{DoxyItemize}
+
+Definition at line 75 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a70f45a7f52f1338650da6361c6ed343f}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+free@{cvector\+\_\+free}}
+\index{cvector\+\_\+free@{cvector\+\_\+free}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+free}
+{\footnotesize\ttfamily \#define cvector\+\_\+free~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+free)}
+
+
+
+Definition at line 135 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a373a516d422fd195c53c09c36cbe7d82}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+free\+\_\+func@{cvector\+\_\+free\+\_\+func}}
+\index{cvector\+\_\+free\+\_\+func@{cvector\+\_\+free\+\_\+func}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+free\+\_\+func}
+{\footnotesize\ttfamily \#define cvector\+\_\+free\+\_\+func~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+free\+\_\+value)}
+
+
+
+Definition at line 137 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a79baaa8927dfdf6635a321e277ae7f4e}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+get@{cvector\+\_\+get}}
+\index{cvector\+\_\+get@{cvector\+\_\+get}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+get}
+{\footnotesize\ttfamily \#define cvector\+\_\+get~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+get)}
+
+
+
+Definition at line 145 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_af39d7cdb805176af722ef046a4a2b2c2}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+getsize@{cvector\+\_\+getsize}}
+\index{cvector\+\_\+getsize@{cvector\+\_\+getsize}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+getsize}
+{\footnotesize\ttfamily \#define cvector\+\_\+getsize~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+getsize)}
+
+
+
+Definition at line 136 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a5ccf7fd8453004fb8e66572b60d8af73}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+hash@{cvector\+\_\+hash}}
+\index{cvector\+\_\+hash@{cvector\+\_\+hash}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+hash}
+{\footnotesize\ttfamily \#define cvector\+\_\+hash~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+hash)}
+
+
+
+Definition at line 152 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a0ecd0147cd93e74ad16de86510f98f93}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!C\+V\+E\+C\+T\+O\+R\+\_\+\+H\+A\+S\+H\+\_\+T@{C\+V\+E\+C\+T\+O\+R\+\_\+\+H\+A\+S\+H\+\_\+T}}
+\index{C\+V\+E\+C\+T\+O\+R\+\_\+\+H\+A\+S\+H\+\_\+T@{C\+V\+E\+C\+T\+O\+R\+\_\+\+H\+A\+S\+H\+\_\+T}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{C\+V\+E\+C\+T\+O\+R\+\_\+\+H\+A\+S\+H\+\_\+T}
+{\footnotesize\ttfamily \#define C\+V\+E\+C\+T\+O\+R\+\_\+\+H\+A\+S\+H\+\_\+T~size\+\_\+t}
+
+
+
+Definition at line 120 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a4940acc3182042721bcf7102f2ceeb24}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+in@{cvector\+\_\+in}}
+\index{cvector\+\_\+in@{cvector\+\_\+in}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+in}
+{\footnotesize\ttfamily \#define cvector\+\_\+in~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+in)}
+
+
+
+Definition at line 161 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_aa2b50973c47d37928b890217ca2eac2c}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+in\+\_\+func@{cvector\+\_\+in\+\_\+func}}
+\index{cvector\+\_\+in\+\_\+func@{cvector\+\_\+in\+\_\+func}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+in\+\_\+func}
+{\footnotesize\ttfamily \#define cvector\+\_\+in\+\_\+func~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+in\+\_\+func)}
+
+
+
+Definition at line 162 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a9757eab681e37499cd2c6b7d544162c9}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+indexof@{cvector\+\_\+indexof}}
+\index{cvector\+\_\+indexof@{cvector\+\_\+indexof}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+indexof}
+{\footnotesize\ttfamily \#define cvector\+\_\+indexof~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+indexof)}
+
+
+
+Definition at line 159 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a04d9b4e4e1e41eb48ce8114bd3f0912b}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+indexof\+\_\+func@{cvector\+\_\+indexof\+\_\+func}}
+\index{cvector\+\_\+indexof\+\_\+func@{cvector\+\_\+indexof\+\_\+func}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+indexof\+\_\+func}
+{\footnotesize\ttfamily \#define cvector\+\_\+indexof\+\_\+func~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+indexof\+\_\+func)}
+
+
+
+Definition at line 160 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_acdc5f2ffbd44358c93d43b407298357d}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+C\+T\+OR@{C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+C\+T\+OR}}
+\index{C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+C\+T\+OR@{C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+C\+T\+OR}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+C\+T\+OR}
+{\footnotesize\ttfamily \#define C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+C\+T\+OR~1.\+25}
+
+Space factor used when a copy of cvector is created, or a concatenation of two cvectors. It means that the resulting array will have a space for I\+N\+I\+T\+\_\+\+F\+A\+C\+T\+OR $\ast$ actual size items. 
+
+Definition at line 38 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_adfda45c00eca583be3617c72c86e4889}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+S\+P\+A\+CE@{C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+S\+P\+A\+CE}}
+\index{C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+S\+P\+A\+CE@{C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+S\+P\+A\+CE}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+S\+P\+A\+CE}
+{\footnotesize\ttfamily \#define C\+V\+E\+C\+T\+O\+R\+\_\+\+I\+N\+I\+T\+\_\+\+S\+P\+A\+CE~8}
+
+Space in element units of a fresh created cvector, if no space was specified. 
+
+Definition at line 29 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a43cb4f7b550a0b1a71e8b9d962806395}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+insert@{cvector\+\_\+insert}}
+\index{cvector\+\_\+insert@{cvector\+\_\+insert}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+insert}
+{\footnotesize\ttfamily \#define cvector\+\_\+insert~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+insert)}
+
+
+
+Definition at line 140 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_af3643ddbd25169dad31b44b959394dc7}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+new@{cvector\+\_\+new}}
+\index{cvector\+\_\+new@{cvector\+\_\+new}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+new}
+{\footnotesize\ttfamily \#define cvector\+\_\+new~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+new)}
+
+
+
+Definition at line 131 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_abcbb5e5e4cdf38758949ca5f10c30e47}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+new\+\_\+copy@{cvector\+\_\+new\+\_\+copy}}
+\index{cvector\+\_\+new\+\_\+copy@{cvector\+\_\+new\+\_\+copy}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+new\+\_\+copy}
+{\footnotesize\ttfamily \#define cvector\+\_\+new\+\_\+copy~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+new\+\_\+copy)}
+
+
+
+Definition at line 133 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a0d8025e096c1aac2ebae9df97d78691d}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+new\+\_\+copy\+\_\+space@{cvector\+\_\+new\+\_\+copy\+\_\+space}}
+\index{cvector\+\_\+new\+\_\+copy\+\_\+space@{cvector\+\_\+new\+\_\+copy\+\_\+space}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+new\+\_\+copy\+\_\+space}
+{\footnotesize\ttfamily \#define cvector\+\_\+new\+\_\+copy\+\_\+space~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+new\+\_\+copy\+\_\+space)}
+
+
+
+Definition at line 134 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_aca5164cb1aa88f7f19c4075d0bc5f805}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+new\+\_\+space@{cvector\+\_\+new\+\_\+space}}
+\index{cvector\+\_\+new\+\_\+space@{cvector\+\_\+new\+\_\+space}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+new\+\_\+space}
+{\footnotesize\ttfamily \#define cvector\+\_\+new\+\_\+space~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+new\+\_\+space)}
+
+
+
+Definition at line 132 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a1aa368f3241a897fe78c3ffdbcbfca50}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+readjust@{cvector\+\_\+readjust}}
+\index{cvector\+\_\+readjust@{cvector\+\_\+readjust}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+readjust}
+{\footnotesize\ttfamily \#define cvector\+\_\+readjust~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+readjust)}
+
+
+
+Definition at line 129 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a07ebf34fb33362799534be60982d7cc8}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+remove@{cvector\+\_\+remove}}
+\index{cvector\+\_\+remove@{cvector\+\_\+remove}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+remove}
+{\footnotesize\ttfamily \#define cvector\+\_\+remove~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+remove)}
+
+
+
+Definition at line 141 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a1424f999efb97f731ea07c85992b1259}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+removei@{cvector\+\_\+removei}}
+\index{cvector\+\_\+removei@{cvector\+\_\+removei}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+removei}
+{\footnotesize\ttfamily \#define cvector\+\_\+removei~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+removei)}
+
+
+
+Definition at line 142 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_ac937f9d34a8452ac8cc86687add5e24a}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+replace@{cvector\+\_\+replace}}
+\index{cvector\+\_\+replace@{cvector\+\_\+replace}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+replace}
+{\footnotesize\ttfamily \#define cvector\+\_\+replace~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+replace)}
+
+
+
+Definition at line 156 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_af9f756d04da4e4064d1934c4160c7f91}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+replace\+\_\+func@{cvector\+\_\+replace\+\_\+func}}
+\index{cvector\+\_\+replace\+\_\+func@{cvector\+\_\+replace\+\_\+func}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+replace\+\_\+func}
+{\footnotesize\ttfamily \#define cvector\+\_\+replace\+\_\+func~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+replace\+\_\+func)}
+
+
+
+Definition at line 157 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a5c16c9eb99c75ab12e1a2d3647ca8c21}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+reversed@{cvector\+\_\+reversed}}
+\index{cvector\+\_\+reversed@{cvector\+\_\+reversed}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+reversed}
+{\footnotesize\ttfamily \#define cvector\+\_\+reversed~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+reversed)}
+
+
+
+Definition at line 151 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a562157196361f6753556240eef4025de}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+safeget@{cvector\+\_\+safeget}}
+\index{cvector\+\_\+safeget@{cvector\+\_\+safeget}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+safeget}
+{\footnotesize\ttfamily \#define cvector\+\_\+safeget~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+safeget)}
+
+
+
+Definition at line 146 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a3420c4176f753b105565826a15dcaf88}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+safeset@{cvector\+\_\+safeset}}
+\index{cvector\+\_\+safeset@{cvector\+\_\+safeset}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+safeset}
+{\footnotesize\ttfamily \#define cvector\+\_\+safeset~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+safeset)}
+
+
+
+Definition at line 148 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a6ce1d1b0ccfe9af799dc66a8d4a86319}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+set@{cvector\+\_\+set}}
+\index{cvector\+\_\+set@{cvector\+\_\+set}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+set}
+{\footnotesize\ttfamily \#define cvector\+\_\+set~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+set)}
+
+
+
+Definition at line 147 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_ab420b76ec1bcb1e26f88051732b20a7b}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+F\+A\+C\+T\+OR@{C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+F\+A\+C\+T\+OR}}
+\index{C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+F\+A\+C\+T\+OR@{C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+F\+A\+C\+T\+OR}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+F\+A\+C\+T\+OR}
+{\footnotesize\ttfamily \#define C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+F\+A\+C\+T\+OR~0.\+5}
+
+Space factor used when a shrink operation is triggered. It means that the new space of the cvector will be S\+H\+R\+I\+N\+K\+\_\+\+F\+A\+C\+T\+OR $\ast$ the current space. 
+
+Definition at line 65 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a890cf69697bfb2a97859e31f6d60997e}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}}
+\index{C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}
+{\footnotesize\ttfamily \#define C\+V\+E\+C\+T\+O\+R\+\_\+\+S\+H\+R\+I\+N\+K\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD~0.\+5}
+
+Threshold from which the cvector will be shrank in a readjust operation. It means that if the current size of the cvector is under S\+H\+R\+I\+N\+K\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD $\ast$ its space, it will be shrank. Set to under 0 to prevent shrink during readjust operations. 
+
+Definition at line 57 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a19178a8e9548e20ef127fecc36df0bcf}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+slice@{cvector\+\_\+slice}}
+\index{cvector\+\_\+slice@{cvector\+\_\+slice}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+slice}
+{\footnotesize\ttfamily \#define cvector\+\_\+slice~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+slice)}
+
+
+
+Definition at line 163 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_aa222f3c71e732d2358f6cecb3bdda92f}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+slicetoarray@{cvector\+\_\+slicetoarray}}
+\index{cvector\+\_\+slicetoarray@{cvector\+\_\+slicetoarray}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+slicetoarray}
+{\footnotesize\ttfamily \#define cvector\+\_\+slicetoarray~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+slicetoarray)}
+
+
+
+Definition at line 164 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a1aa0dce34ea6ec1a2c066676cebf2a6a}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+sort@{cvector\+\_\+sort}}
+\index{cvector\+\_\+sort@{cvector\+\_\+sort}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+sort}
+{\footnotesize\ttfamily \#define cvector\+\_\+sort~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+sort)}
+
+
+
+Definition at line 158 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a5e15da722d5963a5f7bcef8bbbfa1638}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!C\+V\+E\+C\+T\+O\+R\+\_\+T@{C\+V\+E\+C\+T\+O\+R\+\_\+T}}
+\index{C\+V\+E\+C\+T\+O\+R\+\_\+T@{C\+V\+E\+C\+T\+O\+R\+\_\+T}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{C\+V\+E\+C\+T\+O\+R\+\_\+T}
+{\footnotesize\ttfamily \#define C\+V\+E\+C\+T\+O\+R\+\_\+T~int}
+
+Type of the elements to hold in this instance of the cvector library. BE C\+A\+R\+E\+F\+U\+L! The specified type must be a correct indentifier, since it will prefix any function of this cvector instance. For example \#define C\+V\+E\+C\+T\+O\+R\+\_\+T int $\ast$ should be replaced with typedef int $\ast$ pint; \#define C\+V\+E\+C\+T\+O\+R\+\_\+T pint 
+
+Definition at line 108 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a385ae55033d32896e9d4be4325bea78c}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+toarray@{cvector\+\_\+toarray}}
+\index{cvector\+\_\+toarray@{cvector\+\_\+toarray}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+toarray}
+{\footnotesize\ttfamily \#define cvector\+\_\+toarray~\textbf{ C\+O\+N\+C\+AT}(\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}, \+\_\+vect\+\_\+\+\_\+toarray)}
+
+
+
+Definition at line 155 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_ab1b394a82c540c8a85b27083cfb98948}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!hash\+\_\+t@{hash\+\_\+t}}
+\index{hash\+\_\+t@{hash\+\_\+t}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{hash\+\_\+t}
+{\footnotesize\ttfamily \#define hash\+\_\+t~\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+\+H\+A\+S\+H\+\_\+T}}
+
+
+
+Definition at line 124 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_ad722078677c063a09661059674fb996c}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!index\+\_\+t@{index\+\_\+t}}
+\index{index\+\_\+t@{index\+\_\+t}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{index\+\_\+t}
+{\footnotesize\ttfamily \#define index\+\_\+t~long}
+
+
+
+Definition at line 12 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a133390f76ff87262f4813b7948623a9c}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX@{N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX}}
+\index{N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX@{N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX}
+{\footnotesize\ttfamily \#define N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX~((\textbf{ index\+\_\+t}) (-\/1))}
+
+
+
+Definition at line 13 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_ad24cec92ca2f0cfda6e9b53ea3dd1fc5}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!R\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX@{R\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX}}
+\index{R\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX@{R\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{R\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX}
+{\footnotesize\ttfamily \#define R\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((\textbf{ index\+\_\+t}) (lrint(x)))}
+
+
+
+Definition at line 14 of file cvector\+\_\+interface.\+h.
+
+\mbox{\label{cvector__interface_8h_a693b7d81758e9116dfebbbff0daa099b}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!value\+\_\+t@{value\+\_\+t}}
+\index{value\+\_\+t@{value\+\_\+t}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{value\+\_\+t}
+{\footnotesize\ttfamily \#define value\+\_\+t~\textbf{ C\+V\+E\+C\+T\+O\+R\+\_\+T}}
+
+
+
+Definition at line 123 of file cvector\+\_\+interface.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\label{cvector__interface_8h_ae8a3b37df7cac75e42faff09d0552627}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector@{cvector}}
+\index{cvector@{cvector}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector}
+{\footnotesize\ttfamily typedef struct \textbf{ cvector} \textbf{ cvector}}
+
+
+
+Definition at line 169 of file cvector\+\_\+interface.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\label{cvector__interface_8h_afa75ec5b8e81cc3d4e18298f8792f5a2}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!\+\_\+\+\_\+cvector\+\_\+extend@{\+\_\+\+\_\+cvector\+\_\+extend}}
+\index{\+\_\+\+\_\+cvector\+\_\+extend@{\+\_\+\+\_\+cvector\+\_\+extend}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{\+\_\+\+\_\+cvector\+\_\+extend()}
+{\footnotesize\ttfamily void \+\_\+\+\_\+cvector\+\_\+extend (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Extends the specified cvector without any check about its size. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 35 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a2b3fb7098225f258606f6e87d51a293f}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!\+\_\+\+\_\+cvector\+\_\+setspace@{\+\_\+\+\_\+cvector\+\_\+setspace}}
+\index{\+\_\+\+\_\+cvector\+\_\+setspace@{\+\_\+\+\_\+cvector\+\_\+setspace}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{\+\_\+\+\_\+cvector\+\_\+setspace()}
+{\footnotesize\ttfamily void \+\_\+\+\_\+cvector\+\_\+setspace (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ index\+\_\+t}}]{new\+\_\+space }\end{DoxyParamCaption})}
+
+Sets space of the specified cvector to new\+\_\+space 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em new\+\_\+space} & the new space for the specified cvector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a2ec9a92ee1097fb5aa38c4d30c2bd06d}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!\+\_\+\+\_\+cvector\+\_\+shrink@{\+\_\+\+\_\+cvector\+\_\+shrink}}
+\index{\+\_\+\+\_\+cvector\+\_\+shrink@{\+\_\+\+\_\+cvector\+\_\+shrink}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{\+\_\+\+\_\+cvector\+\_\+shrink()}
+{\footnotesize\ttfamily void \+\_\+\+\_\+cvector\+\_\+shrink (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Shrinks the specified cvector without any check about its size. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_ad504959e360214da1255d28534b1d3a4}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+add@{cvector\+\_\+add}}
+\index{cvector\+\_\+add@{cvector\+\_\+add}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+add()}
+{\footnotesize\ttfamily void cvector\+\_\+add (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ value\+\_\+t}}]{value }\end{DoxyParamCaption})}
+
+Adds the specified element at the end of the cvector. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value to push at the end of the cvector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 190 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_aded13abbf232cf0d65c889cb806cee0b}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+addi@{cvector\+\_\+addi}}
+\index{cvector\+\_\+addi@{cvector\+\_\+addi}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+addi()}
+{\footnotesize\ttfamily void cvector\+\_\+addi (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ value\+\_\+t}}]{value,  }\item[{\textbf{ index\+\_\+t}}]{index }\end{DoxyParamCaption})}
+
+Adds the specified element a the position index in the cvector, and shift following elements to the right. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value to push a the position index in the cvector \\
+\hline
+{\em index} & the index where the specified value will be inserted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 207 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a6e677aaaa755f53fe337eed349e610c2}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+addspace@{cvector\+\_\+addspace}}
+\index{cvector\+\_\+addspace@{cvector\+\_\+addspace}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+addspace()}
+{\footnotesize\ttfamily void cvector\+\_\+addspace (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Adds space (according to the D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+D\+D\+S\+P\+A\+C\+E\+\_\+\+F\+A\+C\+T\+OR) to the specified cvector. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector to extend. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 59 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_ae23d89e171be11d31835926949af3de2}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+appendto@{cvector\+\_\+appendto}}
+\index{cvector\+\_\+appendto@{cvector\+\_\+appendto}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+appendto()}
+{\footnotesize\ttfamily void cvector\+\_\+appendto (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ cvector} $\ast$}]{p\+\_\+add }\end{DoxyParamCaption})}
+
+Appends element of the cvector pointed by p\+\_\+add at the end of the cvector pointed by p\+\_\+cvector. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector where elements will be appended \\
+\hline
+{\em p\+\_\+add} & a pointer to the cvector containing elements to copy \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 438 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_aed9a4c7a1286857f5aa427938428b9f7}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+clear@{cvector\+\_\+clear}}
+\index{cvector\+\_\+clear@{cvector\+\_\+clear}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+clear()}
+{\footnotesize\ttfamily void cvector\+\_\+clear (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Removes all elements of the cvector without changing its space (that is to say without calling cvector\+\_\+readjust). 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 323 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a4a0181818d231d636c9de16a95efe931}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+concat@{cvector\+\_\+concat}}
+\index{cvector\+\_\+concat@{cvector\+\_\+concat}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+concat()}
+{\footnotesize\ttfamily \textbf{ cvector}$\ast$ cvector\+\_\+concat (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector\+\_\+1,  }\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector\+\_\+2 }\end{DoxyParamCaption})}
+
+Returns a new cvector which is the concatenation of the two specified cvectors 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector\+\_\+1} & a pointer to the first cvector to concatenate \\
+\hline
+{\em p\+\_\+cvector\+\_\+2} & a pointer to the first cvector to concatenate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the resulting cvector 
+\end{DoxyReturn}
+
+
+Definition at line 459 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_aa1f74a774799a6190e0f63e46fd034ad}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+drop@{cvector\+\_\+drop}}
+\index{cvector\+\_\+drop@{cvector\+\_\+drop}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+drop()}
+{\footnotesize\ttfamily \textbf{ value\+\_\+t} cvector\+\_\+drop (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Removes the first element of the cvector. If the cvector is empty, prints an error anrd returns D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the remove (first) element, or D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE if an error occurs 
+\end{DoxyReturn}
+
+
+Definition at line 314 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_aa0027f2467c3f04fb382dbec8cb6e33b}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+equal@{cvector\+\_\+equal}}
+\index{cvector\+\_\+equal@{cvector\+\_\+equal}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+equal()}
+{\footnotesize\ttfamily bool cvector\+\_\+equal (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector\+\_\+1,  }\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector\+\_\+2 }\end{DoxyParamCaption})}
+
+Returns true iif both specified cvectors are equal. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector\+\_\+1} & a pointer to the first cvector to test \\
+\hline
+{\em p\+\_\+cvector\+\_\+2} & a pointer to the second cvector to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both specified cvectors are equal, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 517 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_aaf18bd41c613e955390bb26e6bf84ebb}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+equal\+\_\+func@{cvector\+\_\+equal\+\_\+func}}
+\index{cvector\+\_\+equal\+\_\+func@{cvector\+\_\+equal\+\_\+func}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+equal\+\_\+func()}
+{\footnotesize\ttfamily bool cvector\+\_\+equal\+\_\+func (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector\+\_\+1,  }\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector\+\_\+2,  }\item[{bool($\ast$)(\textbf{ value\+\_\+t}, \textbf{ value\+\_\+t})}]{equal\+\_\+value }\end{DoxyParamCaption})}
+
+Returns true iif both specified cvectors are equal according to the specified test function for values. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector\+\_\+1} & a pointer to the first cvector to test \\
+\hline
+{\em p\+\_\+cvector\+\_\+2} & a pointer to the second cvector to test \\
+\hline
+{\em equal\+\_\+value} & the test function for values. Its signature must be bool equal\+\_\+value(value\+\_\+t value\+\_\+1, value\+\_\+t value\+\_\+2) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both specified cvectors are equal according to the test function, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 540 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a91b4f946caa0193dceb9afec7f54e7ff}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+free@{cvector\+\_\+free}}
+\index{cvector\+\_\+free@{cvector\+\_\+free}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+free()}
+{\footnotesize\ttfamily void cvector\+\_\+free (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Frees the specified cvector. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector to free \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 156 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a7ce27dde556f0de76df7c34a48e517a9}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+free\+\_\+func@{cvector\+\_\+free\+\_\+func}}
+\index{cvector\+\_\+free\+\_\+func@{cvector\+\_\+free\+\_\+func}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+free\+\_\+func()}
+{\footnotesize\ttfamily void cvector\+\_\+free\+\_\+func (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+vector,  }\item[{void($\ast$)(\textbf{ value\+\_\+t})}]{free\+\_\+value }\end{DoxyParamCaption})}
+
+Applies the specified free function of each value of the cvector, and then frees it too. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector} & a pointer to the cvector to free \\
+\hline
+{\em free\+\_\+value} & the function to free each value of the cvector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 167 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_af9a92765b9a85699a7acba0c51ac8620}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+get@{cvector\+\_\+get}}
+\index{cvector\+\_\+get@{cvector\+\_\+get}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+get()}
+{\footnotesize\ttfamily \textbf{ value\+\_\+t} cvector\+\_\+get (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ index\+\_\+t}}]{index }\end{DoxyParamCaption})}
+
+Returns the value at the specified index in the cvector. Prints an error message and returns D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE if the specified index is invalid. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em index} & the index of the value to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the desired value if the index is correct, D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 334 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a069c279e9bce4acc6a357862b100ead7}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+getsize@{cvector\+\_\+getsize}}
+\index{cvector\+\_\+getsize@{cvector\+\_\+getsize}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+getsize()}
+{\footnotesize\ttfamily \textbf{ index\+\_\+t} cvector\+\_\+getsize (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Size getter. Returns the size of the cvector. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the size of the cvector 
+\end{DoxyReturn}
+
+
+Definition at line 181 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_ae5ad5e4e2a0c41c165d3ad1f933916e7}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+hash@{cvector\+\_\+hash}}
+\index{cvector\+\_\+hash@{cvector\+\_\+hash}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+hash()}
+{\footnotesize\ttfamily \textbf{ hash\+\_\+t} cvector\+\_\+hash (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ hash\+\_\+t}($\ast$)(\textbf{ value\+\_\+t})}]{hash\+\_\+value }\end{DoxyParamCaption})}
+
+Returns the hash of the specified cvector, using djb2 algorithm by Dan Bernstein, according to the specified hash function for values of the cvector. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector to hash \\
+\hline
+{\em hash\+\_\+value} & hash function for values of the cvector. Signature of the hash value function must be hash\+\_\+t hash\+\_\+value(value\+\_\+t value) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the computed hash of the specified cvector 
+\end{DoxyReturn}
+
+
+Definition at line 502 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a8729382aeac08507d1e6450a23060aa6}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+in@{cvector\+\_\+in}}
+\index{cvector\+\_\+in@{cvector\+\_\+in}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+in()}
+{\footnotesize\ttfamily bool cvector\+\_\+in (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ value\+\_\+t}}]{value }\end{DoxyParamCaption})}
+
+Returns true iif the specified value was found in the cvector. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value to found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the value was found, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 683 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a0777cdfab1a78dde101ad1352f4ebb99}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+in\+\_\+func@{cvector\+\_\+in\+\_\+func}}
+\index{cvector\+\_\+in\+\_\+func@{cvector\+\_\+in\+\_\+func}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+in\+\_\+func()}
+{\footnotesize\ttfamily bool cvector\+\_\+in\+\_\+func (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ value\+\_\+t}}]{value,  }\item[{bool($\ast$)(\textbf{ value\+\_\+t}, \textbf{ value\+\_\+t})}]{equal\+\_\+value }\end{DoxyParamCaption})}
+
+Returns true iif the specified value was found in the cvector according to the specified test function. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value to found \\
+\hline
+{\em equal\+\_\+value} & the test function to check equality between values. Its signature must be bool equal\+\_\+value(value\+\_\+t value\+\_\+1, value\+\_\+t value\+\_\+2) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the value was found, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 697 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_aa11c7cb1423cfd6d9d41404188659f42}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+indexof@{cvector\+\_\+indexof}}
+\index{cvector\+\_\+indexof@{cvector\+\_\+indexof}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+indexof()}
+{\footnotesize\ttfamily \textbf{ index\+\_\+t} cvector\+\_\+indexof (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ value\+\_\+t}}]{value }\end{DoxyParamCaption})}
+
+Returns the first index where the specified value is found in the cvector. If the value is not found, returns N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX value. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value to found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the first index where the specified value was found, or N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX if it was not found 
+\end{DoxyReturn}
+
+
+Definition at line 644 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a4d82b0c6d906d0b979ecabd6073ca242}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+indexof\+\_\+func@{cvector\+\_\+indexof\+\_\+func}}
+\index{cvector\+\_\+indexof\+\_\+func@{cvector\+\_\+indexof\+\_\+func}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+indexof\+\_\+func()}
+{\footnotesize\ttfamily \textbf{ index\+\_\+t} cvector\+\_\+indexof\+\_\+func (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ value\+\_\+t}}]{value,  }\item[{bool($\ast$)(\textbf{ value\+\_\+t}, \textbf{ value\+\_\+t})}]{equal\+\_\+value }\end{DoxyParamCaption})}
+
+Returns the first index where the specified value is found, according to the specified test function. Il the value is not found, returns N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX value. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value to found \\
+\hline
+{\em equal\+\_\+value} & the test function to check equality between values. Its signature must be bool equal\+\_\+value(value\+\_\+t value\+\_\+1, value\+\_\+t value\+\_\+2) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the first index where the specified value was found, or N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+I\+N\+D\+EX if it was not found 
+\end{DoxyReturn}
+
+
+Definition at line 666 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_aa5e2993e942e56159ab9321eb7b90a6f}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+insert@{cvector\+\_\+insert}}
+\index{cvector\+\_\+insert@{cvector\+\_\+insert}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+insert()}
+{\footnotesize\ttfamily void cvector\+\_\+insert (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ value\+\_\+t}}]{value }\end{DoxyParamCaption})}
+
+Adds the specified value at the beginning of the cvector, and shift following elements to the right. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value to add at the beginning of the cvector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 242 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a6442c91a2a3b14d4d1d865ba148c34e4}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+new@{cvector\+\_\+new}}
+\index{cvector\+\_\+new@{cvector\+\_\+new}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+new()}
+{\footnotesize\ttfamily \textbf{ cvector}$\ast$ cvector\+\_\+new (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a new cvector which can hold at the beginning at least D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+I\+T\+\_\+\+S\+P\+A\+CE elements. \begin{DoxyReturn}{Returns}
+a pointer to the new cvector 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a5106edfcb490caa0a6eb53e4be088fa7}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+new\+\_\+copy@{cvector\+\_\+new\+\_\+copy}}
+\index{cvector\+\_\+new\+\_\+copy@{cvector\+\_\+new\+\_\+copy}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+new\+\_\+copy()}
+{\footnotesize\ttfamily \textbf{ cvector}$\ast$ cvector\+\_\+new\+\_\+copy (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+original }\end{DoxyParamCaption})}
+
+Creates a new cvector which is a copy of the specified one. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+original} & a pointer to the cvector to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the new (clone) cvector 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a8ae393983ad33cb1bc2df73f7d1db615}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+new\+\_\+copy\+\_\+space@{cvector\+\_\+new\+\_\+copy\+\_\+space}}
+\index{cvector\+\_\+new\+\_\+copy\+\_\+space@{cvector\+\_\+new\+\_\+copy\+\_\+space}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+new\+\_\+copy\+\_\+space()}
+{\footnotesize\ttfamily \textbf{ cvector}$\ast$ cvector\+\_\+new\+\_\+copy\+\_\+space (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+original,  }\item[{\textbf{ index\+\_\+t}}]{space }\end{DoxyParamCaption})}
+
+Creates a new cvector which is a copy of the specified one and which can hold at least space elements. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+original} & a pointer to the cvector to copy \\
+\hline
+{\em space} & desired space for the new (clone) cvector. space must be greater or equal than the size of the original cvector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the new (clone) cvector 
+\end{DoxyReturn}
+
+
+Definition at line 127 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_abc0d094d5cdbd31fc74f3902fd74a690}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+new\+\_\+space@{cvector\+\_\+new\+\_\+space}}
+\index{cvector\+\_\+new\+\_\+space@{cvector\+\_\+new\+\_\+space}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+new\+\_\+space()}
+{\footnotesize\ttfamily \textbf{ cvector}$\ast$ cvector\+\_\+new\+\_\+space (\begin{DoxyParamCaption}\item[{\textbf{ index\+\_\+t}}]{space }\end{DoxyParamCaption})}
+
+Creates a new cvector which can hold at the beginning at least space elements. 
+\begin{DoxyParams}{Parameters}
+{\em space} & desired space for the new cvector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the new cvector 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a9461750aa0be3a7104fca3ea80ea26e2}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+readjust@{cvector\+\_\+readjust}}
+\index{cvector\+\_\+readjust@{cvector\+\_\+readjust}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+readjust()}
+{\footnotesize\ttfamily void cvector\+\_\+readjust (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Readjusts space of the specified cvector if needed, according to S\+H\+R\+I\+N\+K\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD and E\+X\+T\+E\+N\+D\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a7af2a3f3b2e1fd3f2081536a4d73ac2e}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+remove@{cvector\+\_\+remove}}
+\index{cvector\+\_\+remove@{cvector\+\_\+remove}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+remove()}
+{\footnotesize\ttfamily \textbf{ value\+\_\+t} cvector\+\_\+remove (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Removes the last element of the cvector and returns it. If the cvector is empty, prints an error and returns D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The last value of the cvector if it is not empty, D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 253 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_aa10fda3704501241f975de8789dc5d9c}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+removei@{cvector\+\_\+removei}}
+\index{cvector\+\_\+removei@{cvector\+\_\+removei}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+removei()}
+{\footnotesize\ttfamily \textbf{ value\+\_\+t} cvector\+\_\+removei (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ index\+\_\+t}}]{index }\end{DoxyParamCaption})}
+
+Removes the element located at the specified index, and returns it. If the cvector is empty or if the index is incorrect, prints an error and returns D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em index} & the index where the element will be removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the removed element or D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE if an error occurs 
+\end{DoxyReturn}
+
+
+Definition at line 274 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a3d72487e7685f7ab93fda40cabb60958}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+replace@{cvector\+\_\+replace}}
+\index{cvector\+\_\+replace@{cvector\+\_\+replace}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+replace()}
+{\footnotesize\ttfamily bool cvector\+\_\+replace (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ value\+\_\+t}}]{original,  }\item[{\textbf{ value\+\_\+t}}]{replacement }\end{DoxyParamCaption})}
+
+Replace specified elements in the cvector and returns true if at least one change was made. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em original} & original value to replace \\
+\hline
+{\em replacement} & replacement value for original \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if at least one replacement was made, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 580 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a8248626d0f31ebb5838c82d0a71f2b05}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+replace\+\_\+func@{cvector\+\_\+replace\+\_\+func}}
+\index{cvector\+\_\+replace\+\_\+func@{cvector\+\_\+replace\+\_\+func}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+replace\+\_\+func()}
+{\footnotesize\ttfamily bool cvector\+\_\+replace\+\_\+func (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ value\+\_\+t}}]{original,  }\item[{\textbf{ value\+\_\+t}}]{replacement,  }\item[{bool($\ast$)(\textbf{ value\+\_\+t}, \textbf{ value\+\_\+t})}]{equal\+\_\+value }\end{DoxyParamCaption})}
+
+Replace specified elements in the cvector and returns true if at least one change was made. Test between elements of the cvector and original are made with the specified function. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em original} & original value to replace \\
+\hline
+{\em replacement} & replacement value for original \\
+\hline
+{\em equal\+\_\+value} & test function used to compare cvector elements and original. Its signature must be bool equal\+\_\+value(value\+\_\+t value\+\_\+1, value\+\_\+t value\+\_\+2) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if at least one replacement was made, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 604 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_af9185ec558ef030b082daee234f9312a}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+reversed@{cvector\+\_\+reversed}}
+\index{cvector\+\_\+reversed@{cvector\+\_\+reversed}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+reversed()}
+{\footnotesize\ttfamily \textbf{ cvector}$\ast$ cvector\+\_\+reversed (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Returns a cvector which contains the same elements as the specified one, but in a reversed order. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the original cvector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the resulting cvector, containing elements of the specified cvector in a reverse order 
+\end{DoxyReturn}
+
+
+Definition at line 479 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a41b0ee17ac9cdc9967afb1dca8f9236a}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+safeget@{cvector\+\_\+safeget}}
+\index{cvector\+\_\+safeget@{cvector\+\_\+safeget}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+safeget()}
+{\footnotesize\ttfamily \textbf{ value\+\_\+t} cvector\+\_\+safeget (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ index\+\_\+t}}]{index }\end{DoxyParamCaption})}
+
+Returns the value at the specified index in the cvector. Only prints a warning and returns D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE if the specified index is invalid. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em index} & the index of the value to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the desired value if the index is correct, D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+UE otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 358 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a2304a9cec856cf184ecaa057472fe2cf}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+safeset@{cvector\+\_\+safeset}}
+\index{cvector\+\_\+safeset@{cvector\+\_\+safeset}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+safeset()}
+{\footnotesize\ttfamily void cvector\+\_\+safeset (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ value\+\_\+t}}]{value,  }\item[{\textbf{ index\+\_\+t}}]{index }\end{DoxyParamCaption})}
+
+Sets the value of the element located at the specified position. Only raises warning if the index is invalid, or extends the cvector to be able to set the value at the specified index. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value which will be inserted at the index position \\
+\hline
+{\em index} & the index where the value will be set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 406 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a786ae2dbda0ab64599516679991eb93f}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+set@{cvector\+\_\+set}}
+\index{cvector\+\_\+set@{cvector\+\_\+set}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+set()}
+{\footnotesize\ttfamily void cvector\+\_\+set (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ value\+\_\+t}}]{value,  }\item[{\textbf{ index\+\_\+t}}]{index }\end{DoxyParamCaption})}
+
+Sets the value of the element located at the specified index. Raises error if the specified index is invalid. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em value} & the value which will be placed at the index position \\
+\hline
+{\em index} & the index where the value will be set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 382 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a58fc66f52658fce930c3fdd7116bf541}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+slice@{cvector\+\_\+slice}}
+\index{cvector\+\_\+slice@{cvector\+\_\+slice}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+slice()}
+{\footnotesize\ttfamily \textbf{ cvector}$\ast$ cvector\+\_\+slice (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ index\+\_\+t}}]{from,  }\item[{\textbf{ index\+\_\+t}}]{to,  }\item[{\textbf{ index\+\_\+t}}]{step }\end{DoxyParamCaption})}
+
+Returns the slice [$\vert$from\+:to[$\vert$ of the specified cvector. Prints an error and return N\+U\+LL if indexes are incorrect. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em from} & index of the begin of the slice, included \\
+\hline
+{\em to} & index of the end of the slice, excluded \\
+\hline
+{\em step} & step of the slice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the corresponding (cvector) slice 
+\end{DoxyReturn}
+
+
+Definition at line 714 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_a06479149fcc3b358ac086aba792b19a7}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+slicetoarray@{cvector\+\_\+slicetoarray}}
+\index{cvector\+\_\+slicetoarray@{cvector\+\_\+slicetoarray}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+slicetoarray()}
+{\footnotesize\ttfamily \textbf{ value\+\_\+t}$\ast$ cvector\+\_\+slicetoarray (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{\textbf{ index\+\_\+t}}]{from,  }\item[{\textbf{ index\+\_\+t}}]{to,  }\item[{\textbf{ index\+\_\+t}}]{step }\end{DoxyParamCaption})}
+
+Returns the slice [$\vert$from\+:to[$\vert$ of the specified cvector as a c-\/style array. Prints an error and return N\+U\+LL if indexes are incorrect. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em from} & index of the begin of the slice, included \\
+\hline
+{\em to} & index of the end of the slice, excluded \\
+\hline
+{\em step} & step of the slice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the corresponding (c-\/style array) slice 
+\end{DoxyReturn}
+
+
+Definition at line 764 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_acf990e9a552f22bf18abfec4d2c14563}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+sort@{cvector\+\_\+sort}}
+\index{cvector\+\_\+sort@{cvector\+\_\+sort}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+sort()}
+{\footnotesize\ttfamily void cvector\+\_\+sort (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector,  }\item[{int($\ast$)(const void $\ast$, const void $\ast$)}]{comp\+\_\+value }\end{DoxyParamCaption})}
+
+Sorts the elements in the cvector according to the specified comparison function. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+{\em comp\+\_\+value} & a comparison function which must have the signature int comp\+\_\+value(const void $\ast$p\+\_\+a, const void $\ast$p\+\_\+b) and which must
+\begin{DoxyItemize}
+\item return -\/1 if element a should be placed before element b
+\item return 0 if element a and b could be placed at the same position
+\item return 1 if element a should be placed after element b 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 629 of file cvector\+\_\+core.\+h.
+
+\mbox{\label{cvector__interface_8h_acee2f57054d93a57da2b95f95df8fda8}} 
+\index{cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}!cvector\+\_\+toarray@{cvector\+\_\+toarray}}
+\index{cvector\+\_\+toarray@{cvector\+\_\+toarray}!cvector\+\_\+interface.\+h@{cvector\+\_\+interface.\+h}}
+\subsubsection{cvector\+\_\+toarray()}
+{\footnotesize\ttfamily \textbf{ value\+\_\+t}$\ast$ cvector\+\_\+toarray (\begin{DoxyParamCaption}\item[{\textbf{ cvector} $\ast$}]{p\+\_\+cvector }\end{DoxyParamCaption})}
+
+Returns a pointer to a c-\/style array holding the same elements as the specified cvector. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+cvector} & a pointer to the cvector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a c-\/style malloc-\/ed array holding the same elements as the specified cvector, which must be freed after use 
+\end{DoxyReturn}
+
+
+Definition at line 562 of file cvector\+\_\+core.\+h.
+
