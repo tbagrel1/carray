@@ -25,7 +25,7 @@
 #define _CONCAT(a, b) a ## b
 #define CONCAT(a, b) _CONCAT(a, b)
 
-#define index_t long
+#define index_t __int128_t
 #define NOT_FOUND_INDEX ((index_t) (-1))
 #define ROUND_INDEX(x) ((index_t) (lrint(x)))
 

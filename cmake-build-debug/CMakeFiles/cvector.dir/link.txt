@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/cvector.dir/main.c.o CMakeFiles/cvector.dir/includes/int_vect.c.o CMakeFiles/cvector.dir/includes/str_vect.c.o CMakeFiles/cvector.dir/includes/virtual_lib.c.o  -o cvector -lm 

@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="cvector" targetName="cvector" />
+      <config projectName="cvector" targetName="cvector_tests" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7ed4805a-37ed-4d4a-b990-0632b19b0bda" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/lib/cvector_interface.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/cvector_interface.h" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cvector_interface.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/cvector_interface.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="e#0#643#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="int_vect.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/int_vect.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="1" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cvector_core.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/cvector_core.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="740">
+                <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="int_vect.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/int_vect.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="str_vect.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/str_vect.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="9" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="str_vect.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/str_vect.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" selection-end-line="2" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>CVECTOR_TYPE</find>
+      <find>#define cvector_readjust CONCAT(CVECTOR_T, _cvector__readjust)</find>
+      <find>INIT_FACTOR</find>
+      <find>NULL</find>
+      <find>print</find>
+      <find>0</find>
+      <find>1</find>
+      <find>return</find>
+      <find>ERROR</find>
+      <find>index_t</find>
+      <find>endif</find>
+      <find>static inline</find>
+      <find>CVECTOR_ERROR_FUNC</find>
+      <find>CVECTOR_ERRORNO</find>
+      <find>TEST\(_(.*?), (.*?)\)</find>
+      <find>ASSERT_LE\((.*?), (.*?)\)</find>
+      <find>nullptr</find>
+      <find>void (.*?)\(\) \{</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>CVECTOR_T</replace>
+      <replace>CVECTOR_ERROR</replace>
+      <replace>void $1_$2()</replace>
+      <replace>ASSERT($1 &lt;= $2)</replace>
+      <replace>NULL</replace>
+      <replace>void $1() {\n    str name = &quot;$1&quot;;</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Thomas BAGREL &lt;tomsb07@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/tests/mult_include.h" />
+        <option value="$PROJECT_DIR$/errorno.md" />
+        <option value="$PROJECT_DIR$/tests/cvector_import.h" />
+        <option value="$PROJECT_DIR$/cvector.c" />
+        <option value="$PROJECT_DIR$/cvector.h" />
+        <option value="$PROJECT_DIR$/cvector_interface.h" />
+        <option value="$PROJECT_DIR$/cvector_core.h" />
+        <option value="$PROJECT_DIR$/includes/int_vect.h" />
+        <option value="$PROJECT_DIR$/includes/int_vect.c" />
+        <option value="$PROJECT_DIR$/includes/str_vect.h" />
+        <option value="$PROJECT_DIR$/includes/str_vect.c" />
+        <option value="$PROJECT_DIR$/includes/virtual_lib.h" />
+        <option value="$PROJECT_DIR$/includes/virtual_lib.c" />
+        <option value="$PROJECT_DIR$/tests/tests.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/lib/cvector_core.h" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/lib/cvector_interface.h" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="25" />
+    <option name="width" value="960" />
+    <option name="height" value="1055" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cvector" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvector" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvector" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvector" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvector" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvector" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Build All">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cvector" RUN_TARGET_NAME="cvector" EXPLICIT_BUILD_TARGET_NAME="all" />
+    <configuration name="cvector" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cvector" TARGET_NAME="cvector" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cvector" RUN_TARGET_NAME="cvector" />
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.cvector" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7ed4805a-37ed-4d4a-b990-0632b19b0bda" name="Default" comment="" />
+      <created>1518629985027</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1518629985027</updated>
+      <workItem from="1518629986436" duration="6314000" />
+      <workItem from="1518638122383" duration="781000" />
+      <workItem from="1518771193142" duration="426000" />
+      <workItem from="1519236512864" duration="6085000" />
+      <workItem from="1519243706685" duration="1047000" />
+      <workItem from="1519293139813" duration="4710000" />
+      <workItem from="1519299417137" duration="1633000" />
+      <workItem from="1519313867675" duration="2831000" />
+      <workItem from="1519317849101" duration="1579000" />
+      <workItem from="1519456367786" duration="15200000" />
+      <workItem from="1519478254029" duration="3636000" />
+      <workItem from="1520271036168" duration="17000" />
+      <workItem from="1520273257215" duration="7000" />
+      <workItem from="1522676124770" duration="606000" />
+      <workItem from="1526300190618" duration="9000" />
+      <workItem from="1526300606308" duration="8025000" />
+      <workItem from="1526309685678" duration="2720000" />
+      <workItem from="1526312467408" duration="1994000" />
+      <workItem from="1526474404118" duration="618000" />
+    </task>
+    <task id="LOCAL-00002" summary="+ changes on README.md because of merge">
+      <created>1519458155525</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1519458155525</updated>
+    </task>
+    <task id="LOCAL-00003" summary="+ error on README.md: email address">
+      <created>1519458255263</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1519458255263</updated>
+    </task>
+    <task id="LOCAL-00004" summary="+ error on README.md: /doc/ instead of /docs/">
+      <created>1519458319877</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1519458319877</updated>
+    </task>
+    <task id="LOCAL-00005" summary="+ error on README.md: missing /html/">
+      <created>1519458390267</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1519458390267</updated>
+    </task>
+    <task id="LOCAL-00006" summary="+ rm on the previous implementation: carray">
+      <created>1519458757979</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1519458757979</updated>
+    </task>
+    <task id="LOCAL-00007" summary="+ work of the morning: all">
+      <created>1519471811056</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1519471811056</updated>
+    </task>
+    <task id="LOCAL-00008" summary="+ v0.2.0: Refont of the include system">
+      <created>1526310696503</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1526310696503</updated>
+    </task>
+    <task id="LOCAL-00009" summary="+ add licence header in lib files">
+      <created>1526310941686</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1526310941686</updated>
+    </task>
+    <task id="LOCAL-00010" summary="+ rebuild doc">
+      <created>1526311694012</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1526311694012</updated>
+    </task>
+    <task id="LOCAL-00011" summary="+ rebuild doc 2">
+      <created>1526311977179</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1526311977179</updated>
+    </task>
+    <task id="LOCAL-00012" summary="+ add tips about linking m (math.h)">
+      <created>1526312538145</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1526312538145</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="cvector_tests - 2018.02.24 at 12h 01m 12s.xml">
+      <configuration name="cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="cvector_tests - 2018.02.24 at 12h 03m 43s.xml">
+      <configuration name="cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="gtest_cvector_tests - 2018.02.24 at 12h 04m 52s.xml">
+      <configuration name="gtest_cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="gtest_cvector_tests - 2018.02.24 at 12h 08m 53s.xml">
+      <configuration name="gtest_cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="gtest_cvector_tests - 2018.02.24 at 12h 13m 35s.xml">
+      <configuration name="gtest_cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="gtest_cvector_tests - 2018.02.24 at 12h 14m 45s.xml">
+      <configuration name="gtest_cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="gtest_cvector_tests - 2018.02.24 at 15h 48m 47s.xml">
+      <configuration name="gtest_cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="gtest_cvector_tests - 2018.02.24 at 15h 49m 46s.xml">
+      <configuration name="gtest_cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="gtest_cvector_tests - 2018.02.24 at 16h 00m 40s.xml">
+      <configuration name="gtest_cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="gtest_cvector_tests - 2018.02.24 at 16h 05m 13s.xml">
+      <configuration name="gtest_cvector_tests" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="58238000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0625" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="CMake" order="7" weight="0.32944915" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32946146" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32944915" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.32946146" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" visible="true" weight="0.32944915" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="+ changes on README.md because of merge" />
+    <MESSAGE value="+ error on README.md: email address" />
+    <MESSAGE value="+ error on README.md: /doc/ instead of /docs/" />
+    <MESSAGE value="+ error on README.md: missing /html/" />
+    <MESSAGE value="+ rm on the previous implementation: carray" />
+    <MESSAGE value="+ work of the morning: all" />
+    <MESSAGE value="+ v0.2.0: Refont of the include system" />
+    <MESSAGE value="+ add licence header in lib files" />
+    <MESSAGE value="+ rebuild doc" />
+    <MESSAGE value="+ rebuild doc 2" />
+    <MESSAGE value="+ add tips about linking m (math.h)" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ add tips about linking m (math.h)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="7" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/errorno.md" />
+    <entry file="file://$PROJECT_DIR$/cvector.h" />
+    <entry file="file://$PROJECT_DIR$/tests/tests.cpp" />
+    <entry file="file://$PROJECT_DIR$/tests/cvector_import.h" />
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/errorno.md" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/cvector.h" />
+    <entry file="file://$PROJECT_DIR$/tests/tests.cpp" />
+    <entry file="file://$PROJECT_DIR$/errorno.md" />
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/cvector_import.h" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/cvector.h" />
+    <entry file="file://$PROJECT_DIR$/errorno.md" />
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/tests.cpp" />
+    <entry file="file://$PROJECT_DIR$/cvector.h" />
+    <entry file="file://$PROJECT_DIR$/cvector.h" />
+    <entry file="file://$PROJECT_DIR$/cvector.h" />
+    <entry file="file://$PROJECT_DIR$/cvector.h" />
+    <entry file="file://$PROJECT_DIR$/cvector.h" />
+    <entry file="file://$PROJECT_DIR$/cvector.h" />
+    <entry file="file://$PROJECT_DIR$/cvector.h" />
+    <entry file="file://$PROJECT_DIR$/cvector.h" />
+    <entry file="file://$PROJECT_DIR$/cvector.h" />
+    <entry file="file://$PROJECT_DIR$/library.c" />
+    <entry file="file://$PROJECT_DIR$/library.h" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/libcvector.a">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="4" column="1151" lean-forward="true" selection-start-line="4" selection-start-column="1151" selection-end-line="4" selection-end-column="1151" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/mult_include.h" />
+    <entry file="file:///usr/include/gtest/gtest.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="1391" column="10" selection-start-line="1391" selection-start-column="10" selection-end-line="1391" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/cvector_import.h" />
+    <entry file="file://$PROJECT_DIR$/cvector.c" />
+    <entry file="file://$PROJECT_DIR$/cvector.h" />
+    <entry file="file://$PROJECT_DIR$/includes/virtual_lib.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/virtual_lib.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/tests.cpp" />
+    <entry file="file://$PROJECT_DIR$/includes/str_vect.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/str_vect.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/int_vect.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/int_vect.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="740">
+            <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/cvector_core.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/cvector_interface.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#0#643#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20130815" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
